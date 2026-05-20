@@ -7,15 +7,26 @@
 
 import SwiftUI
 import CoreData
+import Swinject
 
 @main
 struct CryptoRadarApp: App {
-    let persistenceController = PersistenceController.shared
-
+    let container: Container = {
+        
+        let assembler = Assembler([
+            RegisterAssembly()
+        ])
+        return assembler.resolver as! Container
+        
+    }()
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            RegisterView(
+                viewModel:
+                    container.resolve(
+                        RegisterViewModel.self
+                    )!
+            )
         }
     }
 }
