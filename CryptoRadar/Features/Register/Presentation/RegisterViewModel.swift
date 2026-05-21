@@ -13,6 +13,7 @@ final class RegisterViewModel: ObservableObject {
     
     @Published var email = ""
     @Published var password = ""
+    @Published var confirmPassword = ""
     @Published var isLoading = false
     @Published var errorMessage: String?
     @Published var token = ""
@@ -23,17 +24,36 @@ final class RegisterViewModel: ObservableObject {
     }
     
     func register() {
+        
+        guard !email.isEmpty else {
+            errorMessage = "Se requiere un email"
+            return
+        }
+        
+        guard !password.isEmpty else {
+            errorMessage = "Se requiere una contraseña"
+            return
+        }
+        
+        guard password == confirmPassword else {
+            errorMessage = "Las contraseñas no coinciden"
+            return
+        }
+        
         isLoading = true
         errorMessage = nil
+        
         Task {
             do {
-                let responseToken = try await repository.register(
+                let responseToken =
+                try await repository.register(
                     email: email,
                     password: password
                 )
                 token = responseToken
             } catch {
-                errorMessage = error.localizedDescription
+                errorMessage =
+                error.localizedDescription
             }
             isLoading = false
         }
