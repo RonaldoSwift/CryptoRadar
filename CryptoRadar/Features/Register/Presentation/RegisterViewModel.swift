@@ -17,9 +17,9 @@ final class RegisterViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var errorMessage: String?
     @Published var token = ""
-    private let repository: RegisterRepository
+    private let repository: RegisterRepositoryProtocol
     
-    init(repository: RegisterRepository) {
+    init(repository: RegisterRepositoryProtocol) {
         self.repository = repository
     }
     

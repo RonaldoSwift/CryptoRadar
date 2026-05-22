@@ -29,38 +29,31 @@ struct RegisterView: View {
             
             ScrollView {
                 VStack(spacing:40) {
-                    Text(
-                        Strings.Register.appName
-                    )
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(.blue)
-                    .padding(.top)
+                    Text("Register.AppName")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.blue)
+                        .padding(.top)
                     
                     VStack(spacing:20) {
                         VStack(spacing:8) {
-                            Text(
-                                Strings.Register.title
-                            )
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
+                            Text("Register.Title")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
                             
-                            Text(
-                                Strings.Register.subtitle
-                            )
-                            .foregroundColor(.gray)
+                            Text("Register.Subtitle")
+                                .foregroundColor(.gray)
                         }
                         
                         VStack(
-                            alignment:.leading,
-                            spacing:8
+                            alignment: .leading,
+                            spacing: 8
                         ) {
-                            Text(
-                                Strings.Register.emailTitle
-                            )
-                            .font(.caption)
-                            .foregroundColor(.gray)
+                            
+                            Text("Register.EmailTitle")
+                                .font(.caption)
+                                .foregroundColor(.gray)
                             
                             HStack {
                                 Image(
@@ -69,11 +62,18 @@ struct RegisterView: View {
                                 .foregroundColor(.gray)
                                 
                                 TextField(
-                                    Strings.Register.emailPlaceholder,
+                                    String(
+                                        localized:
+                                            "Register.EmailPlaceholder"
+                                    ),
                                     text: $viewModel.email
                                 )
-                                .keyboardType(.emailAddress)
-                                .textInputAutocapitalization(.never)
+                                .keyboardType(
+                                    .emailAddress
+                                )
+                                .textInputAutocapitalization(
+                                    .never
+                                )
                                 .autocorrectionDisabled()
                                 .foregroundColor(.white)
                             }
@@ -85,29 +85,40 @@ struct RegisterView: View {
                         }
                         
                         VStack(
-                            alignment:.leading,
-                            spacing:8
+                            alignment: .leading,
+                            spacing: 8
                         ) {
                             Text(
-                                Strings.Register.passwordTitle
+                                "Register.PasswordTitle"
                             )
                             .font(.caption)
                             .foregroundColor(.gray)
                             
                             HStack {
-                                Image(systemName:"lock")
-                                    .foregroundColor(.gray)
+                                Image(
+                                    systemName:"lock"
+                                )
+                                .foregroundColor(.gray)
                                 
                                 Group {
+                                    
                                     if showPassword {
+                                        
                                         TextField(
-                                            Strings.Register.passwordPlaceholder,
+                                            String(
+                                                localized:
+                                                    "Register.PasswordPlaceholder"
+                                            ),
                                             text: $viewModel.password
                                         )
                                         
                                     } else {
+                                        
                                         SecureField(
-                                            Strings.Register.passwordPlaceholder,
+                                            String(
+                                                localized:
+                                                    "Register.PasswordPlaceholder"
+                                            ),
                                             text: $viewModel.password
                                         )
                                     }
@@ -121,7 +132,7 @@ struct RegisterView: View {
                                     Image(
                                         systemName:
                                             showPassword ?
-                                        "eye.slash":
+                                        "eye.slash" :
                                             "eye"
                                     )
                                     .foregroundColor(.gray)
@@ -135,11 +146,11 @@ struct RegisterView: View {
                         }
                         
                         VStack(
-                            alignment:.leading,
-                            spacing:8
+                            alignment: .leading,
+                            spacing: 8
                         ) {
                             Text(
-                                Strings.Register.confirmPasswordTitle
+                                "Register.ConfirmPasswordTitle"
                             )
                             .font(.caption)
                             .foregroundColor(.gray)
@@ -152,14 +163,22 @@ struct RegisterView: View {
                                 
                                 Group {
                                     if showConfirmPassword {
+                                        
                                         TextField(
-                                            Strings.Register.confirmPasswordPlaceholder,
+                                            String(
+                                                localized:
+                                                    "Register.ConfirmPasswordPlaceholder"
+                                            ),
                                             text: $viewModel.confirmPassword
                                         )
                                         
                                     } else {
+                                        
                                         SecureField(
-                                            Strings.Register.confirmPasswordPlaceholder,
+                                            String(
+                                                localized:
+                                                    "Register.ConfirmPasswordPlaceholder"
+                                            ),
                                             text: $viewModel.confirmPassword
                                         )
                                     }
@@ -168,11 +187,13 @@ struct RegisterView: View {
                                 
                                 Button {
                                     showConfirmPassword.toggle()
+                                    
                                 } label: {
+                                    
                                     Image(
                                         systemName:
                                             showConfirmPassword ?
-                                        "eye.slash":
+                                        "eye.slash" :
                                             "eye"
                                     )
                                     .foregroundColor(.gray)
@@ -187,30 +208,31 @@ struct RegisterView: View {
                         
                         Button {
                             viewModel.register()
-                        } label: {
                             
+                        } label: {
                             if viewModel.isLoading {
-                                
                                 ProgressView()
                                     .tint(.white)
                                 
                             } else {
-                                
                                 Text(
-                                    Strings.Register.createButton
+                                    "Register.CreateButton"
                                 )
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                             }
                         }
                         .frame(
-                            maxWidth:.infinity
+                            maxWidth: .infinity
                         )
                         .frame(height:55)
-                        .background(Color.blue)
+                        .background(
+                            Color.blue
+                        )
                         .cornerRadius(15)
-                        .disabled(viewModel.isLoading)
-                        
+                        .disabled(
+                            viewModel.isLoading
+                        )
                         
                         if let error =
                             viewModel.errorMessage {
@@ -219,14 +241,14 @@ struct RegisterView: View {
                                 .foregroundColor(.red)
                                 .font(.caption)
                         }
-                        
-                        
                         Text(
-                            Strings.Register.terms
+                            "Register.Terms"
                         )
                         .font(.caption)
                         .foregroundColor(.gray)
-                        .multilineTextAlignment(.center)
+                        .multilineTextAlignment(
+                            .center
+                        )
                     }
                     .padding()
                     .background(
@@ -240,16 +262,18 @@ struct RegisterView: View {
                     .padding(.horizontal)
                     
                     HStack {
+                        
                         Text(
-                            Strings.Register.accountQuestion
+                            "Register.AccountQuestion"
                         )
                         .foregroundColor(.gray)
                         
                         Button {
                             
                         } label: {
+                            
                             Text(
-                                Strings.Register.login
+                                "Register.Login"
                             )
                             .foregroundColor(.blue)
                         }
@@ -266,19 +290,26 @@ struct RegisterView: View {
             }
         }
         .alert(
-            Strings.Register.successTitle,
+            String(
+                localized:
+                    "Register.SuccessTitle"
+            ),
             isPresented: $showSuccessAlert
         ) {
             Button("OK") {}
         } message: {
             Text(
-                Strings.Register.successMessage
+                String(
+                    localized:
+                        "Register.SuccessMessage"
+                )
             )
         }
     }
 }
 
 #Preview {
+    
     RegisterView(
         viewModel:
             RegisterViewModel(

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class RegisterRepositoryImpl: RegisterRepository {
+final class RegisterRepositoryImpl: RegisterRepositoryProtocol {
     
     private let service: AuthServiceRegisterProtocol
     

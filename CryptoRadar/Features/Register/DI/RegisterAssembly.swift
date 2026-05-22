@@ -19,7 +19,7 @@ final class RegisterAssembly: Assembly {
         }
         
         container.register(
-            RegisterRepository.self
+            RegisterRepositoryProtocol.self
         ) { resolver in
             RegisterRepositoryImpl(
                 service: resolver.resolve(
@@ -33,7 +33,7 @@ final class RegisterAssembly: Assembly {
         ) { resolver in
             RegisterViewModel(
                 repository: resolver.resolve(
-                    RegisterRepository.self
+                    RegisterRepositoryProtocol.self
                 )!
             )
         }

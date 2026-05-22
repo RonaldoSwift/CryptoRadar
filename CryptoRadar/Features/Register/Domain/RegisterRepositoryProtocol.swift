@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol RegisterRepository {
+protocol RegisterRepositoryProtocol {
     
     func register(
         email: String,

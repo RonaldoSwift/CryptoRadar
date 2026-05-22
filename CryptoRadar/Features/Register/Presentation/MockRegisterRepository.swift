@@ -8,7 +8,7 @@
 import Foundation
 
 final class MockRegisterRepository:
-    RegisterRepository {
+    RegisterRepositoryProtocol {
     
     func register(
         email: String,
