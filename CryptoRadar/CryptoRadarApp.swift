@@ -8,23 +8,34 @@
 import SwiftUI
 import CoreData
 import Swinject
+import Login
+import Register
 
 @main
 struct CryptoRadarApp: App {
     let container: Container = {
         
         let assembler = Assembler([
-            RegisterAssembly()
+            RegisterAssembly(),
+            LoginAssembly()
         ])
         return assembler.resolver as! Container
         
     }()
     var body: some Scene {
         WindowGroup {
-            RegisterView(
+            
+            /* RegisterView(
+             viewModel:
+             container.resolve(
+             RegisterViewModel.self
+             )!
+             )*/
+            
+            LoginView(
                 viewModel:
                     container.resolve(
-                        RegisterViewModel.self
+                        LoginViewModel.self
                     )!
             )
         }

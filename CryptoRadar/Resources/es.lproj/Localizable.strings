@@ -8,33 +8,34 @@
 //Register
 
 "Register.AppName" = "CryptoRadar";
-
 "Register.Title" = "Crear cuenta";
-
 "Register.Subtitle" = "Comienza tu viaje financiero con nosotros";
-
 "Register.EmailTitle" = "CORREO ELECTRÓNICO";
-
 "Register.EmailPlaceholder" = "nombre@ejemplo.com";
-
 "Register.PasswordTitle" = "CONTRASEÑA";
-
 "Register.PasswordPlaceholder" = "Mín. 8 caracteres";
-
 "Register.ConfirmPasswordTitle" = "CONFIRMAR CONTRASEÑA";
-
 "Register.ConfirmPasswordPlaceholder" = "Repite tu contraseña";
-
 "Register.CreateButton" = "Crear cuenta";
-
 "Register.AccountQuestion" = "¿Ya tienes una cuenta?";
-
 "Register.Login" = "Iniciar sesión";
-
 "Register.Terms" = "Al crear una cuenta aceptas nuestros Términos de Servicio y Política de Privacidad.";
-
 "Register.SuccessTitle" = "Éxito";
-
 "Register.SuccessMessage" = "Cuenta creada correctamente";
-
 "Register.PasswordMismatch" = "Las contraseñas no coinciden";
+
+//Login
+
+"Login.AppName"="CryptoRadar";
+"Login.Title"="Bienvenido";
+"Login.Subtitle"="Inicia sesión para continuar";
+"Login.EmailTitle"="CORREO";
+"Login.EmailPlaceholder"="correo@ejemplo.com";
+"Login.PasswordTitle"="CONTRASEÑA";
+"Login.PasswordPlaceholder"="Ingrese contraseña";
+"Login.Button"="Iniciar sesión";
+"Login.ForgotPassword"="¿Olvidaste tu contraseña?";
+"Login.AccountQuestion"="¿No tienes cuenta?";
+"Login.Register"="Registrarse";
+"Login.SuccessTitle"="Éxito";
+"Login.SuccessMessage"="Inicio de sesión exitoso";
