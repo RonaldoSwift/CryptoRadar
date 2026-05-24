@@ -5,3 +5,34 @@
 //  Created by Ronaldo Andre on 23/05/26.
 //
 
+// Login: English
+
+"Login.AppName"="CryptoRadar";
+"Login.Title"="Welcome Back";
+"Login.Subtitle"="Sign in to continue";
+"Login.EmailTitle"="EMAIL ADDRESS";
+"Login.EmailPlaceholder"="name@example.com";
+"Login.PasswordTitle"="PASSWORD";
+"Login.PasswordPlaceholder"="Enter password";
+"Login.Button"="Login";
+"Login.ForgotPassword"="Forgot Password?";
+"Login.AccountQuestion"="Don't have an account?";
+"Login.Register"="Register";
+"Login.SuccessTitle"="Success";
+"Login.SuccessMessage"="Login successful";
+
+//Login: Español
+
+"Login.AppName"="CryptoRadar";
+"Login.Title"="Bienvenido";
+"Login.Subtitle"="Inicia sesión para continuar";
+"Login.EmailTitle"="CORREO";
+"Login.EmailPlaceholder"="correo@ejemplo.com";
+"Login.PasswordTitle"="CONTRASEÑA";
+"Login.PasswordPlaceholder"="Ingrese contraseña";
+"Login.Button"="Iniciar sesión";
+"Login.ForgotPassword"="¿Olvidaste tu contraseña?";
+"Login.AccountQuestion"="¿No tienes cuenta?";
+"Login.Register"="Registrarse";
+"Login.SuccessTitle"="Éxito";
+"Login.SuccessMessage"="Inicio de sesión exitoso";

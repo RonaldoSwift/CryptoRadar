@@ -24,14 +24,6 @@ struct CryptoRadarApp: App {
     }()
     var body: some Scene {
         WindowGroup {
-            
-            /* RegisterView(
-             viewModel:
-             container.resolve(
-             RegisterViewModel.self
-             )!
-             )*/
-            
             LoginView(
                 viewModel:
                     container.resolve(

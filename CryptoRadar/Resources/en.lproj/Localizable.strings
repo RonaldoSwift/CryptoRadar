@@ -24,18 +24,3 @@
 "Register.SuccessMessage" = "Account created successfully";
 "Register.PasswordMismatch" = "Passwords don't match";
 
-// login
-
-"Login.AppName"="CryptoRadar";
-"Login.Title"="Welcome Back";
-"Login.Subtitle"="Sign in to continue";
-"Login.EmailTitle"="EMAIL ADDRESS";
-"Login.EmailPlaceholder"="name@example.com";
-"Login.PasswordTitle"="PASSWORD";
-"Login.PasswordPlaceholder"="Enter password";
-"Login.Button"="Login";
-"Login.ForgotPassword"="Forgot Password?";
-"Login.AccountQuestion"="Don't have an account?";
-"Login.Register"="Register";
-"Login.SuccessTitle"="Success";
-"Login.SuccessMessage"="Login successful";

@@ -9,9 +9,7 @@ import Foundation
 import Combine
 
 @MainActor
-public final class LoginViewModel:
-                                        
-    ObservableObject {
+public final class LoginViewModel: ObservableObject {
     
     @Published public var email = ""
     @Published public var password = ""
@@ -19,12 +17,9 @@ public final class LoginViewModel:
     @Published public var errorMessage: String?
     @Published public var token = ""
     
-    private let repository:
-    LoginRepositoryProtocol
+    private let repository: LoginRepositoryProtocol
     
-    public init(
-        repository: LoginRepositoryProtocol
-    ) {
+    public init(repository: LoginRepositoryProtocol) {
         self.repository = repository
     }
     
@@ -33,33 +28,30 @@ public final class LoginViewModel:
         guard !email.isEmpty else {
             errorMessage =
             String(
-                localized:
-                    "Login.Error.EmptyEmail"
+                localized: "Login.Error.EmptyEmail"
             )
             return
         }
         
         guard !password.isEmpty else {
-            
             errorMessage =
             String(
-                localized:
-                    "Login.Error.EmptyPassword"
+                localized: "Login.Error.EmptyPassword"
             )
             return
         }
+        
         isLoading = true
+        
         Task {
             do {
-                let responseToken =
-                try await repository.login(
+                let responseToken = try await repository.login(
                     email: email,
                     password: password
                 )
                 token = responseToken
             } catch {
-                errorMessage =
-                error.localizedDescription
+                errorMessage = error.localizedDescription
             }
             isLoading = false
         }
