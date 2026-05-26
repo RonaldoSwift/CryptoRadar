@@ -1,20 +1,21 @@
 //
-//  RegisterView.swift
-//  CryptoRadar
+//  Register.swift
+//  Register
 //
-//  Created by Ronaldo Andre on 20/05/26.
+//  Created by Ronaldo Andre on 21/05/26.
 //
 
+import Foundation
 import SwiftUI
 
-struct RegisterView: View {
+public struct RegisterView: View {
     
     @StateObject private var viewModel: RegisterViewModel
     @State private var showPassword = false
     @State private var showConfirmPassword = false
     @State private var showSuccessAlert = false
     
-    init(
+    public init(
         viewModel: RegisterViewModel
     ) {
         _viewModel = StateObject(
@@ -22,7 +23,7 @@ struct RegisterView: View {
         )
     }
     
-    var body: some View {
+    public var body: some View {
         ZStack {
             Color.black
                 .ignoresSafeArea()

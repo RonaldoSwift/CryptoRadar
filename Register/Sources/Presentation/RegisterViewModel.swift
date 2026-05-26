@@ -2,14 +2,14 @@
 //  RegisterViewModel.swift
 //  CryptoRadar
 //
-//  Created by Ronaldo Andre on 20/05/26.
+//  Created by Ronaldo Andre on 26/05/26.
 //
 
 import Foundation
 import Combine
 
 @MainActor
-final class RegisterViewModel: ObservableObject {
+public final class RegisterViewModel: ObservableObject {
     
     @Published var email = ""
     @Published var password = ""
@@ -19,7 +19,7 @@ final class RegisterViewModel: ObservableObject {
     @Published var token = ""
     private let repository: RegisterRepositoryProtocol
     
-    init(repository: RegisterRepositoryProtocol) {
+    public init(repository: RegisterRepositoryProtocol) {
         self.repository = repository
     }
     
