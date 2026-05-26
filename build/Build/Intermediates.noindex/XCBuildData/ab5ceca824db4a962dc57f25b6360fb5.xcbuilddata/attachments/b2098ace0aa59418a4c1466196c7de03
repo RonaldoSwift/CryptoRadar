@@ -1,0 +1,10 @@
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Resources/Strings.swift
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Sources/Data/AuthServiceRegister.swift
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Sources/Data/RegisterRequest.swift
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Sources/Data/RegisterResponse.swift
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Sources/DI/RegisterAssembly.swift
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Sources/Domain/RegisterRepositoryImpl.swift
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Sources/Domain/RegisterRepositoryProtocol.swift
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Sources/Presentation/MockRegisterRepository.swift
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Sources/Presentation/RegisterView.swift
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Sources/Presentation/RegisterViewModel.swift

@@ -1,0 +1,239 @@
+{
+  "" : {
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Swinject-primary.dia",
+    "emit-module-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Swinject-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Swinject-primary-emit-module.dia",
+    "pch" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Swinject-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Swinject-primary.swiftdeps"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/DerivedSources/resource_bundle_accessor.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/resource_bundle_accessor.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/resource_bundle_accessor.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/resource_bundle_accessor.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/resource_bundle_accessor.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/resource_bundle_accessor.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/resource_bundle_accessor.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/resource_bundle_accessor.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/resource_bundle_accessor~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/Assembler.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Assembler.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Assembler.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Assembler.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Assembler.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Assembler.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Assembler.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Assembler.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Assembler~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/Assembly.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Assembly.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Assembly.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Assembly.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Assembly.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Assembly.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Assembly.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Assembly.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Assembly~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/Behavior.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Behavior.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Behavior.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Behavior.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Behavior.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Behavior.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Behavior.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Behavior.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Behavior~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/Container.Arguments.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.Arguments.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.Arguments.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.Arguments.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.Arguments.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.Arguments.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.Arguments.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.Arguments.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.Arguments~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/Container.Logging.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.Logging.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.Logging.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.Logging.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.Logging.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.Logging.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.Logging.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.Logging.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.Logging~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/Container.TypeForwarding.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.TypeForwarding.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.TypeForwarding.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.TypeForwarding.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.TypeForwarding.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.TypeForwarding.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.TypeForwarding.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.TypeForwarding.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.TypeForwarding~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/Container.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Container~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/DebugHelper.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/DebugHelper.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/DebugHelper.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/DebugHelper.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/DebugHelper.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/DebugHelper.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/DebugHelper.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/DebugHelper.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/DebugHelper~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/FunctionType.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/FunctionType.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/FunctionType.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/FunctionType.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/FunctionType.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/FunctionType.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/FunctionType.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/FunctionType.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/FunctionType~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/GraphIdentifier.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/GraphIdentifier.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/GraphIdentifier.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/GraphIdentifier.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/GraphIdentifier.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/GraphIdentifier.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/GraphIdentifier.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/GraphIdentifier.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/GraphIdentifier~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/InstanceStorage.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/InstanceStorage.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/InstanceStorage.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/InstanceStorage.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/InstanceStorage.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/InstanceStorage.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/InstanceStorage.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/InstanceStorage.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/InstanceStorage~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/InstanceWrapper.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/InstanceWrapper.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/InstanceWrapper.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/InstanceWrapper.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/InstanceWrapper.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/InstanceWrapper.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/InstanceWrapper.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/InstanceWrapper.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/InstanceWrapper~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/ObjectScope.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ObjectScope.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ObjectScope.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ObjectScope.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ObjectScope.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ObjectScope.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ObjectScope.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ObjectScope.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ObjectScope~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/ReadWriteLock.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ReadWriteLock.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ReadWriteLock.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ReadWriteLock.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ReadWriteLock.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ReadWriteLock.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ReadWriteLock.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ReadWriteLock.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ReadWriteLock~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/RecursiveLock.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/RecursiveLock.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/RecursiveLock.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/RecursiveLock.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/RecursiveLock.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/RecursiveLock.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/RecursiveLock.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/RecursiveLock.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/RecursiveLock~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/Resolver.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Resolver.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Resolver.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Resolver.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Resolver.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Resolver.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Resolver.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Resolver.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/Resolver~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/ServiceEntry.TypeForwarding.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceEntry.TypeForwarding.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceEntry.TypeForwarding.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceEntry.TypeForwarding.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceEntry.TypeForwarding.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceEntry.TypeForwarding.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceEntry.TypeForwarding.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceEntry.TypeForwarding.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceEntry.TypeForwarding~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/ServiceEntry.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceEntry.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceEntry.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceEntry.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceEntry.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceEntry.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceEntry.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceEntry.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceEntry~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/ServiceKey.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceKey.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceKey.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceKey.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceKey.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceKey.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceKey.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceKey.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ServiceKey~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/ThreadSafeDictionary.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ThreadSafeDictionary.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ThreadSafeDictionary.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ThreadSafeDictionary.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ThreadSafeDictionary.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ThreadSafeDictionary.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ThreadSafeDictionary.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ThreadSafeDictionary.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/ThreadSafeDictionary~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/UnavailableItems.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/UnavailableItems.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/UnavailableItems.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/UnavailableItems.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/UnavailableItems.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/UnavailableItems.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/UnavailableItems.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/UnavailableItems.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/UnavailableItems~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/SourcePackages/checkouts/Swinject/Sources/_Resolver.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/_Resolver.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/_Resolver.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/_Resolver.dia",
+    "index-unit-output-path" : "/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/_Resolver.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/_Resolver.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/_Resolver.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/_Resolver.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/Swinject.build/Debug-iphoneos/Swinject.build/Objects-normal/arm64/_Resolver~partial.swiftmodule"
+  }
+}

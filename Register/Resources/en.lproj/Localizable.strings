@@ -1,0 +1,25 @@
+//
+//  Localizable.strings
+//  Register
+//
+//  Created by Ronaldo Andre on 26/05/26.
+//
+
+//Register
+
+"Register.AppName" = "CryptoRadar";
+"Register.Title" = "Create Account";
+"Register.Subtitle" = "Start your financial journey with us";
+"Register.EmailTitle" = "EMAIL ADDRESS";
+"Register.EmailPlaceholder" = "name@example.com";
+"Register.PasswordTitle" = "PASSWORD";
+"Register.PasswordPlaceholder" = "Min. 8 characters";
+"Register.ConfirmPasswordTitle" = "CONFIRM PASSWORD";
+"Register.ConfirmPasswordPlaceholder" = "Repeat your password";
+"Register.CreateButton" = "Create Account";
+"Register.AccountQuestion" = "Already have an account?";
+"Register.Login" = "Log In";
+"Register.Terms" = "By creating an account, you agree to our Terms of Service and Privacy Policy.";
+"Register.SuccessTitle" = "Success";
+"Register.SuccessMessage" = "Account created successfully";
+"Register.PasswordMismatch" = "Passwords don't match";

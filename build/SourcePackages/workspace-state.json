@@ -1,0 +1,30 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "swinject",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/Swinject/Swinject.git",
+          "name" : "Swinject"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "b685b549fe4d8ae265fc7a2f27d0789720425d69",
+            "version" : "2.10.0"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "Swinject"
+      }
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}

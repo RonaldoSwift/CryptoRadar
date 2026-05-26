@@ -64,8 +64,7 @@ public struct RegisterView: View {
                                 
                                 TextField(
                                     String(
-                                        localized:
-                                            "Register.EmailPlaceholder"
+                                        localized: "Register.EmailPlaceholder"
                                     ),
                                     text: $viewModel.email
                                 )
@@ -89,37 +88,26 @@ public struct RegisterView: View {
                             alignment: .leading,
                             spacing: 8
                         ) {
-                            Text(
-                                "Register.PasswordTitle"
-                            )
+                            Text("Register.PasswordTitle")
                             .font(.caption)
                             .foregroundColor(.gray)
                             
                             HStack {
-                                Image(
-                                    systemName:"lock"
-                                )
+                                Image(systemName:"lock")
                                 .foregroundColor(.gray)
                                 
                                 Group {
-                                    
                                     if showPassword {
-                                        
                                         TextField(
-                                            String(
-                                                localized:
-                                                    "Register.PasswordPlaceholder"
-                                            ),
+                                            String(localized:"Register.PasswordPlaceholder"
+                                                  ),
                                             text: $viewModel.password
                                         )
                                         
                                     } else {
-                                        
                                         SecureField(
-                                            String(
-                                                localized:
-                                                    "Register.PasswordPlaceholder"
-                                            ),
+                                            String(localized:"Register.PasswordPlaceholder"
+                                                  ),
                                             text: $viewModel.password
                                         )
                                     }
@@ -133,8 +121,7 @@ public struct RegisterView: View {
                                     Image(
                                         systemName:
                                             showPassword ?
-                                        "eye.slash" :
-                                            "eye"
+                                        "eye.slash" : "eye"
                                     )
                                     .foregroundColor(.gray)
                                 }
@@ -167,8 +154,7 @@ public struct RegisterView: View {
                                         
                                         TextField(
                                             String(
-                                                localized:
-                                                    "Register.ConfirmPasswordPlaceholder"
+                                                localized: "Register.ConfirmPasswordPlaceholder"
                                             ),
                                             text: $viewModel.confirmPassword
                                         )
@@ -177,8 +163,7 @@ public struct RegisterView: View {
                                         
                                         SecureField(
                                             String(
-                                                localized:
-                                                    "Register.ConfirmPasswordPlaceholder"
+                                                localized: "Register.ConfirmPasswordPlaceholder"
                                             ),
                                             text: $viewModel.confirmPassword
                                         )
@@ -188,14 +173,12 @@ public struct RegisterView: View {
                                 
                                 Button {
                                     showConfirmPassword.toggle()
-                                    
                                 } label: {
                                     
                                     Image(
                                         systemName:
                                             showConfirmPassword ?
-                                        "eye.slash" :
-                                            "eye"
+                                        "eye.slash" : "eye"
                                     )
                                     .foregroundColor(.gray)
                                 }
@@ -216,20 +199,14 @@ public struct RegisterView: View {
                                     .tint(.white)
                                 
                             } else {
-                                Text(
-                                    "Register.CreateButton"
-                                )
+                                Text("Register.CreateButton")
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                             }
                         }
-                        .frame(
-                            maxWidth: .infinity
-                        )
+                        .frame(maxWidth: .infinity)
                         .frame(height:55)
-                        .background(
-                            Color.blue
-                        )
+                        .background(Color.blue)
                         .cornerRadius(15)
                         .disabled(
                             viewModel.isLoading
@@ -243,66 +220,50 @@ public struct RegisterView: View {
                                 .font(.caption)
                         }
                         Text(
-                            "Register.Terms"
+                            String(localized: "Register.Terms")
                         )
                         .font(.caption)
                         .foregroundColor(.gray)
-                        .multilineTextAlignment(
-                            .center
-                        )
+                        .multilineTextAlignment(.center)
                     }
                     .padding()
                     .background(
-                        RoundedRectangle(
-                            cornerRadius:25
-                        )
-                        .fill(
-                            Color.white.opacity(0.05)
-                        )
+                        RoundedRectangle(cornerRadius:25)
+                        .fill(Color.white.opacity(0.05)
+                             )
                     )
                     .padding(.horizontal)
                     
                     HStack {
-                        
                         Text(
-                            "Register.AccountQuestion"
+                            String(localized: "Register.AccountQuestion")
                         )
                         .foregroundColor(.gray)
                         
                         Button {
                             
                         } label: {
-                            
-                            Text(
-                                "Register.Login"
-                            )
+                            Text("Register.Login")
                             .foregroundColor(.blue)
                         }
                     }
                 }
             }
         }
-        .onChange(
-            of: viewModel.token
-        ) { token in
-            
+        .onChange(of: viewModel.token) { token in
             if !token.isEmpty {
                 showSuccessAlert = true
             }
         }
         .alert(
             String(
-                localized:
-                    "Register.SuccessTitle"
-            ),
+                localized: "Register.SuccessTitle"),
             isPresented: $showSuccessAlert
         ) {
             Button("OK") {}
         } message: {
             Text(
-                String(
-                    localized:
-                        "Register.SuccessMessage"
+                String(localized: "Register.SuccessMessage"
                 )
             )
         }

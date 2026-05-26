@@ -1,0 +1,109 @@
+{
+  "" : {
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/Register-primary.dia",
+    "emit-module-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/Register-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/Register-primary-emit-module.dia",
+    "pch" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/Register-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/Register-primary.swiftdeps"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Resources/Strings.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/Strings.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/Strings.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/Strings.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/Strings.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/Strings.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/Strings.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/Strings.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/Strings~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Sources/DI/RegisterAssembly.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterAssembly.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterAssembly.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterAssembly.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterAssembly.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterAssembly.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterAssembly.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterAssembly.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterAssembly~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Sources/Data/AuthServiceRegister.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/AuthServiceRegister.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/AuthServiceRegister.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/AuthServiceRegister.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/AuthServiceRegister.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/AuthServiceRegister.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/AuthServiceRegister.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/AuthServiceRegister.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/AuthServiceRegister~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Sources/Data/RegisterRequest.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRequest.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRequest.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRequest.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRequest.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRequest.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRequest.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRequest.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRequest~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Sources/Data/RegisterResponse.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterResponse.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterResponse.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterResponse.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterResponse.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterResponse.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterResponse.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterResponse.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterResponse~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Sources/Domain/RegisterRepositoryImpl.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRepositoryImpl.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRepositoryImpl.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRepositoryImpl.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRepositoryImpl.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRepositoryImpl.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRepositoryImpl.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRepositoryImpl.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRepositoryImpl~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Sources/Domain/RegisterRepositoryProtocol.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRepositoryProtocol.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRepositoryProtocol.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRepositoryProtocol.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRepositoryProtocol.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRepositoryProtocol.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRepositoryProtocol.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRepositoryProtocol.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterRepositoryProtocol~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Sources/Presentation/MockRegisterRepository.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/MockRegisterRepository.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/MockRegisterRepository.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/MockRegisterRepository.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/MockRegisterRepository.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/MockRegisterRepository.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/MockRegisterRepository.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/MockRegisterRepository.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/MockRegisterRepository~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Sources/Presentation/RegisterView.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterView.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterView.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterView.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterView.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterView.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterView.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterView.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterView~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Register/Sources/Presentation/RegisterViewModel.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterViewModel.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterViewModel.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterViewModel.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterViewModel.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterViewModel.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterViewModel.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterViewModel.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Register.build/Objects-normal/arm64/RegisterViewModel~partial.swiftmodule"
+  }
+}

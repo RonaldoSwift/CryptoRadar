@@ -1,0 +1,10 @@
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/Data/AuthServiceLogin.swift
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/Data/LoginRequest.swift
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/Data/LoginResponse.swift
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/DI/LoginAssembly.swift
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/Domain/LoginRepositoryImpl.swift
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/Domain/LoginRepositoryProtocol.swift
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/Helpers/LoginStrings.swift
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/Presentation/LoginView.swift
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/Presentation/LoginViewModel.swift
+/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/Preview/MockLoginRepository.swift

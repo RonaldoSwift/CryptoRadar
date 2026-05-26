@@ -1,0 +1,5 @@
+ extern const unsigned char RegisterVersionString[];
+ extern const double RegisterVersionNumber;
+
+ const unsigned char RegisterVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Register  PROJECT:CryptoRadar-1" "\n";
+ const double RegisterVersionNumber __attribute__ ((used)) = (double)1.;

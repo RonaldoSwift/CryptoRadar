@@ -1,0 +1,109 @@
+{
+  "" : {
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/Login-primary.dia",
+    "emit-module-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/Login-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/Login-primary-emit-module.dia",
+    "pch" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/Login-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/Login-primary.swiftdeps"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/DI/LoginAssembly.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginAssembly.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginAssembly.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginAssembly.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginAssembly.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginAssembly.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginAssembly.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginAssembly.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginAssembly~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/Data/AuthServiceLogin.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/AuthServiceLogin.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/AuthServiceLogin.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/AuthServiceLogin.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/AuthServiceLogin.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/AuthServiceLogin.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/AuthServiceLogin.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/AuthServiceLogin.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/AuthServiceLogin~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/Data/LoginRequest.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRequest.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRequest.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRequest.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRequest.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRequest.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRequest.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRequest.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRequest~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/Data/LoginResponse.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginResponse.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginResponse.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginResponse.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginResponse.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginResponse.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginResponse.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginResponse.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginResponse~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/Domain/LoginRepositoryImpl.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRepositoryImpl.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRepositoryImpl.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRepositoryImpl.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRepositoryImpl.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRepositoryImpl.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRepositoryImpl.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRepositoryImpl.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRepositoryImpl~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/Domain/LoginRepositoryProtocol.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRepositoryProtocol.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRepositoryProtocol.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRepositoryProtocol.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRepositoryProtocol.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRepositoryProtocol.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRepositoryProtocol.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRepositoryProtocol.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginRepositoryProtocol~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/Helpers/LoginStrings.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginStrings.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginStrings.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginStrings.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginStrings.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginStrings.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginStrings.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginStrings.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginStrings~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/Presentation/LoginView.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginView.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginView.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginView.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginView.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginView.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginView.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginView.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginView~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/Presentation/LoginViewModel.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginViewModel.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginViewModel.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginViewModel.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginViewModel.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginViewModel.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginViewModel.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginViewModel.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/LoginViewModel~partial.swiftmodule"
+  },
+  "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/Login/Sources/Preview/MockLoginRepository.swift" : {
+    "const-values" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/MockLoginRepository.swiftconstvalues",
+    "dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/MockLoginRepository.d",
+    "diagnostics" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/MockLoginRepository.dia",
+    "index-unit-output-path" : "/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/MockLoginRepository.o",
+    "llvm-bc" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/MockLoginRepository.bc",
+    "object" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/MockLoginRepository.o",
+    "swift-dependencies" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/MockLoginRepository.swiftdeps",
+    "swiftmodule" : "/Users/ronaldoandre/Documents/XCodeProjects/CryptoRadar/build/Build/Intermediates.noindex/CryptoRadar.build/Debug-iphoneos/Login.build/Objects-normal/arm64/MockLoginRepository~partial.swiftmodule"
+  }
+}
