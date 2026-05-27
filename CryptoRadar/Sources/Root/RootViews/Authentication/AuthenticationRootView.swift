@@ -1,40 +1,45 @@
 import Register
 import Login
 import SwiftUI
+import Foundation
+
+enum Route: Hashable {
+    case register
+}
 
 struct AuthenticationRootView: View {
-
+    
     @EnvironmentObject var appRootManager: AppRootManager
-
-    @State private var isActiveRegister = false
-
+    @State private var path = NavigationPath()
     var loginViewModel: LoginViewModel
     var registerViewModel: RegisterViewModel
-
+    
     var body: some View {
-
-        NavigationStack {
+        NavigationStack(path: $path) {
             LoginView(
                 viewModel: loginViewModel,
                 onLoginSuccess: {
                     appRootManager.currentRoot = .principal
                 },
+                
                 onRegisterTap: {
-                    isActiveRegister = true
+                    path.append(Route.register)
                 }
             )
-            .navigationDestination(
-                isPresented: $isActiveRegister
-            ) {
-                RegisterView(
-                    viewModel: registerViewModel,
-                    onRegisterSuccess: {
-                        isActiveRegister = false
-                    },
-                    onLoginTap: {
-                        isActiveRegister = false
-                    }
-                )
+            
+            .navigationDestination(for: Route.self) { route in
+                switch route {
+                case .register:
+                    RegisterView(
+                        viewModel: registerViewModel,
+                        onRegisterSuccess: {
+                            path.removeLast()
+                        },
+                        onLoginTap: {
+                            path.removeLast()
+                        }
+                    )
+                }
             }
         }
     }
