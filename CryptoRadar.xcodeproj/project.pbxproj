@@ -111,6 +111,50 @@
 			);
 			target = FABBC3E22FB7EF6F00F51B23 /* CryptoRadar */;
 		};
+		FAA859CF2FC749FE00A36BC2 /* Exceptions for "Features" folder in "CryptoRadar" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"/Localized: Login/Resources/Localizable.strings",
+				Login/Login.docc,
+				Login/Sources/Data/AuthServiceLogin.swift,
+				Login/Sources/Data/LoginRequest.swift,
+				Login/Sources/Data/LoginResponse.swift,
+				Login/Sources/DI/LoginAssembly.swift,
+				Login/Sources/Domain/LoginRepositoryImpl.swift,
+				Login/Sources/Domain/LoginRepositoryProtocol.swift,
+				Login/Sources/Helpers/LoginStrings.swift,
+				Login/Sources/Presentation/LoginView.swift,
+				Login/Sources/Presentation/LoginViewModel.swift,
+				Login/Sources/Preview/MockLoginRepository.swift,
+				LoginTests/LoginTests.swift,
+			);
+			target = FABBC3E22FB7EF6F00F51B23 /* CryptoRadar */;
+		};
+		FAA859D02FC749FE00A36BC2 /* Exceptions for "Features" folder in "Login" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"/Localized: Login/Resources/Localizable.strings",
+				Login/Login.docc,
+				Login/Sources/Data/AuthServiceLogin.swift,
+				Login/Sources/Data/LoginRequest.swift,
+				Login/Sources/Data/LoginResponse.swift,
+				Login/Sources/DI/LoginAssembly.swift,
+				Login/Sources/Domain/LoginRepositoryImpl.swift,
+				Login/Sources/Domain/LoginRepositoryProtocol.swift,
+				Login/Sources/Helpers/LoginStrings.swift,
+				Login/Sources/Presentation/LoginView.swift,
+				Login/Sources/Presentation/LoginViewModel.swift,
+				Login/Sources/Preview/MockLoginRepository.swift,
+			);
+			target = FA9ADCCD2FC1078800D6AEB9 /* Login */;
+		};
+		FAA859D12FC749FE00A36BC2 /* Exceptions for "Features" folder in "LoginTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				LoginTests/LoginTests.swift,
+			);
+			target = FA9ADCD72FC1078800D6AEB9 /* LoginTests */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
@@ -134,14 +178,14 @@
 			path = RegisterTests;
 			sourceTree = "<group>";
 		};
-		FA9ADCCF2FC1078800D6AEB9 /* Login */ = {
+		FAA859A82FC749D300A36BC2 /* Features */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Login;
-			sourceTree = "<group>";
-		};
-		FA9ADCDE2FC1078800D6AEB9 /* LoginTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = LoginTests;
+			exceptions = (
+				FAA859CF2FC749FE00A36BC2 /* Exceptions for "Features" folder in "CryptoRadar" target */,
+				FAA859D02FC749FE00A36BC2 /* Exceptions for "Features" folder in "Login" target */,
+				FAA859D12FC749FE00A36BC2 /* Exceptions for "Features" folder in "LoginTests" target */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 		FABBC3E52FB7EF6F00F51B23 /* CryptoRadar */ = {
@@ -240,10 +284,9 @@
 				FABBC4022FB7EF7000F51B23 /* CryptoRadarUITests */,
 				FA9A67432FBFB23500D6E8C9 /* Register */,
 				FA9A67522FBFB23500D6E8C9 /* RegisterTests */,
-				FA9ADCCF2FC1078800D6AEB9 /* Login */,
-				FA9ADCDE2FC1078800D6AEB9 /* LoginTests */,
 				FA9ADD4E2FC1125D00D6AEB9 /* Frameworks */,
 				FABBC3E42FB7EF6F00F51B23 /* Products */,
+				FAA859A82FC749D300A36BC2 /* Features */,
 			);
 			sourceTree = "<group>";
 		};
@@ -342,9 +385,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				FA9ADCCF2FC1078800D6AEB9 /* Login */,
-			);
 			name = Login;
 			packageProductDependencies = (
 				FA9ADD4F2FC1125D00D6AEB9 /* Swinject */,
@@ -366,9 +406,6 @@
 			dependencies = (
 				FA9ADCDB2FC1078800D6AEB9 /* PBXTargetDependency */,
 				FA9ADCDD2FC1078800D6AEB9 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				FA9ADCDE2FC1078800D6AEB9 /* LoginTests */,
 			);
 			name = LoginTests;
 			packageProductDependencies = (
@@ -393,6 +430,7 @@
 				FA9ADCE22FC1078800D6AEB9 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
+				FAA859A82FC749D300A36BC2 /* Features */,
 				FABBC3E52FB7EF6F00F51B23 /* CryptoRadar */,
 			);
 			name = CryptoRadar;
