@@ -24,10 +24,10 @@ struct CryptoRadarApp: App {
     }()
     var body: some Scene {
         WindowGroup {
-            LoginView(
+            RegisterView(
                 viewModel:
                     container.resolve(
-                        LoginViewModel.self
+                        RegisterViewModel.self
                     )!
             )
         }

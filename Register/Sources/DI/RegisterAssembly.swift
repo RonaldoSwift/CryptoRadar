@@ -2,15 +2,17 @@
 //  RegisterAssembly.swift
 //  CryptoRadar
 //
-//  Created by Ronaldo Andre on 20/05/26.
+//  Created by Ronaldo Andre on 26/05/26.
 //
 
 import Foundation
 import Swinject
 
-final class RegisterAssembly: Assembly {
+public final class RegisterAssembly: Assembly {
+
+    public init() {}
     
-    func assemble(container: Container) {
+    public func assemble(container: Container) {
         
         container.register(
             AuthServiceRegisterProtocol.self
@@ -30,7 +32,7 @@ final class RegisterAssembly: Assembly {
         
         container.register(
             RegisterViewModel.self
-        ) { resolver in
+        ) { @MainActor resolver in
             RegisterViewModel(
                 repository: resolver.resolve(
                     RegisterRepositoryProtocol.self
