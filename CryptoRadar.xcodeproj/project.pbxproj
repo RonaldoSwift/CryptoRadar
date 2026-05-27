@@ -115,6 +115,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"/Localized: Login/Resources/Localizable.strings",
+				"/Localized: Register/Resources/Localizable.strings",
 				Login/Login.docc,
 				Login/Sources/Data/AuthServiceLogin.swift,
 				Login/Sources/Data/LoginRequest.swift,
@@ -127,6 +128,17 @@
 				Login/Sources/Presentation/LoginViewModel.swift,
 				Login/Sources/Preview/MockLoginRepository.swift,
 				LoginTests/LoginTests.swift,
+				Register/Register.docc,
+				Register/Sources/Data/AuthServiceRegister.swift,
+				Register/Sources/Data/RegisterRequest.swift,
+				Register/Sources/Data/RegisterResponse.swift,
+				Register/Sources/DI/RegisterAssembly.swift,
+				Register/Sources/Domain/RegisterRepositoryImpl.swift,
+				Register/Sources/Domain/RegisterRepositoryProtocol.swift,
+				Register/Sources/Presentation/RegisterView.swift,
+				Register/Sources/Presentation/RegisterViewModel.swift,
+				Register/Sources/Preview/MockRegisterRepository.swift,
+				RegisterTests/RegisterTests.swift,
 			);
 			target = FABBC3E22FB7EF6F00F51B23 /* CryptoRadar */;
 		};
@@ -155,6 +167,30 @@
 			);
 			target = FA9ADCD72FC1078800D6AEB9 /* LoginTests */;
 		};
+		FAA859F52FC74AB700A36BC2 /* Exceptions for "Features" folder in "Register" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"/Localized: Register/Resources/Localizable.strings",
+				Register/Register.docc,
+				Register/Sources/Data/AuthServiceRegister.swift,
+				Register/Sources/Data/RegisterRequest.swift,
+				Register/Sources/Data/RegisterResponse.swift,
+				Register/Sources/DI/RegisterAssembly.swift,
+				Register/Sources/Domain/RegisterRepositoryImpl.swift,
+				Register/Sources/Domain/RegisterRepositoryProtocol.swift,
+				Register/Sources/Presentation/RegisterView.swift,
+				Register/Sources/Presentation/RegisterViewModel.swift,
+				Register/Sources/Preview/MockRegisterRepository.swift,
+			);
+			target = FA9A67412FBFB23500D6E8C9 /* Register */;
+		};
+		FAA859F62FC74AB700A36BC2 /* Exceptions for "Features" folder in "RegisterTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				RegisterTests/RegisterTests.swift,
+			);
+			target = FA9A674B2FBFB23500D6E8C9 /* RegisterTests */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
@@ -168,20 +204,12 @@
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		FA9A67432FBFB23500D6E8C9 /* Register */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Register;
-			sourceTree = "<group>";
-		};
-		FA9A67522FBFB23500D6E8C9 /* RegisterTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = RegisterTests;
-			sourceTree = "<group>";
-		};
 		FAA859A82FC749D300A36BC2 /* Features */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				FAA859CF2FC749FE00A36BC2 /* Exceptions for "Features" folder in "CryptoRadar" target */,
+				FAA859F52FC74AB700A36BC2 /* Exceptions for "Features" folder in "Register" target */,
+				FAA859F62FC74AB700A36BC2 /* Exceptions for "Features" folder in "RegisterTests" target */,
 				FAA859D02FC749FE00A36BC2 /* Exceptions for "Features" folder in "Login" target */,
 				FAA859D12FC749FE00A36BC2 /* Exceptions for "Features" folder in "LoginTests" target */,
 			);
@@ -282,8 +310,6 @@
 				FABBC3E52FB7EF6F00F51B23 /* CryptoRadar */,
 				FABBC3F82FB7EF7000F51B23 /* CryptoRadarTests */,
 				FABBC4022FB7EF7000F51B23 /* CryptoRadarUITests */,
-				FA9A67432FBFB23500D6E8C9 /* Register */,
-				FA9A67522FBFB23500D6E8C9 /* RegisterTests */,
 				FA9ADD4E2FC1125D00D6AEB9 /* Frameworks */,
 				FABBC3E42FB7EF6F00F51B23 /* Products */,
 				FAA859A82FC749D300A36BC2 /* Features */,
@@ -337,9 +363,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				FA9A67432FBFB23500D6E8C9 /* Register */,
-			);
 			name = Register;
 			packageProductDependencies = (
 				FA9ADD512FC1127700D6AEB9 /* Swinject */,
@@ -361,9 +384,6 @@
 			dependencies = (
 				FA9A674F2FBFB23500D6E8C9 /* PBXTargetDependency */,
 				FA9A67512FBFB23500D6E8C9 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				FA9A67522FBFB23500D6E8C9 /* RegisterTests */,
 			);
 			name = RegisterTests;
 			packageProductDependencies = (
