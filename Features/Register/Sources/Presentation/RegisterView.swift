@@ -15,12 +15,19 @@ public struct RegisterView: View {
     @State private var showConfirmPassword = false
     @State private var showSuccessAlert = false
     
+    let onRegisterSuccess: (() -> Void)?
+    let onLoginTap: (() -> Void)?
+    
     public init(
-        viewModel: RegisterViewModel
+        viewModel: RegisterViewModel,
+        onRegisterSuccess: (() -> Void)? = nil,
+        onLoginTap: (() -> Void)? = nil
     ) {
         _viewModel = StateObject(
             wrappedValue: viewModel
         )
+        self.onRegisterSuccess = onRegisterSuccess
+        self.onLoginTap = onLoginTap
     }
     
     public var body: some View {
@@ -63,9 +70,7 @@ public struct RegisterView: View {
                                 .foregroundColor(.gray)
                                 
                                 TextField(
-                                    String(
-                                        localized: "Register.EmailPlaceholder"
-                                    ),
+                                    String(localized: "Register.EmailPlaceholder"),
                                     text: $viewModel.email
                                 )
                                 .keyboardType(
@@ -89,25 +94,23 @@ public struct RegisterView: View {
                             spacing: 8
                         ) {
                             Text("Register.PasswordTitle")
-                            .font(.caption)
-                            .foregroundColor(.gray)
+                                .font(.caption)
+                                .foregroundColor(.gray)
                             
                             HStack {
                                 Image(systemName:"lock")
-                                .foregroundColor(.gray)
+                                    .foregroundColor(.gray)
                                 
                                 Group {
                                     if showPassword {
                                         TextField(
-                                            String(localized:"Register.PasswordPlaceholder"
-                                                  ),
+                                            String(localized:"Register.PasswordPlaceholder"),
                                             text: $viewModel.password
                                         )
                                         
                                     } else {
                                         SecureField(
-                                            String(localized:"Register.PasswordPlaceholder"
-                                                  ),
+                                            String(localized:"Register.PasswordPlaceholder"),
                                             text: $viewModel.password
                                         )
                                     }
@@ -119,8 +122,7 @@ public struct RegisterView: View {
                                 } label: {
                                     
                                     Image(
-                                        systemName:
-                                            showPassword ?
+                                        systemName: showPassword ?
                                         "eye.slash" : "eye"
                                     )
                                     .foregroundColor(.gray)
@@ -200,8 +202,8 @@ public struct RegisterView: View {
                                 
                             } else {
                                 Text("Register.CreateButton")
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
                             }
                         }
                         .frame(maxWidth: .infinity)
@@ -229,22 +231,20 @@ public struct RegisterView: View {
                     .padding()
                     .background(
                         RoundedRectangle(cornerRadius:25)
-                        .fill(Color.white.opacity(0.05)
-                             )
+                            .fill(Color.white.opacity(0.05)
+                                 )
                     )
                     .padding(.horizontal)
                     
                     HStack {
-                        Text(
-                            String(localized: "Register.AccountQuestion")
-                        )
+                        Text(String(localized: "Register.AccountQuestion"))
                         .foregroundColor(.gray)
                         
                         Button {
-                            
+                            onLoginTap?()
                         } label: {
                             Text("Register.Login")
-                            .foregroundColor(.blue)
+                                .foregroundColor(.blue)
                         }
                     }
                 }
@@ -252,19 +252,18 @@ public struct RegisterView: View {
         }
         .onChange(of: viewModel.token) { token in
             if !token.isEmpty {
-                showSuccessAlert = true
+                onRegisterSuccess?()
             }
         }
-        .alert(
-            String(
-                localized: "Register.SuccessTitle"),
+        .alert(String(localized: "Register.SuccessTitle"),
             isPresented: $showSuccessAlert
         ) {
-            Button("OK") {}
+            Button("OK") {
+                onRegisterSuccess?()
+            }
         } message: {
             Text(
-                String(localized: "Register.SuccessMessage"
-                )
+                String(localized: "Register.SuccessMessage")
             )
         }
     }
