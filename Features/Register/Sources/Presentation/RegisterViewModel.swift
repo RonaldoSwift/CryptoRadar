@@ -13,6 +13,7 @@ public final class RegisterViewModel: ObservableObject {
     
     @Published var email = ""
     @Published var password = ""
+    @Published var name = ""
     @Published var confirmPassword = ""
     @Published var isLoading = false
     @Published var errorMessage: String?
@@ -24,6 +25,11 @@ public final class RegisterViewModel: ObservableObject {
     }
     
     func register() {
+        
+        guard !name.isEmpty else {
+            errorMessage = "Se requiere un nombre"
+            return
+        }
         
         guard !email.isEmpty else {
             errorMessage = "Se requiere un email"
