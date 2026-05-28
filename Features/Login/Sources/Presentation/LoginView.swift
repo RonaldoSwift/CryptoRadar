@@ -14,10 +14,17 @@ public struct LoginView: View {
     @State private var showPassword = false
     @State private var showSuccessAlert = false
     
+    let onLoginSuccess: (() -> Void)?
+    let onRegisterTap: (() -> Void)?
+    
     public init(
-        viewModel: LoginViewModel
+        viewModel: LoginViewModel,
+        onLoginSuccess: (() -> Void)? = nil,
+        onRegisterTap: (() -> Void)? = nil
     ) {
         _viewModel = StateObject(wrappedValue: viewModel)
+        self.onLoginSuccess = onLoginSuccess
+        self.onRegisterTap = onRegisterTap
     }
     
     public var body: some View {
@@ -161,7 +168,7 @@ public struct LoginView: View {
                             .foregroundColor(.gray)
                         
                         Button {
-                            
+                            onRegisterTap?()
                         } label: {
                             Text(LoginStrings.register)
                                 .foregroundColor(.blue)
@@ -175,7 +182,7 @@ public struct LoginView: View {
         ) { token in
             
             if !token.isEmpty {
-                showSuccessAlert = true
+                onLoginSuccess?()
             }
         }
         .alert(
