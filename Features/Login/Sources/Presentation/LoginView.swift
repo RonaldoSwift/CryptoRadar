@@ -177,11 +177,9 @@ public struct LoginView: View {
                 }
             }
         }
-        .onChange(
-            of: viewModel.token
-        ) { token in
-            
+        .onChange(of: viewModel.token) { token in
             if !token.isEmpty {
+                showSuccessAlert = true
                 onLoginSuccess?()
             }
         }

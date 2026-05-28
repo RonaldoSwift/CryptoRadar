@@ -59,6 +59,34 @@ public struct RegisterView: View {
                             spacing: 8
                         ) {
                             
+                            Text("Register.NameTitle")
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                            
+                            HStack {
+                                
+                                Image(systemName: "person")
+                                    .foregroundColor(.gray)
+                                
+                                TextField(
+                                    String(localized: "Register.NamePlaceholder"),
+                                    text: $viewModel.name
+                                )
+                                .textInputAutocapitalization(.words)
+                                .foregroundColor(.white)
+                            }
+                            .padding()
+                            .background(
+                                Color.black.opacity(0.6)
+                            )
+                            .cornerRadius(12)
+                        }
+                        
+                        VStack(
+                            alignment: .leading,
+                            spacing: 8
+                        ) {
+                            
                             Text("Register.EmailTitle")
                                 .font(.caption)
                                 .foregroundColor(.gray)
@@ -73,12 +101,8 @@ public struct RegisterView: View {
                                     String(localized: "Register.EmailPlaceholder"),
                                     text: $viewModel.email
                                 )
-                                .keyboardType(
-                                    .emailAddress
-                                )
-                                .textInputAutocapitalization(
-                                    .never
-                                )
+                                .keyboardType(.emailAddress)
+                                .textInputAutocapitalization(.never)
                                 .autocorrectionDisabled()
                                 .foregroundColor(.white)
                             }
@@ -122,7 +146,7 @@ public struct RegisterView: View {
                                 } label: {
                                     
                                     Image(
-                                        systemName: showPassword ?
+                                        systemName:showPassword ?
                                         "eye.slash" : "eye"
                                     )
                                     .foregroundColor(.gray)
@@ -139,34 +163,26 @@ public struct RegisterView: View {
                             alignment: .leading,
                             spacing: 8
                         ) {
-                            Text(
-                                "Register.ConfirmPasswordTitle"
-                            )
+                            
+                            Text("Register.ConfirmPasswordTitle")
                             .font(.caption)
                             .foregroundColor(.gray)
                             
                             HStack {
-                                Image(
-                                    systemName:"shield"
-                                )
+                                Image(systemName:"shield")
                                 .foregroundColor(.gray)
                                 
                                 Group {
+                                    
                                     if showConfirmPassword {
-                                        
                                         TextField(
-                                            String(
-                                                localized: "Register.ConfirmPasswordPlaceholder"
-                                            ),
+                                            String(localized: "Register.ConfirmPasswordPlaceholder"),
                                             text: $viewModel.confirmPassword
                                         )
                                         
                                     } else {
-                                        
                                         SecureField(
-                                            String(
-                                                localized: "Register.ConfirmPasswordPlaceholder"
-                                            ),
+                                            String(localized: "Register.ConfirmPasswordPlaceholder"),
                                             text: $viewModel.confirmPassword
                                         )
                                     }
@@ -194,12 +210,11 @@ public struct RegisterView: View {
                         
                         Button {
                             viewModel.register()
-                            
                         } label: {
+                            
                             if viewModel.isLoading {
                                 ProgressView()
                                     .tint(.white)
-                                
                             } else {
                                 Text("Register.CreateButton")
                                     .fontWeight(.bold)
@@ -210,9 +225,7 @@ public struct RegisterView: View {
                         .frame(height:55)
                         .background(Color.blue)
                         .cornerRadius(15)
-                        .disabled(
-                            viewModel.isLoading
-                        )
+                        .disabled(viewModel.isLoading)
                         
                         if let error =
                             viewModel.errorMessage {
@@ -238,7 +251,7 @@ public struct RegisterView: View {
                     
                     HStack {
                         Text(String(localized: "Register.AccountQuestion"))
-                        .foregroundColor(.gray)
+                            .foregroundColor(.gray)
                         
                         Button {
                             onLoginTap?()
@@ -256,7 +269,7 @@ public struct RegisterView: View {
             }
         }
         .alert(String(localized: "Register.SuccessTitle"),
-            isPresented: $showSuccessAlert
+               isPresented: $showSuccessAlert
         ) {
             Button("OK") {
                 onRegisterSuccess?()

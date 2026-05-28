@@ -13,6 +13,7 @@ public final class RegisterViewModel: ObservableObject {
     
     @Published var email = ""
     @Published var password = ""
+    @Published var name = ""
     @Published var confirmPassword = ""
     @Published var isLoading = false
     @Published var errorMessage: String?
@@ -25,13 +26,28 @@ public final class RegisterViewModel: ObservableObject {
     
     func register() {
         
+        guard !name.isEmpty else {
+            errorMessage = "Se requiere un nombre"
+            return
+        }
+        
         guard !email.isEmpty else {
             errorMessage = "Se requiere un email"
             return
         }
         
+        guard !email.contains("@") else {
+            errorMessage = "Email invalido @"
+            return
+        }
+        
         guard !password.isEmpty else {
             errorMessage = "Se requiere una contraseña"
+            return
+        }
+        
+        guard password.count >= 6 else {
+            errorMessage = "Contraseña debe tener minimo 6 caracteres"
             return
         }
         
