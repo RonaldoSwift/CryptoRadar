@@ -27,17 +27,23 @@ public final class LoginViewModel: ObservableObject {
         errorMessage = nil
         guard !email.isEmpty else {
             errorMessage =
-            String(
-                localized: "Login.Error.EmptyEmail"
-            )
+            String(localized: "Login.Error.EmptyEmail")
+            return
+        }
+        
+        guard email.contains("@") else {
+            errorMessage = "Email invalido @"
             return
         }
         
         guard !password.isEmpty else {
             errorMessage =
-            String(
-                localized: "Login.Error.EmptyPassword"
-            )
+            String(localized: "Login.Error.EmptyPassword")
+            return
+        }
+        
+        guard password.count >= 6 else {
+            errorMessage = "Contraseña debe tener minimo 6 caracteres"
             return
         }
         

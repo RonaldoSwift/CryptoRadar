@@ -30,8 +30,18 @@ public final class RegisterViewModel: ObservableObject {
             return
         }
         
+        guard !email.contains("@") else {
+            errorMessage = "Email invalido @"
+            return
+        }
+        
         guard !password.isEmpty else {
             errorMessage = "Se requiere una contraseña"
+            return
+        }
+        
+        guard password.count >= 6 else {
+            errorMessage = "Contraseña debe tener minimo 6 caracteres"
             return
         }
         

@@ -6,8 +6,16 @@ import Register
 @main
 struct CryptoRadarApp: App {
     
-    @StateObject private var appRootManager =
-    AppRootManager()
+    @StateObject private var appRootManager: AppRootManager = {
+        
+        let manager = AppRootManager()
+        
+        // KeyChainManager
+        if KeychainManager.shared.getToken() != nil {
+            manager.currentRoot = .principal
+        }
+        return manager
+    }()
     
     let container: Container = {
         let assembler = Assembler([
