@@ -204,6 +204,11 @@
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		FA4E8FD02FCE50C3005FB0D1 /* Core */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Core;
+			sourceTree = "<group>";
+		};
 		FAA859A82FC749D300A36BC2 /* Features */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -307,6 +312,7 @@
 		FABBC3DA2FB7EF6F00F51B23 = {
 			isa = PBXGroup;
 			children = (
+				FA4E8FD02FCE50C3005FB0D1 /* Core */,
 				FABBC3E52FB7EF6F00F51B23 /* CryptoRadar */,
 				FABBC3F82FB7EF7000F51B23 /* CryptoRadarTests */,
 				FABBC4022FB7EF7000F51B23 /* CryptoRadarUITests */,
@@ -450,6 +456,7 @@
 				FA9ADCE22FC1078800D6AEB9 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
+				FA4E8FD02FCE50C3005FB0D1 /* Core */,
 				FAA859A82FC749D300A36BC2 /* Features */,
 				FABBC3E52FB7EF6F00F51B23 /* CryptoRadar */,
 			);

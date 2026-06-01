@@ -18,3 +18,5 @@
 "Login.Register"="Register";
 "Login.SuccessTitle"="Success";
 "Login.SuccessMessage"="Login successful";
+"Login.Error.InvalidEmail" = "Invalid email address";
+"Login.Error.PasswordMinLength" = "The password must be at least 6 characters long";

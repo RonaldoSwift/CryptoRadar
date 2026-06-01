@@ -23,3 +23,12 @@
 "Register.SuccessTitle" = "Éxito";
 "Register.SuccessMessage" = "Cuenta creada correctamente";
 "Register.PasswordMismatch" = "Las contraseñas no coinciden";
+
+"Register.Error.EmptyName" = "Name is required";
+"Register.NameTitle" = "Name";
+"Register.Error.EmptyEmail" = "Email is required";
+"Register.Error.InvalidEmail" = "Invalid email address";
+"Register.Error.EmptyPassword" = "Password is required";
+"Register.Error.PasswordMinLength" = "The password must be at least 6 characters long";
+"Register.Error.PasswordMismatch" = "Passwords do not match";
+"Register.NamePlaceholder" = "Enter your name";
