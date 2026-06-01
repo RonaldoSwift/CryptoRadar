@@ -16,6 +16,7 @@ public final class LoginViewModel: ObservableObject {
     @Published public var isLoading = false
     @Published public var errorMessage: String?
     @Published public var token = ""
+    @Published var showSuccessAlert = false
     
     private let repository: LoginRepositoryProtocol
     
@@ -29,17 +30,17 @@ public final class LoginViewModel: ObservableObject {
             errorMessage = LoginStrings.emptyEmail
             return
         }
-
+        
         guard email.isValidEmail else {
             errorMessage = LoginStrings.invalidEmail
             return
         }
-
+        
         guard !password.isEmpty else {
             errorMessage = LoginStrings.emptyPassword
             return
         }
-
+        
         guard password.count >= 6 else {
             errorMessage = LoginStrings.passwordMinLength
             return
@@ -54,6 +55,7 @@ public final class LoginViewModel: ObservableObject {
                     password: password
                 )
                 token = responseToken
+                showSuccessAlert = true
             } catch {
                 errorMessage = error.localizedDescription
             }
