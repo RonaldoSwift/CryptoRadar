@@ -2,6 +2,7 @@ import SwiftUI
 import Swinject
 import Login
 import Register
+import StorageKit
 
 @main
 struct CryptoRadarApp: App {

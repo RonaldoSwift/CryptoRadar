@@ -8,26 +8,28 @@
 import Foundation
 import Security
 
-class KeychainManager {
+public final class KeychainManager {
     
-    static let shared = KeychainManager()
+    public static let shared = KeychainManager()
     
     private init() {}
     
-    //Grabar un token en el Keychain
-    func saveToken(_ token: String) {
+    // Grabar un token en el Keychain
+    public func saveToken(_ token: String) {
         let data = token.data(using: .utf8)!
+
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrAccount as String: "accessToken",
             kSecValueData as String: data
         ]
+
         SecItemDelete(query as CFDictionary)
         SecItemAdd(query as CFDictionary, nil)
     }
     
-    // Sirve para obtener un token del Keychain
-    func getToken() -> String? {
+    // Obtener token
+    public func getToken() -> String? {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrAccount as String: "accessToken",
@@ -46,15 +48,17 @@ class KeychainManager {
            let data = dataTypeRef as? Data {
             return String(data: data, encoding: .utf8)
         }
+        
         return nil
     }
     
-    // Eliminar un token del Keychain
-    func deleteToken(){
+    // Eliminar token
+    public func deleteToken() {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrAccount as String: "accessToken"
         ]
+        
         SecItemDelete(query as CFDictionary)
     }
 }

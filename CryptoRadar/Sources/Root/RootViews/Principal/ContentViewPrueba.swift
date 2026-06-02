@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import StorageKit
 
 struct ContentViewPrueba: View {
     @EnvironmentObject var appRootManager: AppRootManager
