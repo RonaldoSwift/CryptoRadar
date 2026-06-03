@@ -6,10 +6,28 @@
 //
 
 import SwiftUI
+import StorageKit
 
 struct ContentViewPrueba: View {
+    @EnvironmentObject var appRootManager: AppRootManager
+    
     var body: some View {
-        Text("Hello, Content!")
+        VStack(spacing: 20) {
+            Text("Pantalla Principal")
+                .font(.largeTitle)
+            Button {
+                KeychainManager.shared.deleteToken()
+                appRootManager.currentRoot = .authentication
+            } label: {
+                Text("Cerrar sesión")
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 55)
+                    .background(Color.red)
+                    .cornerRadius(12)
+            }
+            .padding(.horizontal)
+        }
     }
 }
 

@@ -13,6 +13,7 @@ public final class RegisterViewModel: ObservableObject {
     
     @Published var email = ""
     @Published var password = ""
+    @Published var name = ""
     @Published var confirmPassword = ""
     @Published var isLoading = false
     @Published var errorMessage: String?
@@ -25,18 +26,45 @@ public final class RegisterViewModel: ObservableObject {
     
     func register() {
         
+        guard !name.isEmpty else {
+            errorMessage = String(
+                localized: "Register.Error.EmptyName"
+            )
+            return
+        }
+        
         guard !email.isEmpty else {
-            errorMessage = "Se requiere un email"
+            errorMessage = String(
+                localized: "Register.Error.EmptyEmail"
+            )
+            return
+        }
+        
+        guard email.isValidEmail else {
+            errorMessage = String(
+                localized: "Register.Error.InvalidEmail"
+            )
             return
         }
         
         guard !password.isEmpty else {
-            errorMessage = "Se requiere una contraseña"
+            errorMessage = String(
+                localized: "Register.Error.EmptyPassword"
+            )
+            return
+        }
+        
+        guard password.count >= 6 else {
+            errorMessage = String(
+                localized: "Register.Error.PasswordMinLength"
+            )
             return
         }
         
         guard password == confirmPassword else {
-            errorMessage = "Las contraseñas no coinciden"
+            errorMessage = String(
+                localized: "Register.Error.PasswordMismatch"
+            )
             return
         }
         
@@ -59,3 +87,18 @@ public final class RegisterViewModel: ObservableObject {
         }
     }
 }
+
+// MARK: - String Extensions
+
+public extension String {
+    
+    var isValidEmail: Bool {
+        let emailRegex = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
+        
+        return NSPredicate(
+            format: "SELF MATCHES %@",
+            emailRegex)
+        .evaluate(with: self)
+    }
+}
+

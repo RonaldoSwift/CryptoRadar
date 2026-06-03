@@ -1,4 +1,5 @@
 import Register
+import StorageKit
 import Login
 import SwiftUI
 import Foundation
@@ -19,6 +20,9 @@ struct AuthenticationRootView: View {
             LoginView(
                 viewModel: loginViewModel,
                 onLoginSuccess: {
+                    KeychainManager.shared.saveToken(
+                        loginViewModel.token
+                    )
                     appRootManager.currentRoot = .principal
                 },
                 

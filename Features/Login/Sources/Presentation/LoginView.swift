@@ -12,7 +12,6 @@ public struct LoginView: View {
     
     @StateObject private var viewModel: LoginViewModel
     @State private var showPassword = false
-    @State private var showSuccessAlert = false
     
     let onLoginSuccess: (() -> Void)?
     let onRegisterTap: (() -> Void)?
@@ -177,20 +176,14 @@ public struct LoginView: View {
                 }
             }
         }
-        .onChange(
-            of: viewModel.token
-        ) { token in
-            
-            if !token.isEmpty {
-                onLoginSuccess?()
-            }
-        }
         .alert(
             LoginStrings.successTitle,
-            isPresented:$showSuccessAlert
+            isPresented:$viewModel.showSuccessAlert
         ) {
             
-            Button("OK") {}
+            Button("OK") {
+                onLoginSuccess?()
+            }
         } message: {
             Text(LoginStrings.successMessage)
         }
