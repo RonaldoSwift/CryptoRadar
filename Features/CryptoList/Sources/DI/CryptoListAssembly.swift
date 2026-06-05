@@ -26,8 +26,7 @@ public final class CryptoListAssembly: Assembly {
         
         container.register(CryptoListViewModel.self) {@MainActor resolver in
             CryptoListViewModel(
-                repository:resolver.resolve(
-                    CryptoListRepositoryProtocol.self)!
+                repository:resolver.resolve(CryptoListRepositoryProtocol.self)!
             )
         }
     }

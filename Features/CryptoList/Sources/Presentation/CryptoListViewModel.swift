@@ -50,8 +50,7 @@ public final class CryptoListViewModel: ObservableObject {
     public func refresh() async {
         errorMessage = nil
         do {
-            cryptos =
-            try await repository.getTopCryptos()
+            cryptos = try await repository.getTopCryptos()
         } catch {
             errorMessage = CryptoListStrings.errorUpdate
         }

@@ -117,7 +117,7 @@ private extension CryptoListView {
                 LazyVStack(spacing: 14) {
                     
                     ForEach(viewModel.filteredCryptos) { crypto in
-                        CryptoListCard(crypto:crypto)
+                        CryptoCardView(crypto:crypto)
                     }
                 }
             }

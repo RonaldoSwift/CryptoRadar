@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CryptoListCard: View {
+struct CryptoCardView: View {
     
     let crypto: Crypto
     
