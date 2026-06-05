@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA85A1EA2FD1EA61008BD0C7 /* CryptoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA85A1DF2FD1EA61008BD0C7 /* CryptoList.framework */; };
+		FA85A1F42FD1EA61008BD0C7 /* CryptoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA85A1DF2FD1EA61008BD0C7 /* CryptoList.framework */; };
+		FA85A1F52FD1EA61008BD0C7 /* CryptoList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA85A1DF2FD1EA61008BD0C7 /* CryptoList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA8F4A4A2FD229B000CBA861 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = FA8F4A492FD229B000CBA861 /* Swinject */; };
 		FA9577752FBE6F800004EEDB /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = FA9577742FBE6F800004EEDB /* Swinject */; };
 		FA9A674D2FBFB23500D6E8C9 /* Register.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9A67422FBFB23500D6E8C9 /* Register.framework */; };
 		FA9A67572FBFB23500D6E8C9 /* Register.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9A67422FBFB23500D6E8C9 /* Register.framework */; };
@@ -26,6 +30,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FA85A1EB2FD1EA61008BD0C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FABBC3DB2FB7EF6F00F51B23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA85A1DE2FD1EA61008BD0C7;
+			remoteInfo = CryptoList;
+		};
+		FA85A1ED2FD1EA61008BD0C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FABBC3DB2FB7EF6F00F51B23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FABBC3E22FB7EF6F00F51B23;
+			remoteInfo = CryptoRadar;
+		};
+		FA85A1F22FD1EA61008BD0C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FABBC3DB2FB7EF6F00F51B23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA85A1DE2FD1EA61008BD0C7;
+			remoteInfo = CryptoList;
+		};
 		FA9A674E2FBFB23500D6E8C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FABBC3DB2FB7EF6F00F51B23 /* Project object */;
@@ -127,6 +152,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				FA9ADCE42FC1078800D6AEB9 /* Login.framework in Embed Frameworks */,
+				FA85A1F52FD1EA61008BD0C7 /* CryptoList.framework in Embed Frameworks */,
 				FA9A67582FBFB23500D6E8C9 /* Register.framework in Embed Frameworks */,
 				FAA55A052FCF65CD00A5B53A /* StorageKit.framework in Embed Frameworks */,
 			);
@@ -158,6 +184,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA85A1DF2FD1EA61008BD0C7 /* CryptoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA85A1E92FD1EA61008BD0C7 /* CryptoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9A67422FBFB23500D6E8C9 /* Register.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Register.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9A674C2FBFB23500D6E8C9 /* RegisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9ADCCE2FC1078800D6AEB9 /* Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +198,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FA85A2042FD1EA6F008BD0C7 /* Exceptions for "Features" folder in "CryptoList" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CryptoList/CryptoList.docc,
+				CryptoList/Resources/CryptoListStrings.swift,
+			);
+			target = FA85A1DE2FD1EA61008BD0C7 /* CryptoList */;
+		};
+		FA85A2052FD1EA6F008BD0C7 /* Exceptions for "Features" folder in "CryptoListTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CryptoListTests/CryptoListTests.swift,
+			);
+			target = FA85A1E82FD1EA61008BD0C7 /* CryptoListTests */;
+		};
 		FA9A673C2FBFABE000D6E8C9 /* Exceptions for "CryptoRadar" folder in "CryptoRadar" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -207,6 +250,9 @@
 			membershipExceptions = (
 				"/Localized: Login/Resources/Localizable.strings",
 				"/Localized: Register/Resources/Localizable.strings",
+				CryptoList/CryptoList.docc,
+				CryptoList/Resources/CryptoListStrings.swift,
+				CryptoListTests/CryptoListTests.swift,
 				Login/Login.docc,
 				Login/Sources/Data/AuthServiceLogin.swift,
 				Login/Sources/Data/LoginRequest.swift,
@@ -313,6 +359,8 @@
 				FAA859F62FC74AB700A36BC2 /* Exceptions for "Features" folder in "RegisterTests" target */,
 				FAA859D02FC749FE00A36BC2 /* Exceptions for "Features" folder in "Login" target */,
 				FAA859D12FC749FE00A36BC2 /* Exceptions for "Features" folder in "LoginTests" target */,
+				FA85A2042FD1EA6F008BD0C7 /* Exceptions for "Features" folder in "CryptoList" target */,
+				FA85A2052FD1EA6F008BD0C7 /* Exceptions for "Features" folder in "CryptoListTests" target */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -339,6 +387,22 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FA85A1DC2FD1EA61008BD0C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA8F4A4A2FD229B000CBA861 /* Swinject in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA85A1E62FD1EA61008BD0C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA85A1EA2FD1EA61008BD0C7 /* CryptoList.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA9A673F2FBFB23500D6E8C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -394,6 +458,7 @@
 			files = (
 				FA9577752FBE6F800004EEDB /* Swinject in Frameworks */,
 				FAA55A042FCF65CD00A5B53A /* StorageKit.framework in Frameworks */,
+				FA85A1F42FD1EA61008BD0C7 /* CryptoList.framework in Frameworks */,
 				FA9ADCE32FC1078800D6AEB9 /* Login.framework in Frameworks */,
 				FA9A67572FBFB23500D6E8C9 /* Register.framework in Frameworks */,
 			);
@@ -448,6 +513,8 @@
 				FA9ADCD82FC1078800D6AEB9 /* LoginTests.xctest */,
 				FAA559EF2FCF65CD00A5B53A /* StorageKit.framework */,
 				FAA559F92FCF65CD00A5B53A /* StorageKitTests.xctest */,
+				FA85A1DF2FD1EA61008BD0C7 /* CryptoList.framework */,
+				FA85A1E92FD1EA61008BD0C7 /* CryptoListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -455,6 +522,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		FA85A1DA2FD1EA61008BD0C7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA9A673D2FBFB23500D6E8C9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -479,6 +553,48 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		FA85A1DE2FD1EA61008BD0C7 /* CryptoList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA85A1FA2FD1EA61008BD0C7 /* Build configuration list for PBXNativeTarget "CryptoList" */;
+			buildPhases = (
+				FA85A1DA2FD1EA61008BD0C7 /* Headers */,
+				FA85A1DB2FD1EA61008BD0C7 /* Sources */,
+				FA85A1DC2FD1EA61008BD0C7 /* Frameworks */,
+				FA85A1DD2FD1EA61008BD0C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CryptoList;
+			packageProductDependencies = (
+				FA8F4A492FD229B000CBA861 /* Swinject */,
+			);
+			productName = CryptoList;
+			productReference = FA85A1DF2FD1EA61008BD0C7 /* CryptoList.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FA85A1E82FD1EA61008BD0C7 /* CryptoListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA85A1FB2FD1EA61008BD0C7 /* Build configuration list for PBXNativeTarget "CryptoListTests" */;
+			buildPhases = (
+				FA85A1E52FD1EA61008BD0C7 /* Sources */,
+				FA85A1E62FD1EA61008BD0C7 /* Frameworks */,
+				FA85A1E72FD1EA61008BD0C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA85A1EC2FD1EA61008BD0C7 /* PBXTargetDependency */,
+				FA85A1EE2FD1EA61008BD0C7 /* PBXTargetDependency */,
+			);
+			name = CryptoListTests;
+			packageProductDependencies = (
+			);
+			productName = CryptoListTests;
+			productReference = FA85A1E92FD1EA61008BD0C7 /* CryptoListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FA9A67412FBFB23500D6E8C9 /* Register */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA9A67592FBFB23500D6E8C9 /* Build configuration list for PBXNativeTarget "Register" */;
@@ -623,6 +739,7 @@
 				FA9A67562FBFB23500D6E8C9 /* PBXTargetDependency */,
 				FA9ADCE22FC1078800D6AEB9 /* PBXTargetDependency */,
 				FAA55A032FCF65CD00A5B53A /* PBXTargetDependency */,
+				FA85A1F32FD1EA61008BD0C7 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				FA4E8FD02FCE50C3005FB0D1 /* Shared */,
@@ -693,6 +810,13 @@
 				LastSwiftUpdateCheck = 2650;
 				LastUpgradeCheck = 2650;
 				TargetAttributes = {
+					FA85A1DE2FD1EA61008BD0C7 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					FA85A1E82FD1EA61008BD0C7 = {
+						CreatedOnToolsVersion = 26.5;
+						TestTargetID = FABBC3E22FB7EF6F00F51B23;
+					};
 					FA9A67412FBFB23500D6E8C9 = {
 						CreatedOnToolsVersion = 26.5;
 					};
@@ -754,11 +878,27 @@
 				FA9ADCD72FC1078800D6AEB9 /* LoginTests */,
 				FAA559EE2FCF65CD00A5B53A /* StorageKit */,
 				FAA559F82FCF65CD00A5B53A /* StorageKitTests */,
+				FA85A1DE2FD1EA61008BD0C7 /* CryptoList */,
+				FA85A1E82FD1EA61008BD0C7 /* CryptoListTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FA85A1DD2FD1EA61008BD0C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA85A1E72FD1EA61008BD0C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA9A67402FBFB23500D6E8C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -825,6 +965,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FA85A1DB2FD1EA61008BD0C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA85A1E52FD1EA61008BD0C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA9A673E2FBFB23500D6E8C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -891,6 +1045,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FA85A1EC2FD1EA61008BD0C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA85A1DE2FD1EA61008BD0C7 /* CryptoList */;
+			targetProxy = FA85A1EB2FD1EA61008BD0C7 /* PBXContainerItemProxy */;
+		};
+		FA85A1EE2FD1EA61008BD0C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FABBC3E22FB7EF6F00F51B23 /* CryptoRadar */;
+			targetProxy = FA85A1ED2FD1EA61008BD0C7 /* PBXContainerItemProxy */;
+		};
+		FA85A1F32FD1EA61008BD0C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA85A1DE2FD1EA61008BD0C7 /* CryptoList */;
+			targetProxy = FA85A1F22FD1EA61008BD0C7 /* PBXContainerItemProxy */;
+		};
 		FA9A674F2FBFB23500D6E8C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FA9A67412FBFB23500D6E8C9 /* Register */;
@@ -959,6 +1128,122 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		FA85A1F62FD1EA61008BD0C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H9JXH336V5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronaldoVargas.CryptoList;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FA85A1F72FD1EA61008BD0C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H9JXH336V5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronaldoVargas.CryptoList;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FA85A1F82FD1EA61008BD0C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H9JXH336V5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronaldoVargas.CryptoListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoRadar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CryptoRadar";
+			};
+			name = Debug;
+		};
+		FA85A1F92FD1EA61008BD0C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H9JXH336V5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronaldoVargas.CryptoListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoRadar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CryptoRadar";
+			};
+			name = Release;
+		};
 		FA9A675A2FBFB23500D6E8C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1589,6 +1874,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FA85A1FA2FD1EA61008BD0C7 /* Build configuration list for PBXNativeTarget "CryptoList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA85A1F62FD1EA61008BD0C7 /* Debug */,
+				FA85A1F72FD1EA61008BD0C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA85A1FB2FD1EA61008BD0C7 /* Build configuration list for PBXNativeTarget "CryptoListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA85A1F82FD1EA61008BD0C7 /* Debug */,
+				FA85A1F92FD1EA61008BD0C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FA9A67592FBFB23500D6E8C9 /* Build configuration list for PBXNativeTarget "Register" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1693,6 +1996,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FA8F4A492FD229B000CBA861 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA9577732FBE6F800004EEDB /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
 		FA9577742FBE6F800004EEDB /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FA9577732FBE6F800004EEDB /* XCRemoteSwiftPackageReference "Swinject" */;

@@ -3,6 +3,7 @@ import Swinject
 import Login
 import Register
 import StorageKit
+import CryptoList
 
 @main
 struct CryptoRadarApp: App {
@@ -21,7 +22,8 @@ struct CryptoRadarApp: App {
     let container: Container = {
         let assembler = Assembler([
             RegisterAssembly(),
-            LoginAssembly()
+            LoginAssembly(),
+            CryptoListAssembly()
         ])
         return assembler.resolver
         as! Container
@@ -44,7 +46,7 @@ struct CryptoRadarApp: App {
                         )!
                 )
             case .principal:
-                ContentViewPrueba()
+                CryptoListView(viewModel:container.resolve(CryptoListViewModel.self)!)
             }
         }
         .environmentObject(
