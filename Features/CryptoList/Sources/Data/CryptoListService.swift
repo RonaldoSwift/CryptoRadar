@@ -11,7 +11,7 @@ public protocol CryptoListServiceProtocol {
     func getTopCryptos() async throws -> [CryptoResponse]
 }
 
-public final class AuthServiceCryptoList: CryptoListServiceProtocol {
+public final class CryptoListService: CryptoListServiceProtocol {
     
     private var baseURL: String {
         Bundle.main.object(forInfoDictionaryKey: "BASE_URL_LIST_CRYPTO") as? String ?? ""

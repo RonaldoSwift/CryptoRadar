@@ -15,7 +15,7 @@ public final class CryptoListAssembly: Assembly {
     public func assemble(container: Container) {
         
         container.register(CryptoListServiceProtocol.self) { _ in
-            AuthServiceCryptoList()
+            CryptoListService()
         }
         
         container.register(CryptoListRepositoryProtocol.self) { resolver in
