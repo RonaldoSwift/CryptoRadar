@@ -8,6 +8,7 @@
 import XCTest
 @testable import CryptoList
 
+@MainActor
 final class CryptoListTests: XCTestCase {
 
     override func setUpWithError() throws {

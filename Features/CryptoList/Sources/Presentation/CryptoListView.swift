@@ -10,6 +10,7 @@
 //
 
 import SwiftUI
+import CryptoList
 
 public struct CryptoListView: View {
     
@@ -44,7 +45,7 @@ private extension CryptoListView {
     var header: some View {
         
         HStack {
-            Text("Search Assets")
+            Text(CryptoListStrings.title)
                 .font(.title2)
                 .bold()
                 .foregroundColor(.white)
@@ -61,8 +62,8 @@ private extension CryptoListView {
     var searchBar: some View {
         
         TextField(
-            "Search assets...",
-            text: .constant("")
+            CryptoListStrings.searchPlaceholder,
+            text: $viewModel.searchText
         )
         .padding()
         .background(Color.white.opacity(0.06))
@@ -106,7 +107,7 @@ private extension CryptoListView {
                 Text(error)
                     .foregroundColor(.white)
                 
-                Button("Retry") {
+                Button(CryptoListStrings.retry) {
                     viewModel.loadCryptos()
                 }
             }
@@ -115,8 +116,8 @@ private extension CryptoListView {
             ScrollView {
                 LazyVStack(spacing: 14) {
                     
-                    ForEach(viewModel.cryptos) { crypto in
-                        CryptoCard(crypto:crypto)
+                    ForEach(viewModel.filteredCryptos) { crypto in
+                        CryptoListCard(crypto:crypto)
                     }
                 }
             }

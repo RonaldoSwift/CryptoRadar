@@ -7,18 +7,25 @@
 
 import Foundation
 
-public final class CryptoListRepositoryImpl:
-                                            
-    CryptoListRepositoryProtocol {
+public final class CryptoListRepositoryImpl: CryptoListRepositoryProtocol {
     
-    private let service:CryptoServiceProtocol
+    private let service: CryptoListServiceProtocol
     
-    public init(service: CryptoServiceProtocol)
-    {
+    public init(service:CryptoListServiceProtocol) {
         self.service = service
     }
     
-    public func getTopCryptos() async throws -> [CryptoResponse] {
-        try await service.getTopCryptos()
+    public func getTopCryptos() async throws -> [Crypto] {
+        let response = try await service.getTopCryptos()
+        return response.map { cryptoResponse in
+            Crypto(
+                id: cryptoResponse.id,
+                symbol: cryptoResponse.symbol,
+                name: cryptoResponse.name,
+                image: cryptoResponse.image,
+                currentPrice: cryptoResponse.currentPrice,
+                priceChangePercentage24h: cryptoResponse.priceChangePercentage24h
+            )
+        }
     }
 }

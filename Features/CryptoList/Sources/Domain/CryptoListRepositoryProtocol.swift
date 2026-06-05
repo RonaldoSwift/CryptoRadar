@@ -9,5 +9,5 @@ import Foundation
 
 public protocol CryptoListRepositoryProtocol {
     
-    func getTopCryptos() async throws -> [CryptoResponse]
+    func getTopCryptos() async throws -> [Crypto]
 }

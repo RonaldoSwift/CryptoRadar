@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class CryptoResponse: Codable, Identifiable {
+public struct CryptoResponse: Codable, Identifiable {
     
     public let id: String
     public let symbol: String
@@ -15,15 +15,6 @@ public class CryptoResponse: Codable, Identifiable {
     public let image: String
     public let currentPrice: Double
     public let priceChangePercentage24h: Double
-    
-    public init(id: String,symbol: String,name: String,image: String,currentPrice: Double,priceChangePercentage24h: Double) {
-        self.id = id
-        self.symbol = symbol
-        self.name = name
-        self.image = image
-        self.currentPrice = currentPrice
-        self.priceChangePercentage24h = priceChangePercentage24h
-    }
     
     enum CodingKeys: String, CodingKey {
         case id

@@ -6,22 +6,31 @@
 //
 
 import Foundation
-public import Combine
+import Combine
+import CryptoList
 
 @MainActor
 public final class CryptoListViewModel: ObservableObject {
     
-    @Published var cryptos: [CryptoResponse] = []
+    @Published public private(set) var cryptos: [Crypto] = []
+    @Published public private(set) var isLoading = false
+    @Published public private(set) var errorMessage: String?
+    @Published var searchText: String = ""
     
-    @Published var isLoading = false
-    
-    @Published var errorMessage: String?
+    //Filtrado de criptomonedas según el texto de búsqueda
+    var filteredCryptos: [Crypto] {
+        if searchText.isEmpty {
+            return cryptos
+        }
+        return cryptos.filter {
+            $0.name.localizedCaseInsensitiveContains(searchText)
+        }
+    }
     
     private let repository: CryptoListRepositoryProtocol
     
     public init(repository:CryptoListRepositoryProtocol) {
-        self.repository =
-        repository
+        self.repository = repository
     }
     
     public func loadCryptos() {
@@ -32,19 +41,19 @@ public final class CryptoListViewModel: ObservableObject {
             do {
                 cryptos = try await repository.getTopCryptos()
             } catch {
-                errorMessage = "No pudimos cargar las criptomonedas. Intenta nuevamente."
+                errorMessage = CryptoListStrings.errorMesageCrypto
             }
             isLoading = false
         }
     }
     
     public func refresh() async {
-        
+        errorMessage = nil
         do {
             cryptos =
             try await repository.getTopCryptos()
         } catch {
-            errorMessage = "No pudimos actualizar."
+            errorMessage = CryptoListStrings.errorUpdate
         }
     }
 }

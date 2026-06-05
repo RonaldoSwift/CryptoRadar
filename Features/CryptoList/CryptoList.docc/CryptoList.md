@@ -1,13 +1,39 @@
 # ``CryptoList``
 
-<!--@START_MENU_TOKEN@-->Summary<!--@END_MENU_TOKEN@-->
+Pantalla encargada de mostrar el listado de criptomonedas con búsqueda, actualización y manejo de estados.
 
 ## Overview
 
-<!--@START_MENU_TOKEN@-->Text<!--@END_MENU_TOKEN@-->
+CryptoList permite visualizar las criptomonedas obtenidas desde un servicio remoto.
+
+Características principales:
+
+- Lista de criptomonedas
+- Búsqueda por nombre
+- Pull to refresh
+- Manejo de carga y errores
+- Arquitectura basada en MVVM + Repository
 
 ## Topics
 
-### <!--@START_MENU_TOKEN@-->Group<!--@END_MENU_TOKEN@-->
+### Views
 
-- <!--@START_MENU_TOKEN@-->``Symbol``<!--@END_MENU_TOKEN@-->
+- ``CryptoListView``
+
+### View Models
+
+- ``CryptoListViewModel``
+
+### Repository
+
+- ``CryptoListRepositoryProtocol``
+- ``CryptoListRepositoryImpl``
+
+### Services
+
+- ``CryptoServiceProtocol``
+- ``AuthServiceCryptoList``
+
+### Models
+
+- ``CryptoResponse``

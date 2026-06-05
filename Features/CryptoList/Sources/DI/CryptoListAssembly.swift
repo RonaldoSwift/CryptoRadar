@@ -14,18 +14,20 @@ public final class CryptoListAssembly: Assembly {
     
     public func assemble(container: Container) {
         
-        container.register(CryptoServiceProtocol.self) { _ in
+        container.register(CryptoListServiceProtocol.self) { _ in
             AuthServiceCryptoList()
         }
         
         container.register(CryptoListRepositoryProtocol.self) { resolver in
             CryptoListRepositoryImpl(
-                service:resolver.resolve(CryptoServiceProtocol.self)!
+                service:resolver.resolve(CryptoListServiceProtocol.self)!
             )
         }
         
-        container.register(CryptoListViewModel.self) { resolver in
-            CryptoListViewModel(repository:resolver.resolve(CryptoListRepositoryProtocol.self)!
+        container.register(CryptoListViewModel.self) {@MainActor resolver in
+            CryptoListViewModel(
+                repository:resolver.resolve(
+                    CryptoListRepositoryProtocol.self)!
             )
         }
     }

@@ -9,9 +9,9 @@ import Foundation
 
 final class MockCryptoRepository: CryptoListRepositoryProtocol {
     
-    func getTopCryptos() async throws -> [CryptoResponse] {
+    func getTopCryptos() async throws -> [Crypto] {
         [
-            CryptoResponse(
+            Crypto(
                 id: "bitcoin",
                 symbol: "BTC",
                 name: "Bitcoin",
@@ -20,7 +20,7 @@ final class MockCryptoRepository: CryptoListRepositoryProtocol {
                 priceChangePercentage24h: 2.45
             ),
             
-            CryptoResponse(
+            Crypto(
                 id: "ethereum",
                 symbol: "ETH",
                 name: "Ethereum",

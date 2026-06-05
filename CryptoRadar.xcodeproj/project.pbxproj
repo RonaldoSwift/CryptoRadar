@@ -202,7 +202,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				CryptoList/CryptoList.docc,
-				CryptoList/CryptoList.swift,
+				CryptoList/Resources/CryptoListStrings.swift,
 			);
 			target = FA85A1DE2FD1EA61008BD0C7 /* CryptoList */;
 		};
@@ -251,7 +251,7 @@
 				"/Localized: Login/Resources/Localizable.strings",
 				"/Localized: Register/Resources/Localizable.strings",
 				CryptoList/CryptoList.docc,
-				CryptoList/CryptoList.swift,
+				CryptoList/Resources/CryptoListStrings.swift,
 				CryptoListTests/CryptoListTests.swift,
 				Login/Login.docc,
 				Login/Sources/Data/AuthServiceLogin.swift,
