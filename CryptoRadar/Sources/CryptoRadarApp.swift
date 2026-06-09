@@ -20,11 +20,14 @@ struct CryptoRadarApp: App {
         return manager
     }()
     
+    @State private var selectedCrypto: String?
+    
     let container: Container = {
         let assembler = Assembler([
             RegisterAssembly(),
             LoginAssembly(),
-            CryptoListAssembly()
+            CryptoListAssembly(),
+            DetalleAssembly()
         ])
         return assembler.resolver
         as! Container
@@ -47,11 +50,27 @@ struct CryptoRadarApp: App {
                         )!
                 )
             case .principal:
-                CryptoListView(viewModel:container.resolve(CryptoListViewModel.self)!)
+                NavigationStack {
+                    CryptoListView(viewModel:container.resolve(CryptoListViewModel.self)!) { cryptoId in
+                        selectedCrypto = cryptoId
+                    }.navigationDestination(item:$selectedCrypto) { id in
+                        CryptoDetailV(
+                            cryptoId: id,
+                            viewModel:container.resolve(CryptoDetailViewModel.self)!
+                        )
+                    }
+                }
             }
         }
         .environmentObject(
             appRootManager
         )
+    }
+}
+
+extension String: Identifiable {
+    
+    public var id: String {
+        self
     }
 }

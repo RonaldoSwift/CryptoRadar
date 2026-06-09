@@ -282,7 +282,7 @@
 				CryptoList/Resources/CryptoListStrings.swift,
 				CryptoListTests/CryptoListTests.swift,
 				Detalle/Detalle.docc,
-				Detalle/Presentation/CryptoDetailView.swift,
+				Detalle/Sources/Presentation/CryptoDetailView.swift,
 				DetalleTests/DetalleTests.swift,
 				Login/Login.docc,
 				Login/Sources/Data/AuthServiceLogin.swift,
@@ -363,7 +363,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Detalle/Detalle.docc,
-				Detalle/Presentation/CryptoDetailView.swift,
+				Detalle/Sources/Presentation/CryptoDetailView.swift,
 			);
 			target = FAB66B322FD38BDF00F36BB8 /* Detalle */;
 		};

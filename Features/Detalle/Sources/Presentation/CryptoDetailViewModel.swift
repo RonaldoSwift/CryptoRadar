@@ -23,16 +23,28 @@ public final class CryptoDetailViewModel: ObservableObject {
     }
     
     public func load(id: String) {
-        
+
+        print("ID recibido:", id)
+
         isLoading = true
         errorMessage = nil
-        
+
         Task {
             do {
-                crypto = try await repository.getCryptoDetail(id: id)
+
+                let result = try await repository.getCryptoDetail(id: id)
+
+                print("Detalle OK:", result)
+
+                crypto = result
+
             } catch {
-                errorMessage = "No pudimos cargar el detalle."
+
+                print("ERROR DETALLE:", error)
+
+                errorMessage = CryptoDetailStrings.errorDetail
             }
+
             isLoading = false
         }
     }

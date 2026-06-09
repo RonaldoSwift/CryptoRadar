@@ -12,7 +12,7 @@ public struct CryptoDetailView: View {
     
     public var body: some View {
         VStack{
-            Text("view")
+            Text("Si elimino este view en el App sale error no reconoce el Import")
         }
     }
 }

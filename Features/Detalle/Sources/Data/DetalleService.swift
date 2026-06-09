@@ -15,7 +15,7 @@ public protocol DetalleServiceProtocol {
 public final class CryptoDetailService: DetalleServiceProtocol {
     
     private var baseURL: String {
-        Bundle.main.object(forInfoDictionaryKey:"BASE_URL") as? String ?? ""
+        Bundle.main.object(forInfoDictionaryKey:"BASE_URL_LIST_CRYPTO") as? String ?? ""
     }
     
     public init() {}
