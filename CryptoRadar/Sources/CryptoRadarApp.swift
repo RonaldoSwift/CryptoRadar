@@ -4,6 +4,7 @@ import Login
 import Register
 import StorageKit
 import CryptoList
+import Detalle
 
 @main
 struct CryptoRadarApp: App {
