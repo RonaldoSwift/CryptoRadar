@@ -54,7 +54,7 @@ struct CryptoRadarApp: App {
                     CryptoListView(viewModel:container.resolve(CryptoListViewModel.self)!) { cryptoId in
                         selectedCrypto = cryptoId
                     }.navigationDestination(item:$selectedCrypto) { id in
-                        CryptoDetailV(
+                        CryptoDetailView(
                             cryptoId: id,
                             viewModel:container.resolve(CryptoDetailViewModel.self)!
                         )

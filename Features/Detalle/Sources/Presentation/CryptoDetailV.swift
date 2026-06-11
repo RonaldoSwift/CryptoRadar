@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct CryptoDetailV: View {
+public struct CryptoDetailView: View {
     
     @StateObject private var viewModel: CryptoDetailViewModel
     private let cryptoId: String
@@ -28,7 +28,7 @@ public struct CryptoDetailV: View {
     }
 }
 
-private extension CryptoDetailV {
+private extension CryptoDetailView {
     @ViewBuilder var content: some View {
         
         if viewModel.isLoading {
@@ -162,7 +162,7 @@ private extension CryptoDetailV {
 }
 
 #Preview {
-    CryptoDetailV(
+    CryptoDetailView(
         cryptoId: "bitcoin",
         viewModel:
             CryptoDetailViewModel(
