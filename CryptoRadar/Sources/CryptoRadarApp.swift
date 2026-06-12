@@ -20,7 +20,7 @@ struct CryptoRadarApp: App {
         return manager
     }()
     
-    @State private var selectedCrypto: String?
+    @State private var selectedCrypto: CryptoSelection?
     
     let container: Container = {
         let assembler = Assembler([
@@ -51,12 +51,16 @@ struct CryptoRadarApp: App {
                 )
             case .principal:
                 NavigationStack {
-                    CryptoListView(viewModel:container.resolve(CryptoListViewModel.self)!) { cryptoId in
-                        selectedCrypto = cryptoId
-                    }.navigationDestination(item:$selectedCrypto) { id in
+                    CryptoListView(viewModel:container.resolve(CryptoListViewModel.self)!
+                    ) { cryptoId in
+                        selectedCrypto = CryptoSelection(id: cryptoId)
+                    }
+                    .navigationDestination(item: $selectedCrypto) { crypto in
                         CryptoDetailView(
-                            cryptoId: id,
-                            viewModel:container.resolve(CryptoDetailViewModel.self)!
+                            cryptoId: crypto.id,
+                            viewModel:container.resolve(
+                                CryptoDetailViewModel.self
+                            )!
                         )
                     }
                 }
@@ -68,9 +72,6 @@ struct CryptoRadarApp: App {
     }
 }
 
-extension String: Identifiable {
-    
-    public var id: String {
-        self
-    }
+private struct CryptoSelection: Identifiable, Hashable {
+    let id: String
 }

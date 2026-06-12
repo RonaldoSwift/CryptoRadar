@@ -138,5 +138,5 @@ private extension CryptoListView {
                 repository:
                     MockCryptoRepository()
             )
-    ) {cryptoId in}
+    ) {_ in}
 }

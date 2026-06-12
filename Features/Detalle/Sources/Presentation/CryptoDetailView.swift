@@ -93,7 +93,7 @@ private extension CryptoDetailView {
             .fill(Color.white.opacity(0.05))
             .frame(height: 220)
             .overlay {
-                Text("Graph")
+                Text(CryptoDetailStrings.graph)
                     .foregroundColor(.gray)
             }
     }
@@ -103,7 +103,7 @@ private extension CryptoDetailView {
         
         VStack(alignment: .leading,spacing: 16) {
             
-            Text("Statistics")
+            Text(CryptoDetailStrings.statistics)
                 .foregroundColor(.white)
                 .bold()
             
@@ -113,7 +113,13 @@ private extension CryptoDetailView {
                     GridItem()
                 ]
             ) {
-                statCard(title: "Price",value:"$\(crypto.currentPrice,default: "%.2f")")
+                statCard(
+                    title: "Price",
+                    value: String(
+                        format: "$%.2f",
+                        crypto.currentPrice
+                    )
+                )
                 statCard(title: "ID",value: crypto.id)
             }
         }
@@ -141,7 +147,7 @@ private extension CryptoDetailView {
         VStack(alignment: .leading,spacing: 12
         ) {
             Text("About \(crypto.name)")
-                .foregroundColor(.white)
+                .foregroundColor(.white)    
                 .bold()
             
             Text(
@@ -149,7 +155,7 @@ private extension CryptoDetailView {
             )
             .foregroundColor(.gray)
             
-            Button(viewModel.showFullDescription ? "Read less" : "Read more") {
+            Button(viewModel.showFullDescription ? CryptoDetailStrings.readLess : CryptoDetailStrings.readMore) {
                 viewModel.toggleDescription()
             }
             .foregroundColor(.blue)

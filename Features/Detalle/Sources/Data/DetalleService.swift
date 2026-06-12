@@ -7,7 +7,7 @@
 
 import Foundation
 
-public final class CryptoDetailService {
+public final class DetalleService {
     
     private var baseURL: String {
         Bundle.main.object(forInfoDictionaryKey:"BASE_URL_LIST_CRYPTO") as? String ?? ""
