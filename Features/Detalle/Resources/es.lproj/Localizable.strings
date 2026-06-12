@@ -1,0 +1,8 @@
+"CryptoDetail.Transaccion" = "Bitcoin (BTC) es una moneda digital descentralizada que permite transacciones entre personas sin depender de una autoridad central.";
+"CryptoDetail.Error.Detail" = "No pudimos cargar el detalle.";
+"CryptoDetail.CurrentPrice" = "PRECIO ACTUAL";
+"CryptoDetail.Statistics" = "Estadísticas";
+"CryptoDetail.Graph" = "Gráfico";
+"CryptoDetail.ReadMore" = "Leer más";
+"CryptoDetail.ReadLess" = "Leer menos";
+"CryptoDetail.About" = "Acerca de";

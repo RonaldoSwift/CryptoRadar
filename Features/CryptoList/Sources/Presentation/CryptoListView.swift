@@ -15,9 +15,11 @@ import CryptoList
 public struct CryptoListView: View {
     
     @StateObject private var viewModel: CryptoListViewModel
+    private let onTapCrypto: (String) -> Void
     
-    public init(viewModel:CryptoListViewModel) {
+    public init(viewModel:CryptoListViewModel,onTapCrypto: @escaping (String) -> Void) {
         _viewModel = StateObject(wrappedValue:viewModel)
+        self.onTapCrypto = onTapCrypto
     }
     
     public var body: some View {
@@ -115,9 +117,11 @@ private extension CryptoListView {
         } else {
             ScrollView {
                 LazyVStack(spacing: 14) {
-                    
                     ForEach(viewModel.filteredCryptos) { crypto in
-                        CryptoCardView(crypto:crypto)
+                        CryptoCardView(crypto: crypto)
+                            .onTapGesture {
+                                onTapCrypto(crypto.id)
+                            }
                     }
                 }
             }
@@ -134,5 +138,5 @@ private extension CryptoListView {
                 repository:
                     MockCryptoRepository()
             )
-    )
+    ) {_ in}
 }
