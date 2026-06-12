@@ -276,13 +276,23 @@
 		FAA859CF2FC749FE00A36BC2 /* Exceptions for "Features" folder in "CryptoRadar" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				"/Localized: Detalle/Resources/Localizable.strings",
 				"/Localized: Login/Resources/Localizable.strings",
 				"/Localized: Register/Resources/Localizable.strings",
 				CryptoList/CryptoList.docc,
 				CryptoList/Resources/CryptoListStrings.swift,
 				CryptoListTests/CryptoListTests.swift,
 				Detalle/Detalle.docc,
+				Detalle/Sources/Data/CryptoDetailResponse.swift,
+				Detalle/Sources/Data/DetalleService.swift,
+				Detalle/Sources/DI/DetalleAssembly.swift,
+				Detalle/Sources/Domain/CryptoDetail.swift,
+				Detalle/Sources/Domain/CryptoDetailRepositoryImpl.swift,
+				Detalle/Sources/Domain/CryptoDetailRepositoryProtocol.swift,
+				Detalle/Sources/Helpers/CryptoDetailStrings.swift,
 				Detalle/Sources/Presentation/CryptoDetailView.swift,
+				Detalle/Sources/Presentation/CryptoDetailViewModel.swift,
+				Detalle/Sources/Preview/MockCryptoDetailRepository.swift,
 				DetalleTests/DetalleTests.swift,
 				Login/Login.docc,
 				Login/Sources/Data/AuthServiceLogin.swift,
@@ -362,8 +372,18 @@
 		FAB66B5A2FD38C0100F36BB8 /* Exceptions for "Features" folder in "Detalle" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				"/Localized: Detalle/Resources/Localizable.strings",
 				Detalle/Detalle.docc,
+				Detalle/Sources/Data/CryptoDetailResponse.swift,
+				Detalle/Sources/Data/DetalleService.swift,
+				Detalle/Sources/DI/DetalleAssembly.swift,
+				Detalle/Sources/Domain/CryptoDetail.swift,
+				Detalle/Sources/Domain/CryptoDetailRepositoryImpl.swift,
+				Detalle/Sources/Domain/CryptoDetailRepositoryProtocol.swift,
+				Detalle/Sources/Helpers/CryptoDetailStrings.swift,
 				Detalle/Sources/Presentation/CryptoDetailView.swift,
+				Detalle/Sources/Presentation/CryptoDetailViewModel.swift,
+				Detalle/Sources/Preview/MockCryptoDetailRepository.swift,
 			);
 			target = FAB66B322FD38BDF00F36BB8 /* Detalle */;
 		};

@@ -7,12 +7,7 @@
 
 import Foundation
 
-public protocol DetalleServiceProtocol {
-    
-    func getCryptoDetail(id: String) async throws -> CryptoDetailResponse
-}
-
-public final class CryptoDetailService: DetalleServiceProtocol {
+public final class CryptoDetailService {
     
     private var baseURL: String {
         Bundle.main.object(forInfoDictionaryKey:"BASE_URL_LIST_CRYPTO") as? String ?? ""

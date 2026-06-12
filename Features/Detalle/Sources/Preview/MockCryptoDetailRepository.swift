@@ -15,7 +15,7 @@ final class MockCryptoDetailRepository: CryptoDetailRepositoryProtocol {
             name: "Bitcoin",
             image: "",
             description:
-                CryptoDetailStrings.currentDescription,
+                "advaDv",
             currentPrice: 105432.20,
             isFavorite: false
         )

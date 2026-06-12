@@ -9,9 +9,9 @@ import Foundation
 
 public final class CryptoDetailRepositoryImpl: CryptoDetailRepositoryProtocol {
     
-    private let service: DetalleServiceProtocol
+    private let service: CryptoDetailService
     
-    public init(service: DetalleServiceProtocol) {
+    public init(service: CryptoDetailService) {
         self.service = service
     }
     

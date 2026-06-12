@@ -12,13 +12,13 @@ public final class DetalleAssembly: Assembly {
     public init() {}
     
     public func assemble(container: Container) {
-        container.register(DetalleServiceProtocol.self) { _ in
+        container.register(CryptoDetailService.self.self) { _ in
             CryptoDetailService()
         }
         
         container.register(CryptoDetailRepositoryProtocol.self) { resolver in
             CryptoDetailRepositoryImpl(
-                service: resolver.resolve(DetalleServiceProtocol.self)!
+                service: resolver.resolve(CryptoDetailService.self)!
             )
         }
         
