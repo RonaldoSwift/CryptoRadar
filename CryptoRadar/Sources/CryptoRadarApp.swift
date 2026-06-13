@@ -5,6 +5,7 @@ import Register
 import StorageKit
 import CryptoList
 import Detalle
+import Favorite
 
 @main
 struct CryptoRadarApp: App {
@@ -50,17 +51,36 @@ struct CryptoRadarApp: App {
                         )!
                 )
             case .principal:
-                NavigationStack {
-                    CryptoListView(viewModel:container.resolve(CryptoListViewModel.self)!
-                    ) { cryptoId in
-                        selectedCrypto = CryptoSelection(id: cryptoId)
+
+                TabView {
+                    NavigationStack {
+                        CryptoListView(
+                            viewModel: container.resolve(CryptoListViewModel.self)!
+                        ) { cryptoId in
+
+                            selectedCrypto = CryptoSelection(id: cryptoId)
+                        }
+                        .navigationDestination(item: $selectedCrypto) { crypto in
+                            CryptoDetailView(
+                                cryptoId: crypto.id,
+                                viewModel: container.resolve(CryptoDetailViewModel.self)!
+                            )
+                        }
                     }
-                    .navigationDestination(item: $selectedCrypto) { crypto in
-                        CryptoDetailView(
-                            cryptoId: crypto.id,
-                            viewModel:container.resolve(
-                                CryptoDetailViewModel.self
-                            )!
+                    .tabItem {
+                        Label(
+                            "Market",
+                            systemImage: "chart.line.uptrend.xyaxis"
+                        )
+                    }
+
+                    NavigationStack {
+                        FavoriteListView()
+                    }
+                    .tabItem {
+                        Label(
+                            "Favorites",
+                            systemImage: "star.fill"
                         )
                     }
                 }
