@@ -272,7 +272,9 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Favorite/Favorite.docc,
-				Favorite/Favorite.swift,
+				Favorite/Sources/Domain/FavoriteCrypto.swift,
+				Favorite/Sources/Presentation/FavoriteListView.swift,
+				Favorite/Sources/Presentation/FavoriteListViewModel.swift,
 			);
 			target = FA8DA80C2FDCD781002C381E /* Favorite */;
 		};
@@ -337,7 +339,9 @@
 				Detalle/Sources/Preview/MockCryptoDetailRepository.swift,
 				DetalleTests/DetalleTests.swift,
 				Favorite/Favorite.docc,
-				Favorite/Favorite.swift,
+				Favorite/Sources/Domain/FavoriteCrypto.swift,
+				Favorite/Sources/Presentation/FavoriteListView.swift,
+				Favorite/Sources/Presentation/FavoriteListViewModel.swift,
 				FavoriteTests/FavoriteTests.swift,
 				Login/Login.docc,
 				Login/Sources/Data/AuthServiceLogin.swift,
