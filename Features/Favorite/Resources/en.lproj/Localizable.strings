@@ -1,0 +1,7 @@
+/* Favorite View */
+"favorite.title" = "Favorites";
+"favorite.empty" = "No favorites yet";
+"favorite.empty.description" = "Add cryptocurrencies to your favorites";
+"favorite.add" = "Add to Favorites";
+"favorite.remove" = "Remove from Favorites";
+"favorite.search.favorite" = "Search favorite";

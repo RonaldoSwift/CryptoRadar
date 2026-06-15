@@ -271,8 +271,10 @@
 		FA8DA8322FDCD791002C381E /* Exceptions for "Features" folder in "Favorite" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				"/Localized: Favorite/Resources/Localizable.strings",
 				Favorite/Favorite.docc,
 				Favorite/Sources/Domain/FavoriteCrypto.swift,
+				Favorite/Sources/Helpers/FavoriteStrings.swift,
 				Favorite/Sources/Presentation/FavoriteListView.swift,
 				Favorite/Sources/Presentation/FavoriteListViewModel.swift,
 			);
@@ -321,6 +323,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"/Localized: Detalle/Resources/Localizable.strings",
+				"/Localized: Favorite/Resources/Localizable.strings",
 				"/Localized: Login/Resources/Localizable.strings",
 				"/Localized: Register/Resources/Localizable.strings",
 				CryptoList/CryptoList.docc,
@@ -340,6 +343,7 @@
 				DetalleTests/DetalleTests.swift,
 				Favorite/Favorite.docc,
 				Favorite/Sources/Domain/FavoriteCrypto.swift,
+				Favorite/Sources/Helpers/FavoriteStrings.swift,
 				Favorite/Sources/Presentation/FavoriteListView.swift,
 				Favorite/Sources/Presentation/FavoriteListViewModel.swift,
 				FavoriteTests/FavoriteTests.swift,

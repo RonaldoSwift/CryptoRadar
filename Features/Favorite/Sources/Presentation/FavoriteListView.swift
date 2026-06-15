@@ -38,7 +38,7 @@ private extension FavoriteListView {
     var header: some View {
         
         HStack {
-            Text("Favorites")
+            Text(FavoriteStrings.title)
                 .font(.title2)
                 .bold()
                 .foregroundColor(.white)
@@ -49,7 +49,7 @@ private extension FavoriteListView {
     
     var searchBar: some View {
         
-        TextField("Search favorite",text:$viewModel.searchText)
+        TextField(FavoriteStrings.searchFavorite,text:$viewModel.searchText)
             .padding()
             .background(Color.white.opacity(0.06))
             .cornerRadius(14)
@@ -66,7 +66,7 @@ private extension FavoriteListView {
                     .font(.largeTitle)
                     .foregroundColor(.gray)
                 
-                Text("No favorites")
+                Text(FavoriteStrings.empty)
                     .foregroundColor(.gray)
             }
             
@@ -128,8 +128,6 @@ private extension FavoriteListView {
 #Preview {
     
     FavoriteListView(
-        viewModel:
-            FavoriteListViewModel()
+        viewModel: FavoriteListViewModel()
     ) { _ in }
-    
 }
