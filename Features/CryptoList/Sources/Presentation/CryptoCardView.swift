@@ -11,6 +11,9 @@ struct CryptoCardView: View {
     
     let crypto: Crypto
     
+    let isFavorite: Bool
+    let onTapFavorite: () -> Void
+    
     var body: some View {
         
         HStack(spacing: 14) {
@@ -35,12 +38,56 @@ struct CryptoCardView: View {
             
             Spacer()
             
-            VStack(alignment:.trailing) {
-                Text(crypto.currentPrice.formatted(.currency(code:"USD")))
-                    .foregroundColor(.white)
-                
-                Text(String(format:"%.2f%%",crypto.priceChangePercentage24h))
-                    .foregroundColor(crypto.priceChangePercentage24h >= 0 ? .green: .red)
+            VStack(
+                alignment: .trailing,
+                spacing: 8
+            ) {
+
+                Button {
+
+                    onTapFavorite()
+
+                } label: {
+
+                    Image(
+                        systemName:
+                            isFavorite
+                        ?
+                        "star.fill"
+                        :
+                        "star"
+                    )
+                    .foregroundColor(
+                        .yellow
+                    )
+                }
+                .buttonStyle(.plain)
+
+                Text(
+                    crypto.currentPrice
+                        .formatted(
+                            .currency(
+                                code: "USD"
+                            )
+                        )
+                )
+                .foregroundColor(
+                    .white
+                )
+
+                Text(
+                    String(
+                        format: "%.2f%%",
+                        crypto.priceChangePercentage24h
+                    )
+                )
+                .foregroundColor(
+                    crypto.priceChangePercentage24h >= 0
+                    ?
+                    .green
+                    :
+                    .red
+                )
             }
         }
         .padding()

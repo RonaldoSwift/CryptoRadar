@@ -117,11 +117,19 @@ private extension CryptoListView {
         } else {
             ScrollView {
                 LazyVStack(spacing: 14) {
-                    ForEach(viewModel.filteredCryptos) { crypto in
-                        CryptoCardView(crypto: crypto)
-                            .onTapGesture {
-                                onTapCrypto(crypto.id)
+                    ForEach( viewModel.filteredCryptos) { crypto in
+                        CryptoCardView(
+                            crypto: crypto,
+                            isFavorite:viewModel.isFavorite(id: crypto.id),
+                            onTapFavorite: {
+                                viewModel.toggleFavorite(id: crypto.id)
                             }
+
+                        )
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            onTapCrypto(crypto.id)
+                        }
                     }
                 }
             }

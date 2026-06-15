@@ -17,6 +17,8 @@ public final class CryptoListViewModel: ObservableObject {
     @Published public private(set) var errorMessage: String?
     @Published var searchText: String = ""
     
+    @Published var favoriteIds: Set<String> = []
+    
     //Filtrado de criptomonedas según el texto de búsqueda
     var filteredCryptos: [Crypto] {
         if searchText.isEmpty {
@@ -54,5 +56,18 @@ public final class CryptoListViewModel: ObservableObject {
         } catch {
             errorMessage = CryptoListStrings.errorUpdate
         }
+    }
+    
+    public func toggleFavorite(id: String) {
+        
+        if favoriteIds.contains(id) {
+            favoriteIds.remove(id)
+        } else {
+            favoriteIds.insert(id)
+        }
+    }
+    
+    public func isFavorite(id: String) -> Bool {
+        favoriteIds.contains(id)
     }
 }
