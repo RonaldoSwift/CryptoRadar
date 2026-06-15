@@ -6,15 +6,20 @@
 //
 
 import SwiftUI
+import CryptoList
 
 public struct FavoriteListView: View {
     
-    @StateObject private var viewModel = FavoriteListViewModel()
+    @ObservedObject private var viewModel = FavoriteListViewModel()
     
-    public init() {}
+    private let onTapCrypto: (String) -> Void
+    
+    public init(viewModel:FavoriteListViewModel,onTapCrypto:@escaping (String)->Void) {
+        self.viewModel = viewModel
+        self.onTapCrypto = onTapCrypto
+    }
     
     public var body: some View {
-        
         ZStack {
             Color.black.ignoresSafeArea()
             VStack(spacing: 24) {
@@ -68,8 +73,22 @@ private extension FavoriteListView {
         } else {
             ScrollView {
                 LazyVStack(spacing: 14) {
-                    ForEach(viewModel.filteredFavorites) { crypto in
-                        favoriteCard(crypto: crypto)
+                    ForEach(viewModel.filteredFavorites) { favorite in
+                        favoriteCard(crypto:favorite)
+                            .overlay(alignment:.trailing) {
+                                Button {
+                                    viewModel.removeFavorite(id:favorite.id)
+                                } label: {
+                                    Image(systemName:"star.fill")
+                                        .foregroundColor(.yellow)
+                                        .padding(.trailing,16)
+                                }
+                                .buttonStyle(.plain)
+                            }
+                            .contentShape(Rectangle())
+                            .onTapGesture {
+                                onTapCrypto(favorite.id)
+                            }
                     }
                 }
             }
@@ -107,5 +126,10 @@ private extension FavoriteListView {
 }
 
 #Preview {
-    FavoriteListView()
+    
+    FavoriteListView(
+        viewModel:
+            FavoriteListViewModel()
+    ) { _ in }
+    
 }

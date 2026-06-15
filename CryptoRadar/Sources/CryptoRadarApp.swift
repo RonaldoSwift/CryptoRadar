@@ -22,6 +22,7 @@ struct CryptoRadarApp: App {
     }()
     
     @State private var selectedCrypto: CryptoSelection?
+    @StateObject private var favoriteViewModel = FavoriteListViewModel()
     
     let container: Container = {
         let assembler = Assembler([
@@ -51,13 +52,14 @@ struct CryptoRadarApp: App {
                         )!
                 )
             case .principal:
-
+                
                 TabView {
                     NavigationStack {
                         CryptoListView(
-                            viewModel: container.resolve(CryptoListViewModel.self)!
+                            viewModel: container.resolve(CryptoListViewModel.self)!,
+                            favoriteViewModel: favoriteViewModel
                         ) { cryptoId in
-
+                            
                             selectedCrypto = CryptoSelection(id: cryptoId)
                         }
                         .navigationDestination(item: $selectedCrypto) { crypto in
@@ -68,20 +70,22 @@ struct CryptoRadarApp: App {
                         }
                     }
                     .tabItem {
-                        Label(
-                            "Market",
-                            systemImage: "chart.line.uptrend.xyaxis"
-                        )
+                        Label("Market",systemImage: "chart.line.uptrend.xyaxis")
                     }
-
+                    
                     NavigationStack {
-                        FavoriteListView()
+                        FavoriteListView(viewModel: favoriteViewModel) { cryptoId in
+                                selectedCrypto = CryptoSelection(id:cryptoId)
+                            }
+                            .navigationDestination(item: $selectedCrypto) { crypto in
+                                CryptoDetailView(
+                                    cryptoId: crypto.id,
+                                    viewModel: container.resolve(CryptoDetailViewModel.self)!
+                                )
+                            }
                     }
                     .tabItem {
-                        Label(
-                            "Favorites",
-                            systemImage: "star.fill"
-                        )
+                        Label("Favorites",systemImage: "star.fill")
                     }
                 }
             }

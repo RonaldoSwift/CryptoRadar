@@ -70,4 +70,15 @@ public final class CryptoListViewModel: ObservableObject {
     public func isFavorite(id: String) -> Bool {
         favoriteIds.contains(id)
     }
+    
+    
+    public var favoriteCryptos: [Crypto] {
+
+        cryptos.filter {
+
+            favoriteIds.contains(
+                $0.id
+            )
+        }
+    }
 }

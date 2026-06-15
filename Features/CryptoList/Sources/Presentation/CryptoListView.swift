@@ -11,14 +11,17 @@
 
 import SwiftUI
 import CryptoList
+import Favorite
 
 public struct CryptoListView: View {
     
     @StateObject private var viewModel: CryptoListViewModel
     private let onTapCrypto: (String) -> Void
+    @ObservedObject private var favoriteViewModel: FavoriteListViewModel
     
-    public init(viewModel:CryptoListViewModel,onTapCrypto: @escaping (String) -> Void) {
+    public init(viewModel:CryptoListViewModel,favoriteViewModel:FavoriteListViewModel,onTapCrypto:@escaping (String) -> Void) {
         _viewModel = StateObject(wrappedValue:viewModel)
+        self.favoriteViewModel = favoriteViewModel
         self.onTapCrypto = onTapCrypto
     }
     
@@ -119,13 +122,41 @@ private extension CryptoListView {
                 LazyVStack(spacing: 14) {
                     ForEach( viewModel.filteredCryptos) { crypto in
                         CryptoCardView(
-                            crypto: crypto,
-                            isFavorite:viewModel.isFavorite(id: crypto.id),
-                            onTapFavorite: {
-                                viewModel.toggleFavorite(id: crypto.id)
-                            }
 
-                        )
+                            crypto: crypto,
+
+                            isFavorite:
+
+                            favoriteViewModel
+                                .isFavorite(
+                                    id:
+                                    crypto.id
+                                )
+
+                        ) {
+
+                            favoriteViewModel
+                                .toggleFavorite(
+
+                                    FavoriteCrypto(
+
+                                        id:
+                                            crypto.id,
+
+                                        name:
+                                            crypto.name,
+
+                                        symbol:
+                                            crypto.symbol,
+
+                                        image:
+                                            crypto.image,
+
+                                        currentPrice:
+                                            crypto.currentPrice
+                                    )
+                                )
+                        }
                         .contentShape(Rectangle())
                         .onTapGesture {
                             onTapCrypto(crypto.id)
@@ -145,6 +176,6 @@ private extension CryptoListView {
             CryptoListViewModel(
                 repository:
                     MockCryptoRepository()
-            )
+            ), favoriteViewModel: FavoriteListViewModel()
     ) {_ in}
 }
