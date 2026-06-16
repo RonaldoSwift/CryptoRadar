@@ -98,7 +98,6 @@ private extension CryptoListView {
     
     @ViewBuilder
     var content: some View {
-        
         if viewModel.isLoading {
             Spacer()
             ProgressView()
@@ -120,40 +119,19 @@ private extension CryptoListView {
         } else {
             ScrollView {
                 LazyVStack(spacing: 14) {
-                    ForEach( viewModel.filteredCryptos) { crypto in
+                    ForEach(viewModel.filteredCryptos) { crypto in
                         CryptoCardView(
-
                             crypto: crypto,
-
-                            isFavorite:
-
-                            favoriteViewModel
-                                .isFavorite(
-                                    id:
-                                    crypto.id
-                                )
-
+                            isFavorite: favoriteViewModel.isFavorite(id: crypto.id)
                         ) {
-
                             favoriteViewModel
                                 .toggleFavorite(
-
                                     FavoriteCrypto(
-
-                                        id:
-                                            crypto.id,
-
-                                        name:
-                                            crypto.name,
-
-                                        symbol:
-                                            crypto.symbol,
-
-                                        image:
-                                            crypto.image,
-
-                                        currentPrice:
-                                            crypto.currentPrice
+                                        id:crypto.id,
+                                        name:crypto.name,
+                                        symbol:crypto.symbol,
+                                        image:crypto.image,
+                                        currentPrice:crypto.currentPrice
                                     )
                                 )
                         }

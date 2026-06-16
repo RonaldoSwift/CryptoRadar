@@ -22,14 +22,14 @@ struct CryptoRadarApp: App {
     }()
     
     @State private var selectedCrypto: CryptoSelection?
-    @StateObject private var favoriteViewModel = FavoriteListViewModel()
     
     let container: Container = {
         let assembler = Assembler([
             RegisterAssembly(),
             LoginAssembly(),
             CryptoListAssembly(),
-            DetalleAssembly()
+            DetalleAssembly(),
+            FavoriteAssembly()
         ])
         return assembler.resolver
         as! Container
@@ -40,7 +40,6 @@ struct CryptoRadarApp: App {
         WindowGroup {
             switch appRootManager.currentRoot {
             case .authentication:
-                
                 AuthenticationRootView(
                     loginViewModel:
                         container.resolve(
@@ -52,14 +51,12 @@ struct CryptoRadarApp: App {
                         )!
                 )
             case .principal:
-                
                 TabView {
                     NavigationStack {
                         CryptoListView(
                             viewModel: container.resolve(CryptoListViewModel.self)!,
-                            favoriteViewModel: favoriteViewModel
+                            favoriteViewModel: container.resolve(FavoriteListViewModel.self)!
                         ) { cryptoId in
-                            
                             selectedCrypto = CryptoSelection(id: cryptoId)
                         }
                         .navigationDestination(item: $selectedCrypto) { crypto in
@@ -70,11 +67,11 @@ struct CryptoRadarApp: App {
                         }
                     }
                     .tabItem {
-                        Label("Market",systemImage: "chart.line.uptrend.xyaxis")
+                        Label("CryptoAp.market", image: "searchList")
                     }
                     
                     NavigationStack {
-                        FavoriteListView(viewModel: favoriteViewModel) { cryptoId in
+                        FavoriteListView(viewModel: container.resolve(FavoriteListViewModel.self)!) { cryptoId in
                                 selectedCrypto = CryptoSelection(id:cryptoId)
                             }
                             .navigationDestination(item: $selectedCrypto) { crypto in
@@ -85,7 +82,7 @@ struct CryptoRadarApp: App {
                             }
                     }
                     .tabItem {
-                        Label("Favorites",systemImage: "star.fill")
+                        Label("CryptoAp.Favorite",systemImage: "star.fill")
                     }
                 }
             }

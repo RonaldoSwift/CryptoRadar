@@ -10,6 +10,7 @@
 		FA85A1EA2FD1EA61008BD0C7 /* CryptoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA85A1DF2FD1EA61008BD0C7 /* CryptoList.framework */; };
 		FA85A1F42FD1EA61008BD0C7 /* CryptoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA85A1DF2FD1EA61008BD0C7 /* CryptoList.framework */; };
 		FA85A1F52FD1EA61008BD0C7 /* CryptoList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA85A1DF2FD1EA61008BD0C7 /* CryptoList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA88F8A42FE19FD30015EEDD /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = FA88F8A32FE19FD30015EEDD /* Swinject */; };
 		FA8DA8182FDCD781002C381E /* Favorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8DA80D2FDCD781002C381E /* Favorite.framework */; };
 		FA8DA8222FDCD781002C381E /* Favorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8DA80D2FDCD781002C381E /* Favorite.framework */; };
 		FA8DA8232FDCD781002C381E /* Favorite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA8DA80D2FDCD781002C381E /* Favorite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -273,6 +274,7 @@
 			membershipExceptions = (
 				"/Localized: Favorite/Resources/Localizable.strings",
 				Favorite/Favorite.docc,
+				Favorite/Sources/DI/FavoriteAssembly.swift,
 				Favorite/Sources/Domain/FavoriteCrypto.swift,
 				Favorite/Sources/Helpers/FavoriteStrings.swift,
 				Favorite/Sources/Presentation/FavoriteListView.swift,
@@ -342,6 +344,7 @@
 				Detalle/Sources/Preview/MockCryptoDetailRepository.swift,
 				DetalleTests/DetalleTests.swift,
 				Favorite/Favorite.docc,
+				Favorite/Sources/DI/FavoriteAssembly.swift,
 				Favorite/Sources/Domain/FavoriteCrypto.swift,
 				Favorite/Sources/Helpers/FavoriteStrings.swift,
 				Favorite/Sources/Presentation/FavoriteListView.swift,
@@ -530,6 +533,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA88F8A42FE19FD30015EEDD /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,6 +788,7 @@
 			);
 			name = Favorite;
 			packageProductDependencies = (
+				FA88F8A32FE19FD30015EEDD /* Swinject */,
 			);
 			productName = Favorite;
 			productReference = FA8DA80D2FDCD781002C381E /* Favorite.framework */;
@@ -2627,6 +2632,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FA88F8A32FE19FD30015EEDD /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA9577732FBE6F800004EEDB /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
 		FA8F4A492FD229B000CBA861 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FA9577732FBE6F800004EEDB /* XCRemoteSwiftPackageReference "Swinject" */;
