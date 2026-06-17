@@ -6,6 +6,7 @@ import StorageKit
 import CryptoList
 import Detalle
 import Favorite
+import SwiftData
 
 @main
 struct CryptoRadarApp: App {
@@ -89,6 +90,11 @@ struct CryptoRadarApp: App {
         }
         .environmentObject(
             appRootManager
+        )
+        .modelContainer(
+            for: [
+                FavoriteCrypto.self
+            ]
         )
     }
 }

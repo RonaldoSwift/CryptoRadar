@@ -6,14 +6,18 @@
 //
 
 import Foundation
+import SwiftData
 
-public struct FavoriteCrypto: Identifiable {
+@Model
+public final class FavoriteCrypto {
 
-    public let id: String
-    public let name: String
-    public let symbol: String
-    public let image: String
-    public let currentPrice: Double
+    @Attribute(.unique)
+    public var id: String
+
+    public var name: String
+    public var symbol: String
+    public var image: String
+    public var currentPrice: Double
 
     public init(
         id: String,
