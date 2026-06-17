@@ -92,9 +92,7 @@ struct CryptoRadarApp: App {
             appRootManager
         )
         .modelContainer(
-            for: [
-                FavoriteCrypto.self
-            ]
+            for: [FavoriteCrypto.self]
         )
     }
 }

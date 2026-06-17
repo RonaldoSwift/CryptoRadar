@@ -31,89 +31,33 @@ public final class FavoriteListViewModel: ObservableObject {
         }
     }
 
-    public func loadFavorites(
-        context: ModelContext
-    ) {
-
-        let descriptor =
-        FetchDescriptor<FavoriteCrypto>()
-
-        favorites =
-        (
-            try?
-            context.fetch(
-                descriptor
-            )
-        ) ?? []
+    public func loadFavorites(context: ModelContext) {
+        let descriptor = FetchDescriptor<FavoriteCrypto>()
+        favorites = (try? context.fetch(descriptor)) ?? []
     }
 
-    public func toggleFavorite(
-        _ crypto:
-        FavoriteCrypto,
+    public func toggleFavorite(_ crypto: FavoriteCrypto,context: ModelContext) {
 
-        context:
-        ModelContext
-    ) {
-
-        if let current =
-            favorites.first(
-                where: {
-                    $0.id == crypto.id
-                }
-            ) {
-
-            context.delete(
-                current
-            )
-
+        if let current = favorites.first(where: { $0.id == crypto.id}) {
+            context.delete(current)
         } else {
-
-            context.insert(
-                crypto
-            )
+            context.insert(crypto)
         }
+        try? context.save()
 
-        try?
-        context.save()
-
-        loadFavorites(
-            context:
-            context
-        )
+        loadFavorites(context:context)
     }
 
-    public func removeFavorite(
-        id: String,
+    public func removeFavorite(id: String, context:ModelContext) {
 
-        context:
-        ModelContext
-    ) {
-
-        if let favorite =
-            favorites.first(
-                where: {
-                    $0.id == id
-                }
-            ) {
-
-            context.delete(
-                favorite
-            )
-
-            try?
-            context.save()
+        if let favorite = favorites.first(where: { $0.id == id}) {
+            context.delete(favorite)
+            try? context.save()
         }
-
-        loadFavorites(
-            context:
-            context
-        )
+        loadFavorites(context:context)
     }
 
-    public func isFavorite(
-        id: String
-    ) -> Bool {
-
+    public func isFavorite(id: String) -> Bool {
         favorites.contains {
             $0.id == id
         }
