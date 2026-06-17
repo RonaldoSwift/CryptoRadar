@@ -7,15 +7,11 @@
 
 import SwiftUI
 import CryptoList
-import SwiftData
 
 public struct FavoriteListView: View {
     
-    @ObservedObject private var viewModel = FavoriteListViewModel()
-    
+    @ObservedObject private var viewModel: FavoriteListViewModel
     private let onTapCrypto: (String) -> Void
-    
-    @Environment(\.modelContext) private var context
     
     public init(viewModel:FavoriteListViewModel,onTapCrypto:@escaping (String)->Void) {
         self.viewModel = viewModel
@@ -34,7 +30,7 @@ public struct FavoriteListView: View {
             .padding()
         }
         .task {
-            viewModel.loadFavorites(context:context)
+            viewModel.load()
         }
     }
 }
@@ -83,7 +79,7 @@ private extension FavoriteListView {
                         favoriteCard(crypto:favorite)
                             .overlay(alignment:.trailing) {
                                 Button {
-                                    viewModel.removeFavorite(id:favorite.id, context: context)
+                                    viewModel.removeFavorite(id:favorite.id)
                                 } label: {
                                     Image(systemName:"star.fill")
                                         .foregroundColor(.yellow)
@@ -134,6 +130,9 @@ private extension FavoriteListView {
 #Preview {
     
     FavoriteListView(
-        viewModel: FavoriteListViewModel()
+        viewModel: FavoriteListViewModel(
+            repository: MockFavoriteRepository()
+        )
     ) { _ in }
+    
 }

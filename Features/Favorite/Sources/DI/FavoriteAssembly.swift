@@ -13,9 +13,15 @@ public final class FavoriteAssembly: Assembly {
     
     public init() {}
     
-    public func assemble(container: Container) {
-        container.register(FavoriteListViewModel.self) { _ in
-            FavoriteListViewModel()
+    public func assemble(container:Container) {
+        
+        container.register(FavoriteRepositoryProtocol.self) { _ in
+            FavoriteRepository()
+        }
+        
+        container.register(FavoriteListViewModel.self) { resolver in
+            FavoriteListViewModel(repository:resolver.resolve(FavoriteRepositoryProtocol.self)!
+            )
         }
     }
 }

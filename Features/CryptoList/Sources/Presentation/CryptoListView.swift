@@ -12,15 +12,12 @@
 import SwiftUI
 import CryptoList
 import Favorite
-import SwiftData
 
 public struct CryptoListView: View {
     
     @StateObject private var viewModel: CryptoListViewModel
     private let onTapCrypto: (String) -> Void
     @ObservedObject private var favoriteViewModel: FavoriteListViewModel
-    
-    @Environment(\.modelContext) private var context
     
     public init(viewModel:CryptoListViewModel,favoriteViewModel:FavoriteListViewModel,onTapCrypto:@escaping (String) -> Void) {
         _viewModel = StateObject(wrappedValue:viewModel)
@@ -44,7 +41,7 @@ public struct CryptoListView: View {
         }
         .task {
             viewModel.loadCryptos()
-            favoriteViewModel.loadFavorites(context:context)
+            favoriteViewModel.load()
         }
     }
 }
@@ -136,8 +133,7 @@ private extension CryptoListView {
                                         symbol:crypto.symbol,
                                         image:crypto.image,
                                         currentPrice:crypto.currentPrice
-                                    ),
-                                    context: context
+                                    )
                                 )
                         }
                         .contentShape(Rectangle())
@@ -157,8 +153,11 @@ private extension CryptoListView {
     CryptoListView(
         viewModel:
             CryptoListViewModel(
-                repository:
-                    MockCryptoRepository()
-            ), favoriteViewModel: FavoriteListViewModel()
-    ) {_ in}
+                repository: MockCryptoRepository()
+            ),
+        
+        favoriteViewModel:
+            FavoriteListViewModel(
+                repository: MockFavoriteRepository())
+    ) { _ in }
 }

@@ -274,11 +274,14 @@
 			membershipExceptions = (
 				"/Localized: Favorite/Resources/Localizable.strings",
 				Favorite/Favorite.docc,
+				Favorite/Sources/Data/FavoriteRepositoryProtocol.swift,
 				Favorite/Sources/DI/FavoriteAssembly.swift,
 				Favorite/Sources/Domain/FavoriteCrypto.swift,
+				Favorite/Sources/Domain/FavoriteRepository.swift,
 				Favorite/Sources/Helpers/FavoriteStrings.swift,
 				Favorite/Sources/Presentation/FavoriteListView.swift,
 				Favorite/Sources/Presentation/FavoriteListViewModel.swift,
+				Favorite/Sources/Preview/MockFavoriteRepository.swift,
 			);
 			target = FA8DA80C2FDCD781002C381E /* Favorite */;
 		};
@@ -344,11 +347,14 @@
 				Detalle/Sources/Preview/MockCryptoDetailRepository.swift,
 				DetalleTests/DetalleTests.swift,
 				Favorite/Favorite.docc,
+				Favorite/Sources/Data/FavoriteRepositoryProtocol.swift,
 				Favorite/Sources/DI/FavoriteAssembly.swift,
 				Favorite/Sources/Domain/FavoriteCrypto.swift,
+				Favorite/Sources/Domain/FavoriteRepository.swift,
 				Favorite/Sources/Helpers/FavoriteStrings.swift,
 				Favorite/Sources/Presentation/FavoriteListView.swift,
 				Favorite/Sources/Presentation/FavoriteListViewModel.swift,
+				Favorite/Sources/Preview/MockFavoriteRepository.swift,
 				FavoriteTests/FavoriteTests.swift,
 				Login/Login.docc,
 				Login/Sources/Data/AuthServiceLogin.swift,
