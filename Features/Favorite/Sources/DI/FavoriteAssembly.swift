@@ -16,7 +16,7 @@ public final class FavoriteAssembly: Assembly {
     public func assemble(container:Container) {
         
         container.register(FavoriteRepositoryProtocol.self) { _ in
-            FavoriteRepository()
+            CryptoRadarDB()
         }
         
         container.register(FavoriteListViewModel.self) { resolver in

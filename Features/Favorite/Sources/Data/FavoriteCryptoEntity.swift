@@ -1,19 +1,22 @@
 //
-//  FavoriteCrypto.swift
-//  CryptoRadar
+//  FavoriteCryptoEntity.swift
+//  Favorite
 //
-//  Created by Ronaldo Andre on 15/06/26.
+//  Created by Ronaldo Andre on 18/06/26.
 //
 
 import Foundation
+import SwiftData
 
-public struct FavoriteCrypto: Identifiable {
+@Model
+public final class FavoriteCryptoEntity {
 
-    public let id: String
-    public let name: String
-    public let symbol: String
-    public let image: String
-    public let currentPrice: Double
+    @Attribute(.unique) public var id: String
+
+    public var name: String
+    public var symbol: String
+    public var image: String
+    public var currentPrice: Double
 
     public init(
         id: String,
