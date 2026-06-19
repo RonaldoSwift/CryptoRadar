@@ -274,7 +274,6 @@
 			membershipExceptions = (
 				"/Localized: Favorite/Resources/Localizable.strings",
 				Favorite/Favorite.docc,
-				Favorite/Sources/Data/CryptoRadarDB.swift,
 				Favorite/Sources/Data/FavoriteCryptoEntity.swift,
 				Favorite/Sources/DI/FavoriteAssembly.swift,
 				Favorite/Sources/Domain/FavoriteCrypto.swift,
@@ -294,6 +293,13 @@
 			);
 			target = FA8DA8162FDCD781002C381E /* FavoriteTests */;
 		};
+		FA8EF8822FE50C8200C0C659 /* Exceptions for "Shared" folder in "Favorite" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				PersistenceKit/PersistenceController.swift,
+			);
+			target = FA8DA80C2FDCD781002C381E /* Favorite */;
+		};
 		FA9A673C2FBFABE000D6E8C9 /* Exceptions for "CryptoRadar" folder in "CryptoRadar" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -305,6 +311,7 @@
 		FAA55A142FCF660D00A5B53A /* Exceptions for "Shared" folder in "CryptoRadar" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				PersistenceKit/PersistenceController.swift,
 				StorageKit/KeychainManager.swift,
 				StorageKit/StorageKit.docc,
 				StorageKitTests/StorageKitTests.swift,
@@ -349,7 +356,6 @@
 				Detalle/Sources/Preview/MockCryptoDetailRepository.swift,
 				DetalleTests/DetalleTests.swift,
 				Favorite/Favorite.docc,
-				Favorite/Sources/Data/CryptoRadarDB.swift,
 				Favorite/Sources/DI/FavoriteAssembly.swift,
 				Favorite/Sources/Domain/FavoriteCrypto.swift,
 				Favorite/Sources/Domain/FavoriteRepository.swift,
@@ -478,6 +484,7 @@
 				FAA55A142FCF660D00A5B53A /* Exceptions for "Shared" folder in "CryptoRadar" target */,
 				FAA55A152FCF660D00A5B53A /* Exceptions for "Shared" folder in "StorageKit" target */,
 				FAA55A162FCF660D00A5B53A /* Exceptions for "Shared" folder in "StorageKitTests" target */,
+				FA8EF8822FE50C8200C0C659 /* Exceptions for "Shared" folder in "Favorite" target */,
 			);
 			path = Shared;
 			sourceTree = "<group>";

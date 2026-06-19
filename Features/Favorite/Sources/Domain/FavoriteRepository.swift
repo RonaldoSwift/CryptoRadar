@@ -9,9 +9,9 @@ import Foundation
 
 public final class FavoriteRepository: FavoriteRepositoryProtocol {
 
-    private let database: CryptoRadarDB
+    private let database: PersistenceController
 
-    public init(database:CryptoRadarDB) {
+    public init(database:PersistenceController) {
         self.database = database
     }
 

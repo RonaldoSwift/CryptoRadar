@@ -20,12 +20,12 @@ public final class FavoriteAssembly: Assembly {
 
     public func assemble(container: Container) {
 
-        container.register(CryptoRadarDB.self) { _ in
-            CryptoRadarDB()
+        container.register(PersistenceController.self) { _ in
+            PersistenceController()
         }
 
         container.register(FavoriteRepositoryProtocol.self) { resolver in
-            FavoriteRepository(database:resolver.resolve(CryptoRadarDB.self)!)
+            FavoriteRepository(database:resolver.resolve(PersistenceController.self)!)
         }
 
         container.register(FavoriteListViewModel.self) {@MainActor resolver in

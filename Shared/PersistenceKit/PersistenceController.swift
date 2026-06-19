@@ -8,7 +8,7 @@
 import Foundation
 import SwiftData
 
-public final class CryptoRadarDB {
+public final class PersistenceController {
     
     private var container: ModelContainer
     private let context: ModelContext
