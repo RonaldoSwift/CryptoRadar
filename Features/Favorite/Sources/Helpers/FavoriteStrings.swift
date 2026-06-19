@@ -14,13 +14,12 @@ enum FavoriteStrings {
     static let emptyDescription = localized("favorite.empty.description")
     static let add = localized("favorite.add")
     static let remove = localized("favorite.remove")
-    static let searchFavorite = localized("favorite.search")
-
+    static let searchFavorite = localized("favorite.search.favorite")
+    
     private static func localized(_ key: String.LocalizationValue) -> String {
-
-        String(localized: key,bundle: Bundle(
-                for: FavoriteListViewModel.self
-            )
+        String(
+            localized: key,
+            bundle: Bundle(for: FavoriteListViewModel.self)
         )
     }
 }

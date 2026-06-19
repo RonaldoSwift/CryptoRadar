@@ -68,7 +68,7 @@ struct CryptoRadarApp: App {
                         }
                     }
                     .tabItem {
-                        Label("CryptoAp.market", image: "searchList")
+                        Label(AppStrings.market, image: AppImages.searchList)
                     }
                     
                     NavigationStack {
@@ -83,7 +83,7 @@ struct CryptoRadarApp: App {
                             }
                     }
                     .tabItem {
-                        Label("CryptoAp.Favorite",systemImage: "star.fill")
+                        Label(AppStrings.favorite,systemImage: AppImages.favorite)
                     }
                 }
             }

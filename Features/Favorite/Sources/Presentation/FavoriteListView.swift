@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import CryptoList
+//import CryptoList
 
 public struct FavoriteListView: View {
     
@@ -36,9 +36,7 @@ public struct FavoriteListView: View {
 }
 
 private extension FavoriteListView {
-    
     var header: some View {
-        
         HStack {
             Text(FavoriteStrings.title)
                 .font(.title2)
