@@ -14,7 +14,6 @@ public final class PersistenceController {
     private let context: ModelContext
     
     public init() {
-        container = try! ModelContainer( for: FavoriteCryptoEntity.self)
         do {
             container = try ModelContainer(for: FavoriteCryptoEntity.self)
             context = ModelContext(container)

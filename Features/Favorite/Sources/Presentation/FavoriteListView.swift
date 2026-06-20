@@ -10,11 +10,11 @@ import SwiftUI
 
 public struct FavoriteListView: View {
     
-    @ObservedObject private var viewModel: FavoriteListViewModel
+    @StateObject private var viewModel: FavoriteListViewModel
     private let onTapCrypto: (String) -> Void
     
     public init(viewModel:FavoriteListViewModel,onTapCrypto:@escaping (String)->Void) {
-        self.viewModel = viewModel
+        _viewModel = StateObject(wrappedValue: viewModel)
         self.onTapCrypto = onTapCrypto
     }
     

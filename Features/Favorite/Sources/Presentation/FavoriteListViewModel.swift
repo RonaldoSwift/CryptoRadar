@@ -12,8 +12,7 @@ import Combine
 public final class FavoriteListViewModel:
     ObservableObject {
     
-    @Published public var favorites: [FavoriteCrypto] = []
-    
+    @Published public private(set) var favorites: [FavoriteCrypto] = []
     @Published public var searchText = ""
     
     private let repository: FavoriteRepositoryProtocol
@@ -37,8 +36,8 @@ public final class FavoriteListViewModel:
         favorites = repository.getFavorites()
     }
     
-    public func toggleFavorite(_ crypto:FavoriteCrypto) {
-        if repository.isFavorite(id: crypto.id) {
+    public func toggleFavorite(_ crypto: FavoriteCrypto) {
+        if isFavorite(id:crypto.id) {
             repository.removeFavorite(id:crypto.id)
         } else {
             repository.addFavorite(crypto)
@@ -52,6 +51,8 @@ public final class FavoriteListViewModel:
     }
     
     public func isFavorite(id:String) -> Bool {
-        repository.isFavorite(id:id)
+        favorites.contains {
+            $0.id == id
+        }
     }
 }

@@ -274,7 +274,6 @@
 			membershipExceptions = (
 				"/Localized: Favorite/Resources/Localizable.strings",
 				Favorite/Favorite.docc,
-				Favorite/Sources/Data/FavoriteCryptoEntity.swift,
 				Favorite/Sources/DI/FavoriteAssembly.swift,
 				Favorite/Sources/Domain/FavoriteCrypto.swift,
 				Favorite/Sources/Domain/FavoriteRepository.swift,
@@ -296,6 +295,7 @@
 		FA8EF8822FE50C8200C0C659 /* Exceptions for "Shared" folder in "Favorite" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				PersistenceKit/FavoriteCryptoEntity.swift,
 				PersistenceKit/PersistenceController.swift,
 			);
 			target = FA8DA80C2FDCD781002C381E /* Favorite */;
