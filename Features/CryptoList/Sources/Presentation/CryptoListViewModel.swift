@@ -16,7 +16,7 @@ public final class CryptoListViewModel: ObservableObject {
     @Published public private(set) var isLoading = false
     @Published public private(set) var errorMessage: String?
     @Published var searchText: String = ""
-    
+        
     //Filtrado de criptomonedas según el texto de búsqueda
     var filteredCryptos: [Crypto] {
         if searchText.isEmpty {
@@ -55,4 +55,5 @@ public final class CryptoListViewModel: ObservableObject {
             errorMessage = CryptoListStrings.errorUpdate
         }
     }
+    
 }

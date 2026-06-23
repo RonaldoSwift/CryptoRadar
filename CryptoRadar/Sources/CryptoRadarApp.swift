@@ -5,6 +5,8 @@ import Register
 import StorageKit
 import CryptoList
 import Detalle
+import Favorite
+import SwiftData
 
 @main
 struct CryptoRadarApp: App {
@@ -27,7 +29,8 @@ struct CryptoRadarApp: App {
             RegisterAssembly(),
             LoginAssembly(),
             CryptoListAssembly(),
-            DetalleAssembly()
+            DetalleAssembly(),
+            FavoriteAssembly()
         ])
         return assembler.resolver
         as! Container
@@ -38,7 +41,6 @@ struct CryptoRadarApp: App {
         WindowGroup {
             switch appRootManager.currentRoot {
             case .authentication:
-                
                 AuthenticationRootView(
                     loginViewModel:
                         container.resolve(
@@ -50,24 +52,47 @@ struct CryptoRadarApp: App {
                         )!
                 )
             case .principal:
-                NavigationStack {
-                    CryptoListView(viewModel:container.resolve(CryptoListViewModel.self)!
-                    ) { cryptoId in
-                        selectedCrypto = CryptoSelection(id: cryptoId)
+                TabView {
+                    NavigationStack {
+                        CryptoListView(
+                            viewModel: container.resolve(CryptoListViewModel.self)!,
+                            favoriteViewModel: container.resolve(FavoriteListViewModel.self)!
+                        ) { cryptoId in
+                            selectedCrypto = CryptoSelection(id: cryptoId)
+                        }
+                        .navigationDestination(item: $selectedCrypto) { crypto in
+                            CryptoDetailView(
+                                cryptoId: crypto.id,
+                                viewModel: container.resolve(CryptoDetailViewModel.self)!
+                            )
+                        }
                     }
-                    .navigationDestination(item: $selectedCrypto) { crypto in
-                        CryptoDetailView(
-                            cryptoId: crypto.id,
-                            viewModel:container.resolve(
-                                CryptoDetailViewModel.self
-                            )!
-                        )
+                    .tabItem {
+                        Label(AppStrings.market, image: AppImages.searchList)
+                    }
+                    
+                    NavigationStack {
+                        FavoriteListView(viewModel: container.resolve(FavoriteListViewModel.self)!) { cryptoId in
+                                selectedCrypto = CryptoSelection(id:cryptoId)
+                            }
+                            .navigationDestination(item: $selectedCrypto) { crypto in
+                                CryptoDetailView(
+                                    cryptoId: crypto.id,
+                                    viewModel: container.resolve(CryptoDetailViewModel.self)!
+                                )
+                            }
+                    }
+                    .tabItem {
+                        Label(AppStrings.favorite,systemImage: AppImages.favorite)
                     }
                 }
             }
         }
         .environmentObject(
             appRootManager
+        )
+        .modelContainer(
+            for: [FavoriteCryptoEntity.self]
         )
     }
 }

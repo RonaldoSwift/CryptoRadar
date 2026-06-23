@@ -1,0 +1,8 @@
+/* Vista de Favoritos */
+"favorite.title" = "Favoritos";
+"favorite.empty" = "Sin favoritos aún";
+"favorite.empty.description" = "Añade criptomonedas a tus favoritos";
+"favorite.add" = "Añadir a Favoritos";
+"favorite.remove" = "Eliminar de Favoritos";
+"favorite.search.favorite" = "Buscar en favoritos";
+
