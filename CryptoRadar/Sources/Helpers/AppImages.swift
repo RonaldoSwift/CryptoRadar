@@ -12,6 +12,8 @@ enum AppImages {
     static let searchList = image("searchList")
     static let favorite = system("star.fill")
     static let settings = system("slider.horizontal.3")
+    
+    static let settingsConfiguracion = "gearshape.fill"
 
     private static func image(_ name: String) -> String {
         name

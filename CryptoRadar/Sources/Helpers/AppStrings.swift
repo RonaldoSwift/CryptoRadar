@@ -12,6 +12,8 @@ enum AppStrings {
 
     static let market = localized("CryptoAp.market")
     static let favorite = localized("CryptoAp.Favorite")
+    
+    static let settings = localized("app.settings")
 
     private static func localized(_ key:String.LocalizationValue) -> String {
         String(localized: key)

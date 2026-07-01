@@ -7,6 +7,7 @@ import CryptoList
 import Detalle
 import Favorite
 import SwiftData
+import Configuracion
 
 @main
 struct CryptoRadarApp: App {
@@ -30,7 +31,8 @@ struct CryptoRadarApp: App {
             LoginAssembly(),
             CryptoListAssembly(),
             DetalleAssembly(),
-            FavoriteAssembly()
+            FavoriteAssembly(),
+            SettingsAssembly()
         ])
         return assembler.resolver
         as! Container
@@ -73,17 +75,24 @@ struct CryptoRadarApp: App {
                     
                     NavigationStack {
                         FavoriteListView(viewModel: container.resolve(FavoriteListViewModel.self)!) { cryptoId in
-                                selectedCrypto = CryptoSelection(id:cryptoId)
-                            }
-                            .navigationDestination(item: $selectedCrypto) { crypto in
-                                CryptoDetailView(
-                                    cryptoId: crypto.id,
-                                    viewModel: container.resolve(CryptoDetailViewModel.self)!
-                                )
-                            }
+                            selectedCrypto = CryptoSelection(id:cryptoId)
+                        }
+                        .navigationDestination(item: $selectedCrypto) { crypto in
+                            CryptoDetailView(
+                                cryptoId: crypto.id,
+                                viewModel: container.resolve(CryptoDetailViewModel.self)!
+                            )
+                        }
                     }
                     .tabItem {
                         Label(AppStrings.favorite,systemImage: AppImages.favorite)
+                    }
+                    
+                    NavigationStack {
+                        SettingsView(viewModel: container.resolve(SettingsViewModel.self)!)
+                    }
+                    .tabItem {
+                        Label(AppStrings.settings,systemImage: AppImages.settingsConfiguracion)
                     }
                 }
             }
