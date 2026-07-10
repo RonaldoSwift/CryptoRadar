@@ -22,7 +22,7 @@ public struct SettingsView: View {
             Picker("Moneda Base", selection: Binding(
                 get: {viewModel.currency},
                 set: {viewModel.updateCurrency($0)})) {
-                    ForEach(SettingsEntity.allCases, id: \.self) { currency in
+                    ForEach(Settings.allCases, id: \.self) { currency in
                         Text(currency.rawValue)
                             .tag(currency)
                     }
@@ -43,6 +43,9 @@ public struct SettingsView: View {
             Button("Cerrar Sesión") {
                 viewModel.logout()
             }
+        }
+        .task {
+            viewModel.load()
         }
     }
 }
