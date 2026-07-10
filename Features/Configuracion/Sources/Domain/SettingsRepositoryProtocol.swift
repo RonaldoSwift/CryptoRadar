@@ -16,4 +16,8 @@ public protocol SettingsRepositoryProtocol {
     func getNotificationsEnabled() -> Bool
 
     func saveNotificationsEnabled(_ enabled: Bool)
+    
+    func requestNotificationPermission(
+        completion: @escaping (Bool) -> Void
+    )
 }

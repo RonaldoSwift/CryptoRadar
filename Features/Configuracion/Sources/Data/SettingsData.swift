@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UserNotifications
 
 public final class SettingsData {
 
@@ -33,5 +34,14 @@ public final class SettingsData {
 
     public func saveNotificationsEnabled(_ enabled: Bool) {
         defaults.set(enabled,forKey: Keys.notifications)
+    }
+    
+    public func requestNotificationPermission(completion: @escaping (Bool) -> Void) {
+        UNUserNotificationCenter.current()
+            .requestAuthorization(options: [.alert, .badge, .sound]) { granted, _ in
+                DispatchQueue.main.async {
+                    completion(granted)
+                }
+            }
     }
 }

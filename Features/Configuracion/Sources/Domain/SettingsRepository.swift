@@ -30,4 +30,8 @@ public final class SettingsRepository: SettingsRepositoryProtocol {
     public func saveNotificationsEnabled(_ enabled: Bool) {
         data.saveNotificationsEnabled(enabled)
     }
+    
+    public func requestNotificationPermission(completion: @escaping (Bool) -> Void) {
+        data.requestNotificationPermission(completion: completion)
+    }
 }
