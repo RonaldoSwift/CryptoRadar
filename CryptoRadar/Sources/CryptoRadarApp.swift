@@ -34,24 +34,28 @@ struct CryptoRadarApp: App {
             FavoriteAssembly(),
             SettingsAssembly()
         ])
-        return assembler.resolver
-        as! Container
+        return assembler.resolver as! Container
         
     }()
+    
+    // MARK: - Settings ViewModel
+    
+    private var settingsViewModel: SettingsViewModel {
+        let viewModel = container.resolve(SettingsViewModel.self)!
+        viewModel.onLogout = { [appRootManager] in
+            KeychainManager.shared.deleteToken()
+            appRootManager.currentRoot = .authentication
+        }
+        return viewModel
+    }
     
     var body: some Scene {
         WindowGroup {
             switch appRootManager.currentRoot {
             case .authentication:
                 AuthenticationRootView(
-                    loginViewModel:
-                        container.resolve(
-                            LoginViewModel.self
-                        )!,
-                    registerViewModel:
-                        container.resolve(
-                            RegisterViewModel.self
-                        )!
+                    loginViewModel:container.resolve(LoginViewModel.self)!,
+                    registerViewModel:container.resolve(RegisterViewModel.self)!
                 )
             case .principal:
                 TabView {
@@ -89,7 +93,7 @@ struct CryptoRadarApp: App {
                     }
                     
                     NavigationStack {
-                        SettingsView(viewModel: container.resolve(SettingsViewModel.self)!)
+                        SettingsView(viewModel: settingsViewModel)
                     }
                     .tabItem {
                         Label(AppStrings.settings,systemImage: AppImages.settingsConfiguracion)
@@ -97,9 +101,7 @@ struct CryptoRadarApp: App {
                 }
             }
         }
-        .environmentObject(
-            appRootManager
-        )
+        .environmentObject(appRootManager)
         .modelContainer(
             for: [FavoriteCryptoEntity.self]
         )

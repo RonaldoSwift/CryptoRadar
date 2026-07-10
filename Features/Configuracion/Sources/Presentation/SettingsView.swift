@@ -41,7 +41,7 @@ public struct SettingsView: View {
             )
             
             Button("Cerrar Sesión") {
-                // luego implementas logout
+                viewModel.logout()
             }
         }
     }
