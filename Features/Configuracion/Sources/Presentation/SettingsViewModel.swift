@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import StorageKit
 
 @MainActor
 public final class SettingsViewModel: ObservableObject {
@@ -15,7 +16,7 @@ public final class SettingsViewModel: ObservableObject {
     
     @Published public var notificationsEnabled = false
     
-    public var onLogout: (() -> Void)?
+   // public var onLogout: (() -> Void)?
     
     private let repository: SettingsRepositoryProtocol
     
@@ -29,7 +30,7 @@ public final class SettingsViewModel: ObservableObject {
     }
     
     public func logout() {
-        onLogout?()
+        KeychainManager.shared.deleteToken()
     }
     
     public func updateCurrency(_ currency: Settings) {

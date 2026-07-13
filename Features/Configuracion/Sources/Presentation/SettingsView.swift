@@ -12,9 +12,11 @@ import SwiftUI
 public struct SettingsView: View {
     
     @StateObject private var viewModel: SettingsViewModel
+    private let onLogout: () -> Void
     
-    public init(viewModel:SettingsViewModel) {
+    public init(viewModel:SettingsViewModel,onLogout: @escaping () -> Void) {
         _viewModel = StateObject(wrappedValue: viewModel)
+        self.onLogout = onLogout
     }
     
     public var body: some View {
@@ -42,6 +44,7 @@ public struct SettingsView: View {
             
             Button("Cerrar Sesión") {
                 viewModel.logout()
+                onLogout()
             }
         }
         .task {

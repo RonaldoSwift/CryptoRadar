@@ -5,32 +5,4 @@
 //  Created by Ronaldo Andre on 22/05/26.
 //
 
-//Register
-
-"Register.AppName" = "CryptoRadar";
-"Register.Title" = "Crear cuenta";
-"Register.Subtitle" = "Comienza tu viaje financiero con nosotros";
-"Register.EmailTitle" = "CORREO ELECTRÓNICO";
-"Register.EmailPlaceholder" = "nombre@ejemplo.com";
-"Register.PasswordTitle" = "CONTRASEÑA";
-"Register.PasswordPlaceholder" = "Mín. 8 caracteres";
-"Register.ConfirmPasswordTitle" = "CONFIRMAR CONTRASEÑA";
-"Register.ConfirmPasswordPlaceholder" = "Repite tu contraseña";
-"Register.CreateButton" = "Crear cuenta";
-"Register.AccountQuestion" = "¿Ya tienes una cuenta?";
-"Register.Login" = "Iniciar sesión";
-"Register.Terms" = "Al crear una cuenta aceptas nuestros Términos de Servicio y Política de Privacidad.";
-"Register.SuccessTitle" = "Éxito";
-"Register.SuccessMessage" = "Cuenta creada correctamente";
-"Register.PasswordMismatch" = "Las contraseñas no coinciden";
-
-"Register.Error.EmptyName" = "Name is required";
-"Register.NameTitle" = "Name";
-"Register.Error.EmptyEmail" = "Email is required";
-"Register.Error.InvalidEmail" = "Invalid email address";
-"Register.Error.EmptyPassword" = "Password is required";
-"Register.Error.PasswordMinLength" = "The password must be at least 6 characters long";
-"Register.Error.PasswordMismatch" = "Passwords do not match";
-"Register.NamePlaceholder" = "Enter your name";
-
 "app.settings" = "Configuración";

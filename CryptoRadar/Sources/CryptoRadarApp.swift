@@ -38,17 +38,6 @@ struct CryptoRadarApp: App {
         
     }()
     
-    // MARK: - Settings ViewModel
-    
-    private var settingsViewModel: SettingsViewModel {
-        let viewModel = container.resolve(SettingsViewModel.self)!
-        viewModel.onLogout = { [appRootManager] in
-            KeychainManager.shared.deleteToken()
-            appRootManager.currentRoot = .authentication
-        }
-        return viewModel
-    }
-    
     var body: some Scene {
         WindowGroup {
             switch appRootManager.currentRoot {
@@ -93,10 +82,18 @@ struct CryptoRadarApp: App {
                     }
                     
                     NavigationStack {
-                        SettingsView(viewModel: settingsViewModel)
+                        SettingsView(
+                            viewModel: container.resolve(SettingsViewModel.self)!,
+                            onLogout: {
+                                appRootManager.currentRoot = .authentication
+                            }
+                        )
                     }
                     .tabItem {
-                        Label(AppStrings.settings,systemImage: AppImages.settingsConfiguracion)
+                        Label(
+                            AppStrings.settings,
+                            systemImage: AppImages.settingsConfiguracion
+                        )
                     }
                 }
             }
