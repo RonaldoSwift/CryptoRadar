@@ -37,7 +37,7 @@ public struct RegisterView: View {
             
             ScrollView {
                 VStack(spacing:40) {
-                    Text("Register.AppName")
+                    Text(RegisterStrings.appName)
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.blue)
@@ -45,12 +45,12 @@ public struct RegisterView: View {
                     
                     VStack(spacing:20) {
                         VStack(spacing:8) {
-                            Text("Register.Title")
+                            Text(RegisterStrings.title)
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                             
-                            Text("Register.Subtitle")
+                            Text(RegisterStrings.subtitle)
                                 .foregroundColor(.gray)
                         }
                         
@@ -59,7 +59,7 @@ public struct RegisterView: View {
                             spacing: 8
                         ) {
                             
-                            Text("Register.NameTitle")
+                            Text(RegisterStrings.nameTitle)
                                 .font(.caption)
                                 .foregroundColor(.gray)
                             
@@ -69,7 +69,7 @@ public struct RegisterView: View {
                                     .foregroundColor(.gray)
                                 
                                 TextField(
-                                    String(localized: "Register.NamePlaceholder"),
+                                    RegisterStrings.namePlaceholder,
                                     text: $viewModel.name
                                 )
                                 .textInputAutocapitalization(.words)
@@ -87,7 +87,7 @@ public struct RegisterView: View {
                             spacing: 8
                         ) {
                             
-                            Text("Register.EmailTitle")
+                            Text(RegisterStrings.emailTitle)
                                 .font(.caption)
                                 .foregroundColor(.gray)
                             
@@ -98,7 +98,7 @@ public struct RegisterView: View {
                                 .foregroundColor(.gray)
                                 
                                 TextField(
-                                    String(localized: "Register.EmailPlaceholder"),
+                                    RegisterStrings.emailPlaceholder,
                                     text: $viewModel.email
                                 )
                                 .keyboardType(.emailAddress)
@@ -117,7 +117,7 @@ public struct RegisterView: View {
                             alignment: .leading,
                             spacing: 8
                         ) {
-                            Text("Register.PasswordTitle")
+                            Text(RegisterStrings.passwordTitle)
                                 .font(.caption)
                                 .foregroundColor(.gray)
                             
@@ -128,13 +128,13 @@ public struct RegisterView: View {
                                 Group {
                                     if showPassword {
                                         TextField(
-                                            String(localized:"Register.PasswordPlaceholder"),
+                                            RegisterStrings.passwordPlaceholder,
                                             text: $viewModel.password
                                         )
                                         
                                     } else {
                                         SecureField(
-                                            String(localized:"Register.PasswordPlaceholder"),
+                                            RegisterStrings.passwordPlaceholder,
                                             text: $viewModel.password
                                         )
                                     }
@@ -164,25 +164,25 @@ public struct RegisterView: View {
                             spacing: 8
                         ) {
                             
-                            Text("Register.ConfirmPasswordTitle")
-                            .font(.caption)
-                            .foregroundColor(.gray)
+                            Text(RegisterStrings.confirmPasswordTitle)
+                                .font(.caption)
+                                .foregroundColor(.gray)
                             
                             HStack {
                                 Image(systemName:"shield")
-                                .foregroundColor(.gray)
+                                    .foregroundColor(.gray)
                                 
                                 Group {
                                     
                                     if showConfirmPassword {
                                         TextField(
-                                            String(localized: "Register.ConfirmPasswordPlaceholder"),
+                                            RegisterStrings.confirmPasswordPlaceholder,
                                             text: $viewModel.confirmPassword
                                         )
                                         
                                     } else {
                                         SecureField(
-                                            String(localized: "Register.ConfirmPasswordPlaceholder"),
+                                            RegisterStrings.confirmPasswordPlaceholder,
                                             text: $viewModel.confirmPassword
                                         )
                                     }
@@ -216,7 +216,7 @@ public struct RegisterView: View {
                                 ProgressView()
                                     .tint(.white)
                             } else {
-                                Text("Register.CreateButton")
+                                Text(RegisterStrings.createButton)
                                     .fontWeight(.bold)
                                     .foregroundColor(.white)
                             }
@@ -234,12 +234,10 @@ public struct RegisterView: View {
                                 .foregroundColor(.red)
                                 .font(.caption)
                         }
-                        Text(
-                            String(localized: "Register.Terms")
-                        )
-                        .font(.caption)
-                        .foregroundColor(.gray)
-                        .multilineTextAlignment(.center)
+                        Text(RegisterStrings.terms)
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                            .multilineTextAlignment(.center)
                     }
                     .padding()
                     .background(
@@ -250,13 +248,13 @@ public struct RegisterView: View {
                     .padding(.horizontal)
                     
                     HStack {
-                        Text(String(localized: "Register.AccountQuestion"))
+                        Text(RegisterStrings.accountQuestion)
                             .foregroundColor(.gray)
                         
                         Button {
                             onLoginTap?()
                         } label: {
-                            Text("Register.Login")
+                            Text(RegisterStrings.login)
                                 .foregroundColor(.blue)
                         }
                     }
