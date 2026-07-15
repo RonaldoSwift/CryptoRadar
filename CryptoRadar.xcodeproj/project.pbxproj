@@ -502,6 +502,20 @@
 			);
 			target = FA9A674B2FBFB23500D6E8C9 /* RegisterTests */;
 		};
+		FAA90F9C300818A500A22254 /* Exceptions for "Shared" folder in "Login" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				NetworkKit/ApiClient.swift,
+			);
+			target = FA9ADCCD2FC1078800D6AEB9 /* Login */;
+		};
+		FAA90F9E300818CD00A22254 /* Exceptions for "Shared" folder in "Register" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				NetworkKit/ApiClient.swift,
+			);
+			target = FA9A67412FBFB23500D6E8C9 /* Register */;
+		};
 		FAB66B5A2FD38C0100F36BB8 /* Exceptions for "Features" folder in "Detalle" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -544,6 +558,8 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				FAA55A142FCF660D00A5B53A /* Exceptions for "Shared" folder in "CryptoRadar" target */,
+				FAA90F9E300818CD00A22254 /* Exceptions for "Shared" folder in "Register" target */,
+				FAA90F9C300818A500A22254 /* Exceptions for "Shared" folder in "Login" target */,
 				FAA55A152FCF660D00A5B53A /* Exceptions for "Shared" folder in "StorageKit" target */,
 				FAA55A162FCF660D00A5B53A /* Exceptions for "Shared" folder in "StorageKitTests" target */,
 				FA8EF8822FE50C8200C0C659 /* Exceptions for "Shared" folder in "Favorite" target */,
