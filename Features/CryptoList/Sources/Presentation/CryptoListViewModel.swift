@@ -16,16 +16,7 @@ public final class CryptoListViewModel: ObservableObject {
     @Published public private(set) var isLoading = false
     @Published public private(set) var errorMessage: String?
     @Published var searchText: String = ""
-        
-    //Filtrado de criptomonedas según el texto de búsqueda
-    var filteredCryptos: [Crypto] {
-        if searchText.isEmpty {
-            return cryptos
-        }
-        return cryptos.filter {
-            $0.name.localizedCaseInsensitiveContains(searchText)
-        }
-    }
+    private var searchTask: Task<Void, Never>?
     
     private let repository: CryptoListRepositoryProtocol
     
@@ -56,4 +47,22 @@ public final class CryptoListViewModel: ObservableObject {
         }
     }
     
+    public func searchCryptos() {
+        searchTask?.cancel()
+        if searchText.isEmpty {
+            loadCryptos()
+            return
+        }
+        isLoading = true
+        searchTask = Task {
+            try? await Task.sleep(for: .milliseconds(500))
+            guard !Task.isCancelled else { return }
+            do {
+                cryptos = try await repository.searchCryptos(query: searchText)
+            } catch {
+                errorMessage = CryptoListStrings.errorMesageCrypto
+            }
+            isLoading = false
+        }
+    }
 }

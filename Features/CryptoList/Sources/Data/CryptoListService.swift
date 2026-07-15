@@ -9,6 +9,8 @@ import Foundation
 
 public protocol CryptoListServiceProtocol {
     func getTopCryptos() async throws -> [CryptoResponse]
+    func searchCryptos(query: String) async throws -> SearchResponse
+
 }
 
 public final class CryptoListService: CryptoListServiceProtocol {
@@ -60,5 +62,36 @@ public final class CryptoListService: CryptoListServiceProtocol {
                 [CryptoResponse].self,
                 from: data
             )
+    }
+    
+    public func searchCryptos(query: String) async throws -> SearchResponse {
+
+        var components = URLComponents(string: "\(baseURL)/search")!
+
+        components.queryItems = [
+            URLQueryItem(name: "query", value: query)
+        ]
+
+        guard let url = components.url else {
+            throw URLError(.badURL)
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+
+        let (data, response) = try await URLSession.shared.data(for: request)
+
+        guard let httpResponse = response as? HTTPURLResponse else {
+            throw URLError(.badServerResponse)
+        }
+
+        guard (200...299).contains(httpResponse.statusCode) else {
+            throw URLError(.badServerResponse)
+        }
+
+        return try JSONDecoder().decode(
+            SearchResponse.self,
+            from: data
+        )
     }
 }

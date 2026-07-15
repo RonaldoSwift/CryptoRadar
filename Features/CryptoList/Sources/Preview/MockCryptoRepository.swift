@@ -9,6 +9,15 @@ import Foundation
 
 final class MockCryptoRepository: CryptoListRepositoryProtocol {
     
+    func searchCryptos(query: String) async throws -> [Crypto] {
+        let cryptos = try await getTopCryptos()
+        return cryptos.filter {
+            $0.name.localizedCaseInsensitiveContains(query) ||
+            $0.symbol.localizedCaseInsensitiveContains(query)
+        }
+    }
+    
+    
     func getTopCryptos() async throws -> [Crypto] {
         [
             Crypto(

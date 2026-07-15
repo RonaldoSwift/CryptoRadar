@@ -10,4 +10,5 @@ import Foundation
 public protocol CryptoListRepositoryProtocol {
     
     func getTopCryptos() async throws -> [Crypto]
+    func searchCryptos(query: String) async throws -> [Crypto]
 }

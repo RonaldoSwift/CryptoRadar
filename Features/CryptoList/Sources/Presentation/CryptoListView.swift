@@ -75,6 +75,9 @@ private extension CryptoListView {
         .background(Color.white.opacity(0.06))
         .cornerRadius(14)
         .foregroundColor(.white)
+        .onChange(of: viewModel.searchText) { _ in
+            viewModel.searchCryptos()
+        }
     }
     
     var trending: some View {
@@ -120,7 +123,7 @@ private extension CryptoListView {
         } else {
             ScrollView {
                 LazyVStack(spacing: 14) {
-                    ForEach(viewModel.filteredCryptos) { crypto in
+                    ForEach(viewModel.cryptos) { crypto in
                         CryptoCardView(
                             crypto: crypto,
                             isFavorite: favoriteViewModel.isFavorite(id: crypto.id)
