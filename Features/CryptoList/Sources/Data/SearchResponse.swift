@@ -7,11 +7,11 @@
 
 import Foundation
 
-public struct SearchResponse: Codable {
+public struct SearchResponse: Decodable {
     public let coins: [SearchCoinResponse]
 }
 
-public struct SearchCoinResponse: Codable, Identifiable {
+public struct SearchCoinResponse: Decodable, Identifiable {
     public let id: String
     public let name: String
     public let symbol: String

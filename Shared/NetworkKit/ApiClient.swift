@@ -80,4 +80,53 @@ public final class ApiClient {
                 from: data
             )
     }
+    
+    public func request<Response: Decodable>(
+        baseURL: String,
+        endpoint: String,
+        queryItems: [URLQueryItem] = []
+    ) async throws -> Response {
+
+        guard var components = URLComponents(string: "\(baseURL)\(endpoint)") else {
+            throw URLError(.badURL)
+        }
+
+        components.queryItems = queryItems
+
+        guard let url = components.url else {
+            throw URLError(.badURL)
+        }
+        
+        print("URL -> \(url.absoluteString)")
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+
+        request.setValue(
+            "application/json",
+            forHTTPHeaderField: "Content-Type"
+        )
+
+        let (data, response) = try await URLSession.shared.data(for: request)
+        print(String(data: data, encoding: .utf8) ?? "Sin respuesta")
+        guard let http = response as? HTTPURLResponse else {
+            throw URLError(.badServerResponse)
+        }
+
+        guard (200...299).contains(http.statusCode) else {
+            throw NSError(
+                domain: "",
+                code: http.statusCode,
+                userInfo: [
+                    NSLocalizedDescriptionKey:
+                        "Error del servidor \(http.statusCode)"
+                ]
+            )
+        }
+
+        return try JSONDecoder().decode(
+            Response.self,
+            from: data
+        )
+    }
 }

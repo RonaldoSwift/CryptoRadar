@@ -30,14 +30,14 @@ public final class CryptoListRepositoryImpl: CryptoListRepositoryProtocol {
     }
     
     public func searchCryptos(query: String) async throws -> [Crypto] {
-
+        
         let response = try await service.searchCryptos(query: query)
-        return response.coins.map {
+        return response.coins.map { crypto in
             Crypto(
-                id: $0.id,
-                symbol: $0.symbol,
-                name: $0.name,
-                image: $0.thumb,
+                id: crypto.id,
+                symbol: crypto.symbol,
+                name: crypto.name,
+                image: crypto.thumb,
                 currentPrice: 0,
                 priceChangePercentage24h: 0
             )
