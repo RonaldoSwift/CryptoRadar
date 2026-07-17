@@ -13,7 +13,6 @@ public struct FavoriteCrypto: Identifiable {
     public let name: String
     public let symbol: String
     public let image: String
-    public let currentPrice: Double
 
     public init(
         id: String,
@@ -26,6 +25,5 @@ public struct FavoriteCrypto: Identifiable {
         self.name = name
         self.symbol = symbol
         self.image = image
-        self.currentPrice = currentPrice
     }
 }

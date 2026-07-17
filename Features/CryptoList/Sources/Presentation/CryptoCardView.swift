@@ -43,17 +43,6 @@ struct CryptoCardView: View {
                     .foregroundColor(.yellow)
                 }
                 .buttonStyle(.plain)
-
-                Text(crypto.currentPrice.formatted(.currency(code: "USD")))
-                .foregroundColor(.white)
-                
-                Text(
-                    String(
-                        format: "%.2f%%",
-                        crypto.priceChangePercentage24h
-                    )
-                )
-                .foregroundColor(crypto.priceChangePercentage24h >= 0 ? .green : .red)
             }
         }
         .padding()

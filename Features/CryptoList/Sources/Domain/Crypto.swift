@@ -13,6 +13,4 @@ public struct Crypto: Identifiable {
     public let symbol: String
     public let name: String
     public let image: String
-    public let currentPrice: Double
-    public let priceChangePercentage24h: Double
 }

@@ -311,6 +311,17 @@
 			membershipExceptions = (
 				CryptoList/CryptoList.docc,
 				CryptoList/Resources/CryptoListStrings.swift,
+				CryptoList/Sources/Data/CryptoListService.swift,
+				CryptoList/Sources/Data/CryptoResponse.swift,
+				CryptoList/Sources/Data/SearchResponse.swift,
+				CryptoList/Sources/DI/CryptoListAssembly.swift,
+				CryptoList/Sources/Domain/Crypto.swift,
+				CryptoList/Sources/Domain/CryptoListRepositoryImpl.swift,
+				CryptoList/Sources/Domain/CryptoListRepositoryProtocol.swift,
+				CryptoList/Sources/Presentation/CryptoCardView.swift,
+				CryptoList/Sources/Presentation/CryptoListView.swift,
+				CryptoList/Sources/Presentation/CryptoListViewModel.swift,
+				CryptoList/Sources/Preview/MockCryptoRepository.swift,
 			);
 			target = FA85A1DE2FD1EA61008BD0C7 /* CryptoList */;
 		};
@@ -351,6 +362,13 @@
 				PersistenceKit/PersistenceController.swift,
 			);
 			target = FA8DA80C2FDCD781002C381E /* Favorite */;
+		};
+		FA98FEFD3009A30F00B0AA82 /* Exceptions for "Shared" folder in "CryptoList" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				NetworkKit/ApiClient.swift,
+			);
+			target = FA85A1DE2FD1EA61008BD0C7 /* CryptoList */;
 		};
 		FA9A673C2FBFABE000D6E8C9 /* Exceptions for "CryptoRadar" folder in "CryptoRadar" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -402,6 +420,17 @@
 				ConfiguracionTests/ConfiguracionTests.swift,
 				CryptoList/CryptoList.docc,
 				CryptoList/Resources/CryptoListStrings.swift,
+				CryptoList/Sources/Data/CryptoListService.swift,
+				CryptoList/Sources/Data/CryptoResponse.swift,
+				CryptoList/Sources/Data/SearchResponse.swift,
+				CryptoList/Sources/DI/CryptoListAssembly.swift,
+				CryptoList/Sources/Domain/Crypto.swift,
+				CryptoList/Sources/Domain/CryptoListRepositoryImpl.swift,
+				CryptoList/Sources/Domain/CryptoListRepositoryProtocol.swift,
+				CryptoList/Sources/Presentation/CryptoCardView.swift,
+				CryptoList/Sources/Presentation/CryptoListView.swift,
+				CryptoList/Sources/Presentation/CryptoListViewModel.swift,
+				CryptoList/Sources/Preview/MockCryptoRepository.swift,
 				CryptoListTests/CryptoListTests.swift,
 				Detalle/Detalle.docc,
 				Detalle/Sources/Data/CryptoDetailResponse.swift,
@@ -562,6 +591,7 @@
 				FAA90F9C300818A500A22254 /* Exceptions for "Shared" folder in "Login" target */,
 				FAA55A152FCF660D00A5B53A /* Exceptions for "Shared" folder in "StorageKit" target */,
 				FAA55A162FCF660D00A5B53A /* Exceptions for "Shared" folder in "StorageKitTests" target */,
+				FA98FEFD3009A30F00B0AA82 /* Exceptions for "Shared" folder in "CryptoList" target */,
 				FA8EF8822FE50C8200C0C659 /* Exceptions for "Shared" folder in "Favorite" target */,
 			);
 			path = Shared;

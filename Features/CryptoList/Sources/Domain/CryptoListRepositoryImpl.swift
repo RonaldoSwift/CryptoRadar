@@ -22,9 +22,20 @@ public final class CryptoListRepositoryImpl: CryptoListRepositoryProtocol {
                 id: cryptoResponse.id,
                 symbol: cryptoResponse.symbol,
                 name: cryptoResponse.name,
-                image: cryptoResponse.image,
-                currentPrice: cryptoResponse.currentPrice,
-                priceChangePercentage24h: cryptoResponse.priceChangePercentage24h
+                image: cryptoResponse.image
+            )
+        }
+    }
+    
+    public func searchCryptos(query: String) async throws -> [Crypto] {
+        
+        let response = try await service.searchCryptos(query: query)
+        return response.coins.map { crypto in
+            Crypto(
+                id: crypto.id,
+                symbol: crypto.symbol,
+                name: crypto.name,
+                image: crypto.thumb
             )
         }
     }

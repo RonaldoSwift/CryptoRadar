@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct CryptoResponse: Codable, Identifiable {
+public struct CryptoResponse: Decodable, Identifiable {
     
     public let id: String
     public let symbol: String
