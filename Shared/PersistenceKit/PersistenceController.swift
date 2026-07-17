@@ -72,7 +72,7 @@ private extension FavoriteCryptoEntity {
             name: name,
             symbol: symbol,
             image: image,
-            currentPrice: currentPrice
+            currentPrice: 0.0
         )
     }
 }
@@ -83,8 +83,7 @@ private extension FavoriteCrypto {
             id: id,
             name: name,
             symbol: symbol,
-            image: image,
-            currentPrice: currentPrice
+            image: image
         )
     }
 }

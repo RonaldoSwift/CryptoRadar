@@ -24,18 +24,14 @@ final class MockCryptoRepository: CryptoListRepositoryProtocol {
                 id: "bitcoin",
                 symbol: "BTC",
                 name: "Bitcoin",
-                image: "",
-                currentPrice: 64321.50,
-                priceChangePercentage24h: 2.45
+                image: ""
             ),
             
             Crypto(
                 id: "ethereum",
                 symbol: "ETH",
                 name: "Ethereum",
-                image: "",
-                currentPrice: 3452.12,
-                priceChangePercentage24h: -1.12
+                image: ""
             )
         ]
     }

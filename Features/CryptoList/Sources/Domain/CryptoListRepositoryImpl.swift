@@ -22,9 +22,7 @@ public final class CryptoListRepositoryImpl: CryptoListRepositoryProtocol {
                 id: cryptoResponse.id,
                 symbol: cryptoResponse.symbol,
                 name: cryptoResponse.name,
-                image: cryptoResponse.image,
-                currentPrice: cryptoResponse.currentPrice,
-                priceChangePercentage24h: cryptoResponse.priceChangePercentage24h
+                image: cryptoResponse.image
             )
         }
     }
@@ -37,9 +35,7 @@ public final class CryptoListRepositoryImpl: CryptoListRepositoryProtocol {
                 id: crypto.id,
                 symbol: crypto.symbol,
                 name: crypto.name,
-                image: crypto.thumb,
-                currentPrice: 0,
-                priceChangePercentage24h: 0
+                image: crypto.thumb
             )
         }
     }

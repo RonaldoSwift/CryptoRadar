@@ -115,9 +115,6 @@ private extension FavoriteListView {
             }
             
             Spacer()
-            
-            Text(crypto.currentPrice.formatted(.currency(code:"USD")))
-                .foregroundColor(.white)
         }
         .padding()
         .background(Color.white.opacity(0.05))

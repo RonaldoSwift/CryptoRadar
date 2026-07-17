@@ -135,7 +135,7 @@ private extension CryptoListView {
                                         name:crypto.name,
                                         symbol:crypto.symbol,
                                         image:crypto.image,
-                                        currentPrice:crypto.currentPrice
+                                        currentPrice: 0.0
                                     )
                                 )
                         }
