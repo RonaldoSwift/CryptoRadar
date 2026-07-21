@@ -11,9 +11,9 @@ import SwiftUI
 public struct FavoriteListView: View {
     
     @StateObject private var viewModel: FavoriteListViewModel
-    private let onTapCrypto: (String) -> Void
+    private let onTapCrypto: (String,String) -> Void
     
-    public init(viewModel:FavoriteListViewModel,onTapCrypto:@escaping (String)->Void) {
+    public init(viewModel:FavoriteListViewModel,onTapCrypto:@escaping (String,String)->Void) {
         _viewModel = StateObject(wrappedValue: viewModel)
         self.onTapCrypto = onTapCrypto
     }
@@ -87,7 +87,7 @@ private extension FavoriteListView {
                             }
                             .contentShape(Rectangle())
                             .onTapGesture {
-                                onTapCrypto(favorite.id)
+                                onTapCrypto(favorite.id,favorite.name)
                             }
                     }
                 }
@@ -128,6 +128,6 @@ private extension FavoriteListView {
         viewModel: FavoriteListViewModel(
             repository: MockFavoriteRepository()
         )
-    ) { _ in }
+    ) { _,_  in }
     
 }

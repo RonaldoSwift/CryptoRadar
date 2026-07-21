@@ -52,12 +52,12 @@ struct CryptoRadarApp: App {
                         CryptoListView(
                             viewModel: container.resolve(CryptoListViewModel.self)!,
                             favoriteViewModel: container.resolve(FavoriteListViewModel.self)!
-                        ) { cryptoId in
-                            selectedCrypto = CryptoSelection(id: cryptoId)
+                        ) { cryptoId, name in
+                            selectedCrypto = CryptoSelection(id: cryptoId, name: name)
                         }
                         .navigationDestination(item: $selectedCrypto) { crypto in
                             CryptoDetailView(
-                                cryptoId: crypto.id,
+                                cryptoId: crypto.id, cryptoName: crypto.name,
                                 viewModel: container.resolve(CryptoDetailViewModel.self)!
                             )
                         }
@@ -67,12 +67,13 @@ struct CryptoRadarApp: App {
                     }
                     
                     NavigationStack {
-                        FavoriteListView(viewModel: container.resolve(FavoriteListViewModel.self)!) { cryptoId in
-                            selectedCrypto = CryptoSelection(id:cryptoId)
+                        FavoriteListView(viewModel: container.resolve(FavoriteListViewModel.self)!) { cryptoId, name in
+                            selectedCrypto = CryptoSelection(id:cryptoId, name: name)
                         }
                         .navigationDestination(item: $selectedCrypto) { crypto in
                             CryptoDetailView(
                                 cryptoId: crypto.id,
+                                cryptoName: crypto.name,
                                 viewModel: container.resolve(CryptoDetailViewModel.self)!
                             )
                         }
@@ -107,4 +108,5 @@ struct CryptoRadarApp: App {
 
 private struct CryptoSelection: Identifiable, Hashable {
     let id: String
+    let name: String
 }
