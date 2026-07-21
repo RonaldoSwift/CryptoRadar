@@ -40,12 +40,16 @@ public struct CryptoListView: View {
             .padding()
         }
         .task {
-            viewModel.loadCryptos()
+            viewModel.loadIfNeeded()
             favoriteViewModel.load()
         }
         .alert("Error",isPresented: $viewModel.showErrorAlert) {
             Button(CryptoListStrings.retry) {
-                viewModel.loadCryptos()
+                if viewModel.searchText.isEmpty {
+                    viewModel.loadCryptos()
+                } else {
+                    viewModel.searchCryptos()
+                }
             }
             Button("OK", role: .cancel) { }
         } message: {

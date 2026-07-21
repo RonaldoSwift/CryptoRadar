@@ -18,6 +18,7 @@ public final class CryptoListViewModel: ObservableObject {
     @Published var showErrorAlert = false
     @Published var searchText: String = ""
     private var searchTask: Task<Void, Never>?
+    private var hasLoaded = false
     
     private let repository: CryptoListRepositoryProtocol
     
@@ -71,6 +72,16 @@ public final class CryptoListViewModel: ObservableObject {
                 showErrorAlert = true
             }
             isLoading = false
+        }
+    }
+    
+    public func loadIfNeeded() {
+        guard !hasLoaded else { return }
+        hasLoaded = true
+        if searchText.isEmpty {
+            loadCryptos()
+        } else {
+            searchCryptos()
         }
     }
 }
