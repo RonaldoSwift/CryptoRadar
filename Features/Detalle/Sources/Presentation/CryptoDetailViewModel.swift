@@ -20,6 +20,7 @@ public final class CryptoDetailViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var errorMessage: String?
     @Published var showFullDescription = false
+    @Published var isFavorite = false
 
     private let repository: CryptoDetailRepositoryProtocol
     private let favoriteRepository: FavoriteRepositoryProtocol
@@ -42,7 +43,7 @@ public final class CryptoDetailViewModel: ObservableObject {
             do {
                 var result = try await repository.getCryptoDetail(id: id)
                 result.isFavorite = favoriteRepository.isFavorite(id: id)
-                
+                isFavorite = result.isFavorite
                 #if DEBUG
                 print("Detalle OK:", result)
                 #endif
@@ -81,6 +82,7 @@ public final class CryptoDetailViewModel: ObservableObject {
         }
         crypto.isFavorite = favoriteRepository.isFavorite(id: crypto.id)
         self.crypto = crypto
+        isFavorite = favoriteRepository.isFavorite(id: crypto.id)
     }
     
     public func toggleDescription() {

@@ -16,10 +16,10 @@ import Favorite
 public struct CryptoListView: View {
     
     @StateObject private var viewModel: CryptoListViewModel
-    private let onTapCrypto: (String) -> Void
+    private let onTapCrypto: (String,String) -> Void
     @ObservedObject private var favoriteViewModel: FavoriteListViewModel
     
-    public init(viewModel:CryptoListViewModel,favoriteViewModel:FavoriteListViewModel,onTapCrypto:@escaping (String) -> Void) {
+    public init(viewModel:CryptoListViewModel,favoriteViewModel:FavoriteListViewModel,onTapCrypto:@escaping (String,String) -> Void) {
         _viewModel = StateObject(wrappedValue:viewModel)
         self.favoriteViewModel = favoriteViewModel
         self.onTapCrypto = onTapCrypto
@@ -152,7 +152,7 @@ private extension CryptoListView {
                         }
                         .contentShape(Rectangle())
                         .onTapGesture {
-                            onTapCrypto(crypto.id)
+                            onTapCrypto(crypto.id,crypto.name)
                         }
                     }
                 }
@@ -173,5 +173,5 @@ private extension CryptoListView {
         favoriteViewModel:
             FavoriteListViewModel(
                 repository: MockFavoriteRepository())
-    ) { _ in }
+    ) { _,_  in }
 }

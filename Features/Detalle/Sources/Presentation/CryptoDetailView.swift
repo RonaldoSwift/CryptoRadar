@@ -12,9 +12,11 @@ public struct CryptoDetailView: View {
     
     @StateObject private var viewModel: CryptoDetailViewModel
     private let cryptoId: String
+    private let cryptoName: String
     
-    public init(cryptoId: String,viewModel: CryptoDetailViewModel) {
+    public init(cryptoId: String,cryptoName: String,viewModel: CryptoDetailViewModel) {
         self.cryptoId = cryptoId
+        self.cryptoName = cryptoName
         _viewModel = StateObject(wrappedValue: viewModel)
     }
     
@@ -30,36 +32,45 @@ public struct CryptoDetailView: View {
 }
 
 private extension CryptoDetailView {
-    @ViewBuilder var content: some View {
+    @ViewBuilder
+    var content: some View {
         
-        if viewModel.isLoading {
-            ProgressView()
-                .tint(.white)
+        ScrollView {
             
-        } else if let error = viewModel.errorMessage {
-            Text(error)
-                .foregroundColor(.white)
-            
-        } else if let crypto = viewModel.crypto {
-            
-            ScrollView {
-                VStack(spacing: 24) {
-                    header(crypto: crypto)
+            VStack(spacing: 24) {
+                
+                // Este aparece siempre
+                header(crypto: viewModel.crypto)
+                
+                if viewModel.isLoading {
+                    
+                    ProgressView()
+                        .tint(.white)
+                    
+                } else if let crypto = viewModel.crypto {
+                    
                     priceSection(crypto: crypto)
                     chartView
                     statsSection(crypto: crypto)
                     descriptionSection(crypto: crypto)
+                    
+                } else if let error = viewModel.errorMessage {
+                    
+                    Text(error)
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                        .padding()
                 }
-                .padding()
             }
+            .padding()
         }
     }
     
     @ViewBuilder
-    func header(crypto: CryptoDetail) -> some View {
+    func header(crypto: CryptoDetail?) -> some View {
         
         HStack {
-            Text(crypto.name)
+            Text(crypto?.name ?? cryptoName)
                 .font(.title2)
                 .bold()
                 .foregroundColor(.white)
@@ -69,8 +80,10 @@ private extension CryptoDetailView {
             Button {
                 viewModel.toggleFavorite()
             } label: {
-                Image(systemName: crypto.isFavorite ? "star.fill" : "star")
-                    .foregroundColor(.yellow)
+                Image(
+                    systemName: (crypto?.isFavorite ?? false) ? "star.fill": "star"
+                )
+                .foregroundColor(.yellow)
             }
         }
     }
@@ -170,11 +183,11 @@ private extension CryptoDetailView {
 
 #Preview {
     CryptoDetailView(
-        cryptoId: "bitcoin",
+        cryptoId: "bitcoin", cryptoName: "",
         viewModel:
             CryptoDetailViewModel(
                 repository: MockCryptoDetailRepository(),
                 favoriteRepository: MockFavoriteRepository()
-            )
+            ),
     )
 }
