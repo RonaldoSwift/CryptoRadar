@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Favorite
 
 public struct CryptoDetailView: View {
     
@@ -172,7 +173,8 @@ private extension CryptoDetailView {
         cryptoId: "bitcoin",
         viewModel:
             CryptoDetailViewModel(
-                repository: MockCryptoDetailRepository()
+                repository: MockCryptoDetailRepository(),
+                favoriteRepository: MockFavoriteRepository()
             )
     )
 }

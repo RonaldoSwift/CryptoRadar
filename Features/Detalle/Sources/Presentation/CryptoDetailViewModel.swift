@@ -11,6 +11,7 @@
 
 import Foundation
 import Combine
+import Favorite
 
 @MainActor
 public final class CryptoDetailViewModel: ObservableObject {
@@ -21,9 +22,11 @@ public final class CryptoDetailViewModel: ObservableObject {
     @Published var showFullDescription = false
 
     private let repository: CryptoDetailRepositoryProtocol
+    private let favoriteRepository: FavoriteRepositoryProtocol
 
-    public init(repository: CryptoDetailRepositoryProtocol) {
+    public init(repository: CryptoDetailRepositoryProtocol,favoriteRepository: FavoriteRepositoryProtocol) {
         self.repository = repository
+        self.favoriteRepository = favoriteRepository
     }
 
     public func load(id: String) {
@@ -37,8 +40,9 @@ public final class CryptoDetailViewModel: ObservableObject {
 
         Task {
             do {
-                let result = try await repository.getCryptoDetail(id: id)
-
+                var result = try await repository.getCryptoDetail(id: id)
+                result.isFavorite = favoriteRepository.isFavorite(id: id)
+                
                 #if DEBUG
                 print("Detalle OK:", result)
                 #endif
@@ -61,7 +65,21 @@ public final class CryptoDetailViewModel: ObservableObject {
         guard var crypto = self.crypto else {
             return
         }
-        crypto.isFavorite.toggle()
+
+        if favoriteRepository.isFavorite(id: crypto.id) {
+            favoriteRepository.removeFavorite(id: crypto.id)
+        } else {
+            favoriteRepository.addFavorite(
+                FavoriteCrypto(
+                    id: crypto.id,
+                    name: crypto.name,
+                    symbol: crypto.description,
+                    image: crypto.image,
+                    currentPrice: crypto.currentPrice
+                )
+            )
+        }
+        crypto.isFavorite = favoriteRepository.isFavorite(id: crypto.id)
         self.crypto = crypto
     }
     
