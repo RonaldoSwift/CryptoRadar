@@ -43,6 +43,14 @@ public struct CryptoListView: View {
             viewModel.loadCryptos()
             favoriteViewModel.load()
         }
+        .alert("Error",isPresented: $viewModel.showErrorAlert) {
+            Button(CryptoListStrings.retry) {
+                viewModel.loadCryptos()
+            }
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text(viewModel.errorMessage ?? "")
+        }
     }
 }
 
@@ -102,13 +110,12 @@ private extension CryptoListView {
     
     @ViewBuilder
     var content: some View {
-        if viewModel.isLoading {
+        if viewModel.isLoading && viewModel.cryptos.isEmpty  {
             Spacer()
             ProgressView()
                 .tint(.white)
-            
             Spacer()
-        } else if let error = viewModel.errorMessage {
+        } else if let error = viewModel.errorMessage, viewModel.cryptos.isEmpty {
             
             VStack(spacing: 16) {
                 

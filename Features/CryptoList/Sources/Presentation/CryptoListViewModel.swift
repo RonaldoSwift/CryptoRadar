@@ -15,6 +15,7 @@ public final class CryptoListViewModel: ObservableObject {
     @Published public private(set) var cryptos: [Crypto] = []
     @Published public private(set) var isLoading = false
     @Published public private(set) var errorMessage: String?
+    @Published var showErrorAlert = false
     @Published var searchText: String = ""
     private var searchTask: Task<Void, Never>?
     
@@ -33,6 +34,11 @@ public final class CryptoListViewModel: ObservableObject {
                 cryptos = try await repository.getTopCryptos()
             } catch {
                 errorMessage = CryptoListStrings.errorMesageCrypto
+                if cryptos.isEmpty {
+                    // primera carga
+                } else {
+                    showErrorAlert = true
+                }
             }
             isLoading = false
         }
@@ -44,6 +50,7 @@ public final class CryptoListViewModel: ObservableObject {
             cryptos = try await repository.getTopCryptos()
         } catch {
             errorMessage = CryptoListStrings.errorUpdate
+            showErrorAlert = true
         }
     }
     
@@ -61,6 +68,7 @@ public final class CryptoListViewModel: ObservableObject {
                 cryptos = try await repository.searchCryptos(query: searchText)
             } catch {
                 errorMessage = CryptoListStrings.errorMesageCrypto
+                showErrorAlert = true
             }
             isLoading = false
         }
