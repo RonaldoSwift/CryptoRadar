@@ -15,14 +15,9 @@ struct CryptoCardView: View {
     
     var body: some View {
         HStack(spacing: 14) {
-            AsyncImage(url:URL(string:crypto.image)) { image in
-                image.resizable()
-                
-            } placeholder: {
-                ProgressView()
-            }
-            .frame(width: 46,height: 46)
-            .clipShape(Circle())
+            CachedAsyncImage(url: crypto.image)
+                .frame(width: 46, height: 46)
+                .clipShape(Circle())
             
             VStack(alignment:.leading) {
                 Text(crypto.name)
