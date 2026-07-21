@@ -366,6 +366,9 @@
 		FA98FEFD3009A30F00B0AA82 /* Exceptions for "Shared" folder in "CryptoList" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				ImageKit/CachedAsyncImage.swift,
+				ImageKit/ImageCache.swift,
+				ImageKit/ImageLoader.swift,
 				NetworkKit/ApiClient.swift,
 			);
 			target = FA85A1DE2FD1EA61008BD0C7 /* CryptoList */;

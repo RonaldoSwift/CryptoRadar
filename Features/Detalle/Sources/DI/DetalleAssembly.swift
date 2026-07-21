@@ -7,6 +7,7 @@
 
 import Foundation
 import Swinject
+import Favorite
 
 public final class DetalleAssembly: Assembly {
     public init() {}
@@ -24,7 +25,8 @@ public final class DetalleAssembly: Assembly {
         
         container.register(CryptoDetailViewModel.self) { @MainActor resolver in
             CryptoDetailViewModel(
-                repository: resolver.resolve(CryptoDetailRepositoryProtocol.self)!
+                repository: resolver.resolve(CryptoDetailRepositoryProtocol.self)!,
+                favoriteRepository: resolver.resolve(FavoriteRepositoryProtocol.self)!
             )
         }
     }
