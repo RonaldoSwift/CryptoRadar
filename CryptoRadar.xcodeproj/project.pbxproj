@@ -419,7 +419,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"/Localized: Resources/Localizable.strings",
-				Info.plist,
 			);
 			target = FABBC3E22FB7EF6F00F51B23 /* CryptoRadar */;
 		};
@@ -642,6 +641,11 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		FA66559630182B0400BCABF5 /* Screenshots */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		FAA859A82FC749D300A36BC2 /* Features */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -841,6 +845,7 @@
 		FABBC3DA2FB7EF6F00F51B23 = {
 			isa = PBXGroup;
 			children = (
+				FA66559630182B0400BCABF5 /* Screenshots */,
 				FA6655923018233F00BCABF5 /* README.md */,
 				FA4E8FD02FCE50C3005FB0D1 /* Shared */,
 				FABBC3E52FB7EF6F00F51B23 /* CryptoRadar */,
@@ -1254,6 +1259,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				FA4E8FD02FCE50C3005FB0D1 /* Shared */,
+				FA66559630182B0400BCABF5 /* Screenshots */,
 				FAA859A82FC749D300A36BC2 /* Features */,
 				FABBC3E52FB7EF6F00F51B23 /* CryptoRadar */,
 			);
