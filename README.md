@@ -20,22 +20,28 @@ La aplicación permite explorar criptomonedas, consultar información detallada,
 # 📸 Screenshots
 
 ### Login
-/var/folders/2v/ndfyp8fj7xg16ywmqrg9q_0r0000gq/T/simulator_screenshot_EE8EC14D-9630-48E5-84B3-FA602B3DD9DE.png
+
+<img src="Screenshots/login.png" width="250">
 
 ### Register
-/var/folders/2v/ndfyp8fj7xg16ywmqrg9q_0r0000gq/T/simulator_screenshot_2F7926F6-233C-4433-AFF2-23A1880A2A17.png
+
+<img src="Screenshots/register.png" width="250">
 
 ### Market
-/var/folders/2v/ndfyp8fj7xg16ywmqrg9q_0r0000gq/T/simulator_screenshot_BC354265-D2B8-4A28-9118-249A31D7D522.png
+
+<img src="Screenshots/market.png" width="250">
 
 ### Crypto Detail
-/var/folders/2v/ndfyp8fj7xg16ywmqrg9q_0r0000gq/T/simulator_screenshot_B5EE32E9-FF85-4B27-8D42-D0725B0A9548.png
+
+<img src="Screenshots/detail.png" width="250">
 
 ### Favorites
-/var/folders/2v/ndfyp8fj7xg16ywmqrg9q_0r0000gq/T/simulator_screenshot_4A534647-88B2-404E-8612-909A36898083.png
+
+<img src="Screenshots/favorites.png" width="250">
 
 ### Settings
-/var/folders/2v/ndfyp8fj7xg16ywmqrg9q_0r0000gq/T/simulator_screenshot_4C48FDAA-0B9F-48F8-A007-0443C221F855.png
+
+<img src="Screenshots/settings.png" width="250">
 
 ---
 
@@ -55,8 +61,9 @@ Se utiliza:
 
 # 📂 Estructura del proyecto
 
+```text
 CryptoRadar
-
+│
 ├── Features
 │   ├── Login
 │   ├── Register
@@ -65,17 +72,17 @@ CryptoRadar
 │   ├── Favorite
 │   └── Settings
 │
-
 ├── Shared
 │   ├── StorageKit
 │   ├── NetworkKit
 │   └── ImageKit
 │
+└── CryptoRadar
+    ├── Sources
+    ├── Resources
+    └── Core
+```
 
-├── CryptoRadar
-│   ├── Sources
-│   ├── Resources
-│   └── Core
 ---
 
 # 🔗 Deep Links
@@ -88,7 +95,6 @@ Abrir favoritos
 
 cryptoradar://favorites
 Si el usuario no ha iniciado sesión, el Deep Link queda pendiente y se ejecuta automáticamente después del Login.
-
 ---
 
 # 🛠 Stack Tecnológico
@@ -103,7 +109,6 @@ Si el usuario no ha iniciado sesión, el Deep Link queda pendiente y se ejecuta 
 - CoinGecko API
 - Keychain
 - Deep Linking
-
 ---
 
 # ⚙ Instalación
@@ -112,7 +117,6 @@ Si el usuario no ha iniciado sesión, el Deep Link queda pendiente y se ejecuta 
 git clone:   https://github.com/RonaldoSwift/CryptoRadar.git
 2. Abrir el proyecto en Xcode
 3. Ejecutar la aplicación
-
 ---
 
 # 👨‍💻 Autor
