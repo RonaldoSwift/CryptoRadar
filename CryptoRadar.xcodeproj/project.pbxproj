@@ -419,6 +419,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"/Localized: Resources/Localizable.strings",
+				Info.plist,
 			);
 			target = FABBC3E22FB7EF6F00F51B23 /* CryptoRadar */;
 		};
