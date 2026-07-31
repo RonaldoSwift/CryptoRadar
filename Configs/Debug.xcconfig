@@ -1,0 +1,7 @@
+// Development
+
+APP_NAME = CryptoRadar Dev
+
+BASE_URL = https://api-dev.cryptoradar.com
+
+ENVIRONMENT = DEBUG

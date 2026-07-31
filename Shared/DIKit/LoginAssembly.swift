@@ -5,8 +5,8 @@
 //  Created by Ronaldo Andre on 22/05/26.
 //
 
-import Foundation
 import Swinject
+import Login
 
 public final class LoginAssembly: Assembly {
     public init() {}

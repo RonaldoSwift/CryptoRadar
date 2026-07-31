@@ -1,0 +1,7 @@
+// Production
+
+APP_NAME = CryptoRadar
+
+BASE_URL = https://api.cryptoradar.com
+
+ENVIRONMENT = RELEASE
