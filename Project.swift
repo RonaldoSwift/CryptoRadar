@@ -64,6 +64,19 @@ let project = Project(
         ),
 
         .target(
+            name: "PersistenceKit",
+            destinations: .iOS,
+            product: .framework,
+            bundleId: "com.ronaldo.PersistenceKit",
+            infoPlist: .default,
+            buildableFolders: [
+                "Shared/PersistenceKit"
+            ],
+            dependencies: [
+            ]
+        ),
+
+        .target(
             name: "NetworkKit",
             destinations: .iOS,
             product: .framework,
@@ -131,7 +144,8 @@ let project = Project(
             ],
             dependencies: [
                 .target(name: "NetworkKit"),
-                .target(name: "ImageKit")
+                .target(name: "ImageKit"),
+                .target(name: "Favorite")
             ]
         ),
 
@@ -148,7 +162,8 @@ let project = Project(
             dependencies: [
                 .target(name: "NetworkKit"),
                 .target(name: "ImageKit"),
-                .target(name: "StorageKit")
+                .target(name: "StorageKit"),
+                .target(name: "Favorite")
             ]
         ),
 
@@ -163,7 +178,9 @@ let project = Project(
                 "Features/Favorite/Resources"
             ],
             dependencies: [
-                .target(name: "StorageKit")
+                .target(name: "StorageKit"),
+                .target(name: "PersistenceKit"),
+                .package(product: "Swinject")
             ]
         ),
 

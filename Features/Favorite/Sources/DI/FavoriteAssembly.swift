@@ -12,6 +12,7 @@
 
 import Foundation
 import Swinject
+import PersistenceKit
 
 @MainActor
 public final class FavoriteAssembly: Assembly {

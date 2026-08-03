@@ -10,7 +10,6 @@
 //
 
 import SwiftUI
-import CryptoList
 import Favorite
 
 public struct CryptoListView: View {

@@ -7,7 +7,6 @@
 
 import Foundation
 import Combine
-import CryptoList
 
 @MainActor
 public final class CryptoListViewModel: ObservableObject {
