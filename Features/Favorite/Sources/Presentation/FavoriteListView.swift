@@ -38,7 +38,7 @@ public struct FavoriteListView: View {
 private extension FavoriteListView {
     var header: some View {
         HStack {
-            Text(FavoriteStrings.title)
+            Text(FavoriteStrings.Favorite.title)
                 .font(.title2)
                 .bold()
                 .foregroundColor(.white)
@@ -49,7 +49,7 @@ private extension FavoriteListView {
     
     var searchBar: some View {
         
-        TextField(FavoriteStrings.searchFavorite,text:$viewModel.searchText)
+        TextField(FavoriteStrings.Favorite.Search.favorite,text:$viewModel.searchText)
             .padding()
             .background(Color.white.opacity(0.06))
             .cornerRadius(14)
@@ -66,7 +66,7 @@ private extension FavoriteListView {
                     .font(.largeTitle)
                     .foregroundColor(.gray)
                 
-                Text(FavoriteStrings.empty)
+                Text(FavoriteStrings.Favorite.empty)
                     .foregroundColor(.gray)
             }
             

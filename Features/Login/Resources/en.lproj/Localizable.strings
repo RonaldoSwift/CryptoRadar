@@ -20,3 +20,5 @@
 "Login.SuccessMessage"="Login successful";
 "Login.Error.InvalidEmail" = "Invalid email address";
 "Login.Error.PasswordMinLength" = "The password must be at least 6 characters long";
+"Login.Error.EmptyEmail" = "Email is required";
+"Login.Error.EmptyPassword" = "Password is required";

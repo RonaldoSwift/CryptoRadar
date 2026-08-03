@@ -55,7 +55,7 @@ public final class CryptoDetailViewModel: ObservableObject {
                 print("ERROR DETALLE:", error)
                 #endif
 
-                errorMessage = CryptoDetailStrings.errorDetail
+                errorMessage = DetalleStrings.CryptoDetail.Error.detail
             }
             isLoading = false
         }
