@@ -44,6 +44,16 @@ let project = Project(
                 dependencies: [
                 ]
             ),
+            .target(
+                name: "PersistenceKit",
+                destinations: .iOS,
+                product: .framework,
+                bundleId: "com.ronaldoVargas.PersistenceKit",
+                infoPlist: .default,
+                sources: [
+                    "Shared/PersistenceKit/**"
+                ]
+            ),
         
             .target(
                 name: "NetworkKit",
@@ -159,6 +169,7 @@ let project = Project(
             ],
             dependencies: [
                 .target(name: "StorageKit"),
+                .target(name: "PersistenceKit"),
                 .target(name: "NetworkKit"),
                 .target(name: "ImageKit"),
                 .external(name: "Swinject")

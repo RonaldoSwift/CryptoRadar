@@ -33,7 +33,7 @@ public struct LoginView: View {
             
             ScrollView {
                 VStack(spacing: 40) {
-                    Text(LoginStrings.appName)
+                    Text(LoginStrings.Login.appName)
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.blue)
@@ -41,12 +41,12 @@ public struct LoginView: View {
                     
                     VStack(spacing: 20) {
                         VStack(spacing: 8) {
-                            Text(LoginStrings.title)
+                            Text(LoginStrings.Login.title)
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                             
-                            Text(LoginStrings.subtitle)
+                            Text(LoginStrings.Login.subtitle)
                                 .foregroundColor(.gray)
                         }
                         
@@ -55,7 +55,7 @@ public struct LoginView: View {
                             spacing: 8
                         ) {
                             
-                            Text(LoginStrings.emailTitle)
+                            Text(LoginStrings.Login.emailTitle)
                                 .font(.caption)
                                 .foregroundColor(.gray)
                             
@@ -64,7 +64,7 @@ public struct LoginView: View {
                                     .foregroundColor(.gray)
                                 
                                 TextField(
-                                    LoginStrings.emailPlaceholder,
+                                    LoginStrings.Login.emailPlaceholder,
                                     text: $viewModel.email
                                 )
                                 .keyboardType(.emailAddress)
@@ -81,7 +81,7 @@ public struct LoginView: View {
                         
                         
                         VStack(alignment: .leading,spacing: 8) {
-                            Text(LoginStrings.passwordTitle)
+                            Text(LoginStrings.Login.passwordTitle)
                                 .font(.caption)
                                 .foregroundColor(.gray)
                             
@@ -92,12 +92,12 @@ public struct LoginView: View {
                                 Group {
                                     if showPassword {
                                         TextField(
-                                            LoginStrings.passwordPlaceholder,
+                                            LoginStrings.Login.passwordPlaceholder,
                                             text: $viewModel.password
                                         )
                                     } else {
                                         SecureField(
-                                            LoginStrings.passwordPlaceholder,
+                                            LoginStrings.Login.passwordPlaceholder,
                                             text: $viewModel.password
                                         )
                                     }
@@ -129,7 +129,7 @@ public struct LoginView: View {
                                 ProgressView()
                                     .tint(.white)
                             } else {
-                                Text(LoginStrings.button)
+                                Text(LoginStrings.Login.button)
                                     .fontWeight(.bold)
                                     .foregroundColor(.white)
                             }
@@ -151,7 +151,7 @@ public struct LoginView: View {
                         Button {
                             
                         } label: {
-                            Text(LoginStrings.forgotPassword)
+                            Text(LoginStrings.Login.forgotPassword)
                                 .foregroundColor(.blue)
                         }
                     }
@@ -163,13 +163,13 @@ public struct LoginView: View {
                     .padding(.horizontal)
                     
                     HStack {
-                        Text(LoginStrings.accountQuestion)
+                        Text(LoginStrings.Login.accountQuestion)
                             .foregroundColor(.gray)
                         
                         Button {
                             onRegisterTap?()
                         } label: {
-                            Text(LoginStrings.register)
+                            Text(LoginStrings.Login.register)
                                 .foregroundColor(.blue)
                         }
                     }
@@ -177,7 +177,7 @@ public struct LoginView: View {
             }
         }
         .alert(
-            LoginStrings.successTitle,
+            LoginStrings.Login.successTitle,
             isPresented:$viewModel.showSuccessAlert
         ) {
             
@@ -185,7 +185,7 @@ public struct LoginView: View {
                 onLoginSuccess?()
             }
         } message: {
-            Text(LoginStrings.successMessage)
+            Text(LoginStrings.Login.successMessage)
         }
     }
 }

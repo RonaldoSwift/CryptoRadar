@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PersistenceKit
 
 public final class FavoriteRepository: FavoriteRepositoryProtocol {
 

@@ -27,22 +27,22 @@ public final class LoginViewModel: ObservableObject {
     public func login() {
         errorMessage = nil
         guard !email.isEmpty else {
-            errorMessage = LoginStrings.emptyEmail
+            errorMessage = LoginStrings.Login.emptyEmail
             return
         }
         
         guard email.isValidEmail else {
-            errorMessage = LoginStrings.invalidEmail
+            errorMessage = LoginStrings.Login.invalidEmail
             return
         }
         
         guard !password.isEmpty else {
-            errorMessage = LoginStrings.emptyPassword
+            errorMessage = LoginStrings.Login.emptyPassword
             return
         }
         
         guard password.count >= 6 else {
-            errorMessage = LoginStrings.passwordMinLength
+            errorMessage = LoginStrings.Login.passwordMinLength
             return
         }
         
