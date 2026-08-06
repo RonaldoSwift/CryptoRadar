@@ -8,6 +8,7 @@ import Detalle
 import Favorite
 import SwiftData
 import Configuracion
+import PersistenceKit
 
 @main
 struct CryptoRadarApp: App {

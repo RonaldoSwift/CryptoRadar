@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NetworkKit
 
 public protocol CryptoListServiceProtocol {
     func getTopCryptos() async throws -> [CryptoResponse]

@@ -28,6 +28,7 @@ let project = Project(
                 .target(name: "StorageKit"),
                 .target(name: "NetworkKit"),
                 .target(name: "ImageKit"),
+                .target(name: "PersistenceKit"),
                 .external(name:"Swinject")
             ]
         ),
@@ -94,6 +95,7 @@ let project = Project(
                 ],
                 dependencies: [
                     .target(name: "StorageKit"),
+                    .target(name: "NetworkKit"),
                     .external(name: "Swinject")
                 ]
             ),
@@ -112,6 +114,7 @@ let project = Project(
                 ],
                 dependencies: [
                     .target(name: "StorageKit"),
+                    .target(name: "NetworkKit"),
                     .external(name: "Swinject")
                 ]
             ),

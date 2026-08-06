@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import StorageKit
 
 @MainActor
 public final class LoginViewModel: ObservableObject {
@@ -27,22 +28,22 @@ public final class LoginViewModel: ObservableObject {
     public func login() {
         errorMessage = nil
         guard !email.isEmpty else {
-            errorMessage = LoginStrings.Login.emptyEmail
+            errorMessage = LoginStrings.Login.Error.emptyEmail
             return
         }
         
         guard email.isValidEmail else {
-            errorMessage = LoginStrings.Login.invalidEmail
+            errorMessage = LoginStrings.Login.Error.invalidEmail
             return
         }
         
         guard !password.isEmpty else {
-            errorMessage = LoginStrings.Login.emptyPassword
+            errorMessage = LoginStrings.Login.Error.emptyPassword
             return
         }
         
         guard password.count >= 6 else {
-            errorMessage = LoginStrings.Login.passwordMinLength
+            errorMessage = LoginStrings.Login.Error.passwordMinLength
             return
         }
         

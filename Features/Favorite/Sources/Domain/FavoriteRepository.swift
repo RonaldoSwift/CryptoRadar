@@ -17,11 +17,11 @@ public final class FavoriteRepository: FavoriteRepositoryProtocol {
     }
 
     public func getFavorites() -> [FavoriteCrypto] {
-        database.getFavorites()
+        database.getFavorites().map { $0.toDomain() }
     }
 
-    public func addFavorite(_ crypto:FavoriteCrypto) {
-        database.addFavorite(crypto)
+    public func addFavorite(_ crypto: FavoriteCrypto) {
+        database.addFavorite(crypto.toEntity())
     }
 
     public func removeFavorite(id:String) {
@@ -30,5 +30,32 @@ public final class FavoriteRepository: FavoriteRepositoryProtocol {
 
     public func isFavorite(id:String) -> Bool {
         database.isFavorite(id: id)
+    }
+}
+
+// MARK: - Mappers
+
+private extension FavoriteCryptoEntity {
+
+    func toDomain() -> FavoriteCrypto {
+        FavoriteCrypto(
+            id: id,
+            name: name,
+            symbol: symbol,
+            image: image,
+            currentPrice: 0.0
+        )
+    }
+}
+
+private extension FavoriteCrypto {
+
+    func toEntity() -> FavoriteCryptoEntity {
+        FavoriteCryptoEntity(
+            id: id,
+            name: name,
+            symbol: symbol,
+            image: image
+        )
     }
 }

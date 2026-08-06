@@ -1,0 +1,5 @@
+"CryptoList.Error.MessageCrypto" = "No se pudieron cargar las criptomonedas";
+"CryptoList.Error.Update" = "No se pudieron actualizar las criptomonedas";
+"CryptoList.Title" = "Criptomonedas";
+"CryptoList.Retry" = "Reintentar";
+"CryptoList.SearchPlaceholder" = "Buscar criptomoneda";

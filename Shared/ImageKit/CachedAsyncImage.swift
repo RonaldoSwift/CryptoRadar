@@ -8,12 +8,16 @@
 import Foundation
 import SwiftUI
 
-struct CachedAsyncImage: View {
+public struct CachedAsyncImage: View {
 
     let url: String
     @StateObject private var loader = ImageLoader()
+    
+    public init(url: String) {
+           self.url = url
+       }
 
-    var body: some View {
+    public var body: some View {
         Group {
             if let image = loader.image {
                 Image(uiImage: image)
