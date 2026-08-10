@@ -1,0 +1,5 @@
+"CryptoList.Error.MessageCrypto" = "Unable to load cryptocurrencies";
+"CryptoList.Error.Update" = "Unable to update cryptocurrencies";
+"CryptoList.Title" = "Cryptocurrencies";
+"CryptoList.Retry" = "Retry";
+"CryptoList.SearchPlaceholder" = "Search cryptocurrency";

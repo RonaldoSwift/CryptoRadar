@@ -22,20 +22,16 @@ public final class PersistenceController {
         }
     }
     
-    public func getFavorites() -> [FavoriteCrypto] {
+    public func getFavorites() -> [FavoriteCryptoEntity] {
         
         let descriptor = FetchDescriptor<FavoriteCryptoEntity>()
         
-        let entities = (try? context.fetch(descriptor)) ?? []
-        
-        return entities.map {
-            $0.toDomain()
-        }
+        return (try? context.fetch(descriptor)) ?? []
     }
     
     // no devuleve modelo de negocio sino la de modelo de datos
-    public func addFavorite(_ crypto:FavoriteCrypto) {
-        context.insert(crypto.toEntity())
+    public func addFavorite(_ crypto:FavoriteCryptoEntity) {
+        context.insert(crypto)
         try? context.save()
     }
     
@@ -61,29 +57,4 @@ public final class PersistenceController {
         return (try? context.fetch(descriptor))?.isEmpty == false
     }
     
-}
-
-// MARK: - Mappers
-
-private extension FavoriteCryptoEntity {
-    func toDomain() -> FavoriteCrypto {
-        FavoriteCrypto(
-            id: id,
-            name: name,
-            symbol: symbol,
-            image: image,
-            currentPrice: 0.0
-        )
-    }
-}
-
-private extension FavoriteCrypto {
-    func toEntity() -> FavoriteCryptoEntity {
-        FavoriteCryptoEntity(
-            id: id,
-            name: name,
-            symbol: symbol,
-            image: image
-        )
-    }
 }

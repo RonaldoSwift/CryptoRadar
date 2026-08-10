@@ -44,7 +44,7 @@ public struct CryptoListView: View {
             favoriteViewModel.load()
         }
         .alert("Error",isPresented: $viewModel.showErrorAlert) {
-            Button(CryptoListStrings.retry) {
+            Button(CryptoListStrings.CryptoList.retry) {
                 if viewModel.searchText.isEmpty {
                     viewModel.loadCryptos()
                 } else {
@@ -63,7 +63,7 @@ private extension CryptoListView {
     var header: some View {
         
         HStack {
-            Text(CryptoListStrings.title)
+            Text(CryptoListStrings.CryptoList.title)
                 .font(.title2)
                 .bold()
                 .foregroundColor(.white)
@@ -80,7 +80,7 @@ private extension CryptoListView {
     var searchBar: some View {
         
         TextField(
-            CryptoListStrings.searchPlaceholder,
+            CryptoListStrings.CryptoList.searchPlaceholder,
             text: $viewModel.searchText
         )
         .padding()
@@ -126,7 +126,7 @@ private extension CryptoListView {
                 Text(error)
                     .foregroundColor(.white)
                 
-                Button(CryptoListStrings.retry) {
+                Button(CryptoListStrings.CryptoList.retry) {
                     viewModel.loadCryptos()
                 }
             }

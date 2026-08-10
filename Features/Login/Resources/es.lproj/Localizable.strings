@@ -20,3 +20,5 @@
 "Login.SuccessMessage"="Inicio de sesión exitoso";
 "Login.Error.InvalidEmail" = "Email inválido";
 "Login.Error.PasswordMinLength" = "La contraseña debe tener mínimo 6 caracteres";
+"Login.Error.EmptyEmail" = "Ingrese su correo";
+"Login.Error.EmptyPassword" = "Ingrese su contraseña";

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NetworkKit
 
 protocol AuthServiceRegisterProtocol {
     func register(email: String,password: String) async throws -> RegisterResponse

@@ -91,7 +91,7 @@ private extension CryptoDetailView {
     @ViewBuilder
     func priceSection(crypto: CryptoDetail) -> some View {
         VStack(spacing: 8) {
-            Text(CryptoDetailStrings.currentPrice)
+            Text(DetalleStrings.CryptoDetail.currentPrice)
                 .foregroundColor(.gray)
             
             Text("$\(crypto.currentPrice,specifier: "%.2f")")
@@ -107,7 +107,7 @@ private extension CryptoDetailView {
             .fill(Color.white.opacity(0.05))
             .frame(height: 220)
             .overlay {
-                Text(CryptoDetailStrings.graph)
+                Text(DetalleStrings.CryptoDetail.graph)
                     .foregroundColor(.gray)
             }
     }
@@ -117,7 +117,7 @@ private extension CryptoDetailView {
         
         VStack(alignment: .leading,spacing: 16) {
             
-            Text(CryptoDetailStrings.statistics)
+            Text(DetalleStrings.CryptoDetail.statistics)
                 .foregroundColor(.white)
                 .bold()
             
@@ -169,7 +169,7 @@ private extension CryptoDetailView {
             )
             .foregroundColor(.gray)
             
-            Button(viewModel.showFullDescription ? CryptoDetailStrings.readLess : CryptoDetailStrings.readMore) {
+            Button(viewModel.showFullDescription ? DetalleStrings.CryptoDetail.readLess : DetalleStrings.CryptoDetail.readMore) {
                 viewModel.toggleDescription()
             }
             .foregroundColor(.blue)
