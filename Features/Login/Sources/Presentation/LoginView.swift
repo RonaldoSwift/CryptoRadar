@@ -122,7 +122,7 @@ public struct LoginView: View {
                         }
                         
                         Button {
-                            viewModel.login()
+                            Task { await viewModel.login() }
                         } label: {
                             
                             if viewModel.isLoading {

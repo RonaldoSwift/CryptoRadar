@@ -16,9 +16,7 @@ public protocol AuthServiceLoginProtocol {
     ) async throws -> LoginResponse
 }
 
-public final class AuthServiceLogin:
-                                        
-    AuthServiceLoginProtocol {
+public final class AuthServiceLogin: AuthServiceLoginProtocol {
     
     private let apiClient = ApiClient()
     

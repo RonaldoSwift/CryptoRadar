@@ -25,7 +25,7 @@ public final class LoginViewModel: ObservableObject {
         self.repository = repository
     }
     
-    public func login() {
+    public func login() async {
         errorMessage = nil
         guard !email.isEmpty else {
             errorMessage = LoginStrings.Login.Error.emptyEmail
@@ -49,18 +49,16 @@ public final class LoginViewModel: ObservableObject {
         
         isLoading = true
         
-        Task {
-            do {
-                let responseToken = try await repository.login(
-                    email: email,
-                    password: password
-                )
-                token = responseToken
-                showSuccessAlert = true
-            } catch {
-                errorMessage = error.localizedDescription
-            }
-            isLoading = false
+        do {
+            let responseToken = try await repository.login(
+                email: email,
+                password: password
+            )
+            token = responseToken
+            showSuccessAlert = true
+        } catch {
+            errorMessage = error.localizedDescription
         }
+        isLoading = false
     }
 }
