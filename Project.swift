@@ -132,6 +132,20 @@ let project = Project(
                     .external(name: "Swinject")
                 ]
             ),
+
+            .target(
+                name: "RegisterTests",
+                destinations: .iOS,
+                product: .unitTests,
+                bundleId: "com.ronaldoVargas.RegisterTests",
+                infoPlist: .default,
+                sources: [
+                    "Features/RegisterTests/**"
+                ],
+                dependencies: [
+                    .target(name: "Register")
+                ]
+            ),
         .target(
             name: "CryptoList",
             destinations: .iOS,
@@ -215,7 +229,10 @@ let project = Project(
             buildAction: .buildAction(
                 targets: ["CryptoRadar"]
             ),
-            testAction: .targets(["LoginTests"]),
+            testAction: .targets([
+                "LoginTests",
+                "RegisterTests"
+            ]),
             runAction: .runAction()
         )
     ]
