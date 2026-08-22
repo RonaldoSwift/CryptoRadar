@@ -99,6 +99,20 @@ let project = Project(
                     .external(name: "Swinject")
                 ]
             ),
+
+            .target(
+                name: "LoginTests",
+                destinations: .iOS,
+                product: .unitTests,
+                bundleId: "com.ronaldoVargas.LoginTests",
+                infoPlist: .default,
+                sources: [
+                    "Features/LoginTests/**"
+                ],
+                dependencies: [
+                    .target(name: "Login")
+                ]
+            ),
         
             .target(
                 name: "Register",
@@ -116,6 +130,20 @@ let project = Project(
                     .target(name: "StorageKit"),
                     .target(name: "NetworkKit"),
                     .external(name: "Swinject")
+                ]
+            ),
+
+            .target(
+                name: "RegisterTests",
+                destinations: .iOS,
+                product: .unitTests,
+                bundleId: "com.ronaldoVargas.RegisterTests",
+                infoPlist: .default,
+                sources: [
+                    "Features/RegisterTests/**"
+                ],
+                dependencies: [
+                    .target(name: "Register")
                 ]
             ),
         .target(
@@ -201,6 +229,10 @@ let project = Project(
             buildAction: .buildAction(
                 targets: ["CryptoRadar"]
             ),
+            testAction: .targets([
+                "LoginTests",
+                "RegisterTests"
+            ]),
             runAction: .runAction()
         )
     ]
