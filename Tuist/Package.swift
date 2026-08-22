@@ -21,6 +21,10 @@ let package = Package(
         .package(
             url: "https://github.com/Swinject/Swinject.git",
             from: "2.9.0"
+        ),
+        .package(
+            url: "https://github.com/nalexn/ViewInspector.git",
+            from: "0.10.0"
         )
     ]
 )

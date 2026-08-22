@@ -110,7 +110,8 @@ let project = Project(
                     "Features/LoginTests/**"
                 ],
                 dependencies: [
-                    .target(name: "Login")
+                    .target(name: "Login"),
+                    .external(name: "ViewInspector")
                 ]
             ),
         
@@ -220,6 +221,19 @@ let project = Project(
                 .external(name:"Swinject")
             ]
         ),
+        .target(
+            name: "CryptoRadarUITests",
+            destinations: .iOS,
+            product: .uiTests,
+            bundleId: "com.ronaldoVargas.CryptoRadarUITests",
+            infoPlist: .default,
+            sources: [
+                "CryptoRadarUITests/**"
+            ],
+            dependencies: [
+                .target(name: "CryptoRadar")
+            ]
+        ),
     ],
     
     schemes: [
@@ -231,7 +245,8 @@ let project = Project(
             ),
             testAction: .targets([
                 "LoginTests",
-                "RegisterTests"
+                "RegisterTests",
+                "CryptoRadarUITests"
             ]),
             runAction: .runAction()
         )

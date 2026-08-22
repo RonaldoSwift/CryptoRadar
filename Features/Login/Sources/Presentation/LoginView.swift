@@ -71,6 +71,7 @@ public struct LoginView: View {
                                 .textInputAutocapitalization(.never)
                                 .autocorrectionDisabled()
                                 .foregroundColor(.white)
+                                .accessibilityIdentifier("login.email.field")
                             }
                             .padding()
                             .background(
@@ -95,11 +96,13 @@ public struct LoginView: View {
                                             LoginStrings.Login.passwordPlaceholder,
                                             text: $viewModel.password
                                         )
+                                        .accessibilityIdentifier("login.password.field")
                                     } else {
                                         SecureField(
                                             LoginStrings.Login.passwordPlaceholder,
                                             text: $viewModel.password
                                         )
+                                        .accessibilityIdentifier("login.password.field")
                                     }
                                 }
                                 .foregroundColor(.white)
@@ -139,6 +142,7 @@ public struct LoginView: View {
                         .background(Color.blue)
                         .cornerRadius(15)
                         .disabled(viewModel.isLoading)
+                        .accessibilityIdentifier("login.button")
                         
                         
                         if let error =
@@ -146,6 +150,7 @@ public struct LoginView: View {
                             Text(error)
                                 .foregroundColor(.red)
                                 .font(.caption)
+                                .accessibilityIdentifier("login.error.message")
                         }
                         
                         Button {
