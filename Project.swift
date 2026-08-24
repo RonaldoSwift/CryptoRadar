@@ -45,16 +45,16 @@ let project = Project(
                 dependencies: [
                 ]
             ),
-            .target(
-                name: "PersistenceKit",
-                destinations: .iOS,
-                product: .framework,
-                bundleId: "com.ronaldoVargas.PersistenceKit",
-                infoPlist: .default,
-                sources: [
-                    "Shared/PersistenceKit/**"
-                ]
-            ),
+        .target(
+            name: "PersistenceKit",
+            destinations: .iOS,
+            product: .framework,
+            bundleId: "com.ronaldoVargas.PersistenceKit",
+            infoPlist: .default,
+            sources: [
+                "Shared/PersistenceKit/**"
+            ]
+        ),
         
             .target(
                 name: "NetworkKit",
@@ -99,7 +99,7 @@ let project = Project(
                     .external(name: "Swinject")
                 ]
             ),
-
+        
             .target(
                 name: "LoginTests",
                 destinations: .iOS,
@@ -132,7 +132,7 @@ let project = Project(
                     .external(name: "Swinject")
                 ]
             ),
-
+        
             .target(
                 name: "RegisterTests",
                 destinations: .iOS,
@@ -229,10 +229,19 @@ let project = Project(
             buildAction: .buildAction(
                 targets: ["CryptoRadar"]
             ),
-            testAction: .targets([
-                "LoginTests",
-                "RegisterTests"
-            ]),
+            testAction: .targets(
+                [
+                    "LoginTests",
+                    "RegisterTests"
+                ],
+                options: .options(
+                    coverage: true,
+                    codeCoverageTargets: [
+                        .target("Login"),
+                        .target("Register")
+                    ]
+                )
+            ),
             runAction: .runAction()
         )
     ]
