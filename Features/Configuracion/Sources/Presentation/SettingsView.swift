@@ -13,10 +13,17 @@ public struct SettingsView: View {
     
     @StateObject private var viewModel: SettingsViewModel
     private let onLogout: () -> Void
+    //Thema
+    private let onThemeChange: (AppTheme) -> Void
     
-    public init(viewModel:SettingsViewModel,onLogout: @escaping () -> Void) {
+    public init(
+        viewModel: SettingsViewModel,
+        onLogout: @escaping () -> Void,
+        onThemeChange: @escaping (AppTheme) -> Void = { _ in }
+    ) {
         _viewModel = StateObject(wrappedValue: viewModel)
         self.onLogout = onLogout
+        self.onThemeChange = onThemeChange
     }
     
     public var body: some View {
@@ -29,10 +36,13 @@ public struct SettingsView: View {
                             .tag(currency)
                     }
                 }
-
+            
             Picker("Tema", selection: Binding(
                 get: { viewModel.theme },
-                set: { viewModel.updateTheme($0) }
+                set: {
+                    viewModel.updateTheme($0)
+                    onThemeChange($0)
+                }
             )) {
                 ForEach(AppTheme.allCases, id: \.self) { theme in
                     Text(theme.rawValue)

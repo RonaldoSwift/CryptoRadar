@@ -28,7 +28,7 @@ public struct CryptoListView: View {
     public var body: some View {
         
         ZStack {
-            Color.black.ignoresSafeArea()
+            Color(.systemBackground).ignoresSafeArea()
             
             VStack(spacing: 24) {
                 header
@@ -66,14 +66,14 @@ private extension CryptoListView {
             Text(CryptoListStrings.CryptoList.title)
                 .font(.title2)
                 .bold()
-                .foregroundColor(.white)
+                .foregroundStyle(.primary)
             
             Spacer()
             
             Image(
                 systemName:"slider.horizontal.3"
             )
-            .foregroundColor(.white)
+            .foregroundStyle(.primary)
         }
     }
     
@@ -84,9 +84,9 @@ private extension CryptoListView {
             text: $viewModel.searchText
         )
         .padding()
-        .background(Color.white.opacity(0.06))
+        .background(Color.primary.opacity(0.06))
         .cornerRadius(14)
-        .foregroundColor(.white)
+        .foregroundStyle(.primary)
         .onChange(of: viewModel.searchText) { _ in
             viewModel.searchCryptos()
         }
@@ -104,9 +104,9 @@ private extension CryptoListView {
                     Text(item)
                         .padding(.horizontal)
                         .padding(.vertical,10)
-                        .background(Color.white.opacity(0.08))
+                        .background(Color.primary.opacity(0.08))
                         .cornerRadius(20)
-                        .foregroundColor(.white)
+                        .foregroundStyle(.primary)
                 }
             }
         }
@@ -117,14 +117,14 @@ private extension CryptoListView {
         if viewModel.isLoading && viewModel.cryptos.isEmpty  {
             Spacer()
             ProgressView()
-                .tint(.white)
+                .tint(.primary)
             Spacer()
         } else if let error = viewModel.errorMessage, viewModel.cryptos.isEmpty {
             
             VStack(spacing: 16) {
                 
                 Text(error)
-                    .foregroundColor(.white)
+                    .foregroundStyle(.primary)
                 
                 Button(CryptoListStrings.CryptoList.retry) {
                     viewModel.loadCryptos()

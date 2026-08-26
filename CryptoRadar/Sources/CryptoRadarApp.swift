@@ -105,6 +105,9 @@ struct CryptoRadarApp: App {
                                 viewModel: container.resolve(SettingsViewModel.self)!,
                                 onLogout: {
                                     appRootManager.currentRoot = .authentication
+                                },
+                                onThemeChange: { theme in
+                                    appTheme = theme.rawValue
                                 }
                             )
                             .toolbar(.hidden, for: .navigationBar)
@@ -122,7 +125,7 @@ struct CryptoRadarApp: App {
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.black.ignoresSafeArea())
+            .background(Color(.systemBackground).ignoresSafeArea())
             .environmentObject(appRootManager)
             .preferredColorScheme(colorScheme(for: appTheme))
             .onChange(of: appRootManager.pendingDeepLink) { deepLink in

@@ -22,11 +22,11 @@ struct CryptoCardView: View {
             
             VStack(alignment:.leading) {
                 Text(crypto.name)
-                    .foregroundColor(.white)
+                    .foregroundStyle(.primary)
                     .bold()
                 
                 Text(crypto.symbol.uppercased())
-                    .foregroundColor(.gray)
+                    .foregroundStyle(.secondary)
             }
             
             Spacer()
@@ -42,7 +42,7 @@ struct CryptoCardView: View {
             }
         }
         .padding()
-        .background(Color.white.opacity(0.05))
+        .background(Color.primary.opacity(0.05))
         .cornerRadius(18)
     }
 }
