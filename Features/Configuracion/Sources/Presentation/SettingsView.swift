@@ -29,6 +29,16 @@ public struct SettingsView: View {
                             .tag(currency)
                     }
                 }
+
+            Picker("Tema", selection: Binding(
+                get: { viewModel.theme },
+                set: { viewModel.updateTheme($0) }
+            )) {
+                ForEach(AppTheme.allCases, id: \.self) { theme in
+                    Text(theme.rawValue)
+                        .tag(theme)
+                }
+            }
             
             Toggle(
                 "Notificaciones",

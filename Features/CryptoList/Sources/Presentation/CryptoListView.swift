@@ -35,9 +35,9 @@ public struct CryptoListView: View {
                 searchBar
                 trending
                 content
-                Spacer()
             }
             .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
         .task {
             viewModel.loadIfNeeded()

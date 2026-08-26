@@ -13,6 +13,7 @@ public final class SettingsData {
     private enum Keys {
         static let currency = "base_currency"
         static let notifications = "notifications_enabled"
+        static let theme = "app_theme"
     }
 
     private let defaults = UserDefaults.standard
@@ -34,6 +35,15 @@ public final class SettingsData {
 
     public func saveNotificationsEnabled(_ enabled: Bool) {
         defaults.set(enabled,forKey: Keys.notifications)
+    }
+
+    public func getTheme() -> AppThemeEntity {
+        let value = defaults.string(forKey: Keys.theme)
+        return AppThemeEntity(rawValue: value ?? "") ?? .light
+    }
+
+    public func saveTheme(_ theme: AppThemeEntity) {
+        defaults.set(theme.rawValue, forKey: Keys.theme)
     }
     
     public func requestNotificationPermission(completion: @escaping (Bool) -> Void) {

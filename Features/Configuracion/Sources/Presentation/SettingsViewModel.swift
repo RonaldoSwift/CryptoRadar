@@ -15,6 +15,8 @@ public final class SettingsViewModel: ObservableObject {
     @Published public var currency: Settings = .usd
     
     @Published public var notificationsEnabled = false
+
+    @Published public var theme: AppTheme = .light
     
    // public var onLogout: (() -> Void)?
     
@@ -27,6 +29,7 @@ public final class SettingsViewModel: ObservableObject {
     public func load() {
         currency = repository.getCurrency()
         notificationsEnabled = repository.getNotificationsEnabled()
+        theme = repository.getTheme()
     }
     
     public func logout() {
@@ -48,5 +51,10 @@ public final class SettingsViewModel: ObservableObject {
             notificationsEnabled = false
             repository.saveNotificationsEnabled(false)
         }
+    }
+
+    public func updateTheme(_ theme: AppTheme) {
+        self.theme = theme
+        repository.saveTheme(theme)
     }
 }

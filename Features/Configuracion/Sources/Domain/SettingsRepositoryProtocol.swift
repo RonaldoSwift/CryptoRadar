@@ -16,6 +16,10 @@ public protocol SettingsRepositoryProtocol {
     func getNotificationsEnabled() -> Bool
 
     func saveNotificationsEnabled(_ enabled: Bool)
+
+    func getTheme() -> AppTheme
+
+    func saveTheme(_ theme: AppTheme)
     
     func requestNotificationPermission(
         completion: @escaping (Bool) -> Void
