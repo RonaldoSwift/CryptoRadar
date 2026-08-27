@@ -22,7 +22,7 @@ public struct CryptoDetailView: View {
     
     public var body: some View {
         ZStack {
-            Color.black.ignoresSafeArea()
+            Color(.systemBackground).ignoresSafeArea()
             content
         }
         .task {
