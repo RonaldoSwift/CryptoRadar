@@ -20,7 +20,7 @@ public struct FavoriteListView: View {
     
     public var body: some View {
         ZStack {
-            Color.black.ignoresSafeArea()
+            Color(.systemBackground).ignoresSafeArea()
             VStack(spacing: 24) {
                 header
                 searchBar
@@ -41,7 +41,7 @@ private extension FavoriteListView {
             Text(FavoriteStrings.Favorite.title)
                 .font(.title2)
                 .bold()
-                .foregroundColor(.white)
+                .foregroundStyle(.primary)
             
             Spacer()
         }
@@ -51,9 +51,9 @@ private extension FavoriteListView {
         
         TextField(FavoriteStrings.Favorite.Search.favorite,text:$viewModel.searchText)
             .padding()
-            .background(Color.white.opacity(0.06))
+            .background(Color.primary.opacity(0.06))
             .cornerRadius(14)
-            .foregroundColor(.white)
+            .foregroundStyle(.primary)
     }
     
     @ViewBuilder
@@ -108,16 +108,16 @@ private extension FavoriteListView {
             
             VStack(alignment:.leading) {
                 Text(crypto.name)
-                    .foregroundColor(.white).bold()
+                    .foregroundStyle(.primary).bold()
                 
                 Text(crypto.symbol.uppercased())
-                    .foregroundColor(.gray)
+                    .foregroundStyle(.secondary)
             }
             
             Spacer()
         }
         .padding()
-        .background(Color.white.opacity(0.05))
+        .background(Color.primary.opacity(0.05))
         .cornerRadius(18)
     }
 }

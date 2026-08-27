@@ -25,6 +25,7 @@ struct CryptoRadarApp: App {
     
     @State private var selectedCrypto: CryptoSelection?
     @State private var selectedTab = 0
+    @AppStorage("app_theme") private var appTheme = AppTheme.light.rawValue
     
     let container: Container = {
         let assembler = Assembler([
@@ -61,6 +62,7 @@ struct CryptoRadarApp: App {
                                     name: name
                                 )
                             }
+                            .toolbar(.hidden, for: .navigationBar)
                             .navigationDestination(item: $selectedCrypto) { crypto in
                                 CryptoDetailView(
                                     cryptoId: crypto.id,
@@ -83,6 +85,7 @@ struct CryptoRadarApp: App {
                                     name: name
                                 )
                             }
+                            .toolbar(.hidden, for: .navigationBar)
                             .navigationDestination(item: $selectedCrypto) { crypto in
                                 CryptoDetailView(
                                     cryptoId: crypto.id,
@@ -102,8 +105,12 @@ struct CryptoRadarApp: App {
                                 viewModel: container.resolve(SettingsViewModel.self)!,
                                 onLogout: {
                                     appRootManager.currentRoot = .authentication
+                                },
+                                onThemeChange: { theme in
+                                    appTheme = theme.rawValue
                                 }
                             )
+                            .toolbar(.hidden, for: .navigationBar)
                             
                         }
                         .tabItem {
@@ -114,9 +121,13 @@ struct CryptoRadarApp: App {
                         }
                         .tag(2)
                     }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color(.systemBackground).ignoresSafeArea())
             .environmentObject(appRootManager)
+            .preferredColorScheme(colorScheme(for: appTheme))
             .onChange(of: appRootManager.pendingDeepLink) { deepLink in
                 guard let deepLink else {
                     return
@@ -148,6 +159,17 @@ struct CryptoRadarApp: App {
             }
         }
         .modelContainer(for: [FavoriteCryptoEntity.self])
+    }
+
+    private func colorScheme(for theme: String) -> ColorScheme? {
+        switch AppTheme(rawValue: theme) ?? .light {
+        case .system:
+            return nil
+        case .light:
+            return .light
+        case .dark:
+            return .dark
+        }
     }
 }
 

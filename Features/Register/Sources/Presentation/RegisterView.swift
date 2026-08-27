@@ -32,8 +32,7 @@ public struct RegisterView: View {
     
     public var body: some View {
         ZStack {
-            Color.black
-                .ignoresSafeArea()
+            Color(.systemBackground).ignoresSafeArea()
             
             ScrollView {
                 VStack(spacing:40) {

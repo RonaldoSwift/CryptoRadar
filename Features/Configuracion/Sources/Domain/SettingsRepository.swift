@@ -30,6 +30,14 @@ public final class SettingsRepository: SettingsRepositoryProtocol {
     public func saveNotificationsEnabled(_ enabled: Bool) {
         data.saveNotificationsEnabled(enabled)
     }
+
+    public func getTheme() -> AppTheme {
+        data.getTheme().toDomain()
+    }
+
+    public func saveTheme(_ theme: AppTheme) {
+        data.saveTheme(theme.toEntity())
+    }
     
     public func requestNotificationPermission(completion: @escaping (Bool) -> Void) {
         data.requestNotificationPermission(completion: completion)

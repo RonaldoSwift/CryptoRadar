@@ -30,7 +30,19 @@ let project = Project(
                 .target(name: "ImageKit"),
                 .target(name: "PersistenceKit"),
                 .external(name:"Swinject")
-            ]
+            ],
+            settings: .settings(
+                configurations: [
+                    .debug(
+                        name: "Debug",
+                        xcconfig: "CryptoRadar/Configs/Secrets.xcconfig"
+                    ),
+                    .release(
+                        name: "Release",
+                        xcconfig: "CryptoRadar/Configs/Secrets.xcconfig"
+                    )
+                ]
+            )
         ),
         
             .target(

@@ -14,6 +14,18 @@ extension SettingsEntity {
     }
 }
 
+public extension AppThemeEntity {
+    func toDomain() -> AppTheme {
+        AppTheme(rawValue: rawValue) ?? .light
+    }
+}
+
+public extension AppTheme {
+    func toEntity() -> AppThemeEntity {
+        AppThemeEntity(rawValue: rawValue) ?? .light
+    }
+}
+
 extension Settings {
     func toEntity() -> SettingsEntity {
         SettingsEntity(rawValue: rawValue) ?? .usd

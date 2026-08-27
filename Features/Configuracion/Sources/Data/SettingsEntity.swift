@@ -12,3 +12,9 @@ public enum SettingsEntity: String, CaseIterable {
     case mxn = "MXN"
     case eur = "EUR"
 }
+
+public enum AppThemeEntity: String, CaseIterable {
+    case system = "System"
+    case light = "Light"
+    case dark = "Dark"
+}

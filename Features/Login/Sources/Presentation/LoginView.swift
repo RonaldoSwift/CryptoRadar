@@ -28,9 +28,8 @@ public struct LoginView: View {
     
     public var body: some View {
         ZStack {
-            Color.black
-                .ignoresSafeArea()
-            
+            Color(.systemBackground).ignoresSafeArea()
+
             ScrollView {
                 VStack(spacing: 40) {
                     Text(LoginStrings.Login.appName)
