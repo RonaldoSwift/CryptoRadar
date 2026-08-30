@@ -15,9 +15,12 @@ struct CryptoRadarApp: App {
     
     @StateObject private var appRootManager: AppRootManager = {
         let manager = AppRootManager()
-        
+        //En este codigo la aplicacion fue ejecutada pasando el argumento -uiTesting.
+        let isUITesting = ProcessInfo.processInfo.arguments.contains("-uiTesting")
+
+        //Solo entra directamente al Home si NO estoy haciendo UI Testing y además existe un token.
         // KeyChainManager
-        if KeychainManager.shared.getToken() != nil {
+        if !isUITesting && KeychainManager.shared.getToken() != nil {
             manager.currentRoot = .principal
         }
         return manager
