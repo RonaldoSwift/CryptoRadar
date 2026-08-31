@@ -44,6 +44,20 @@ let project = Project(
                 ]
             )
         ),
+
+        .target(
+            name: "CryptoRadarUITests",
+            destinations: .iOS,
+            product: .uiTests,
+            bundleId: "com.ronaldoVargas.CryptoRadarUITests",
+            infoPlist: .default,
+            sources: [
+                "CryptoRadarUITests/**"
+            ],
+            dependencies: [
+        .target(name: "CryptoRadar")
+            ]
+        ),
         
             .target(
                 name: "StorageKit",
@@ -244,7 +258,8 @@ let project = Project(
             testAction: .targets(
                 [
                     "LoginTests",
-                    "RegisterTests"
+                    "RegisterTests",
+                    "CryptoRadarUITests"
                 ],
                 options: .options(
                     coverage: true,
