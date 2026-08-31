@@ -10,11 +10,14 @@ import XCTest
 
 final class LoginUITests: XCTestCase {
     
-    func testInvalidLoginShowsErrorMessage() {
-        
+    private func makeApp() -> XCUIApplication {
         let app = XCUIApplication()
-        
         app.launchArguments.append("-uiTesting")
+        return app
+    }
+    
+    func testInvalidLoginShowsErrorMessage() {
+        let app = makeApp()
         app.launch()
         
         let loginPage = LoginPage(app: app)
@@ -30,10 +33,7 @@ final class LoginUITests: XCTestCase {
     
     //correo es vacío, validar que el mensage de error exista.
     func testEmptyEmailShowsErrorMessage() {
-        
-        let app = XCUIApplication()
-        
-        app.launchArguments.append("-uiTesting")
+        let app = makeApp()
         app.launch()
         
         let loginPage = LoginPage(app: app)
@@ -49,10 +49,7 @@ final class LoginUITests: XCTestCase {
     
     //password es vacío, validar que el mensaje de error exista.
     func testEmptyPasswordShowsErrorMessage() {
-        
-        let app = XCUIApplication()
-        
-        app.launchArguments.append("-uiTesting")
+        let app = makeApp()
         app.launch()
         
         let loginPage = LoginPage(app: app)
