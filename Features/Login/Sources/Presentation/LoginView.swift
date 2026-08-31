@@ -29,7 +29,7 @@ public struct LoginView: View {
     public var body: some View {
         ZStack {
             Color(.systemBackground).ignoresSafeArea()
-
+            
             ScrollView {
                 VStack(spacing: 40) {
                     Text(LoginStrings.Login.appName)
@@ -70,7 +70,7 @@ public struct LoginView: View {
                                 .textInputAutocapitalization(.never)
                                 .autocorrectionDisabled()
                                 .foregroundColor(.white)
-                                .accessibilityIdentifier("loginEmailTextField")
+                                .accessibilityIdentifier("login.email.textfield")
                             }
                             .padding()
                             .background(
@@ -95,13 +95,14 @@ public struct LoginView: View {
                                             LoginStrings.Login.passwordPlaceholder,
                                             text: $viewModel.password
                                         )
-                                        .accessibilityIdentifier("loginPasswordTextField")
+                                        //ponerle un identificador único al SecureField
+                                        .accessibilityIdentifier("login.password.textfield")
                                     } else {
                                         SecureField(
                                             LoginStrings.Login.passwordPlaceholder,
                                             text: $viewModel.password
                                         )
-                                        .accessibilityIdentifier("loginPasswordTextField")
+                                        .accessibilityIdentifier("login.password.textfield")
                                     }
                                 }
                                 .foregroundColor(.white)
@@ -141,14 +142,14 @@ public struct LoginView: View {
                         .background(Color.blue)
                         .cornerRadius(15)
                         .disabled(viewModel.isLoading)
-                        .accessibilityIdentifier("loginButton")
+                        .accessibilityIdentifier("login.button")
                         
                         if let error =
                             viewModel.errorMessage {
                             Text(error)
                                 .foregroundColor(.red)
                                 .font(.caption)
-                                .accessibilityIdentifier("loginErrorMessage")
+                                .accessibilityIdentifier("login.error.message")
                         }
                         
                         Button {

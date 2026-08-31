@@ -9,43 +9,60 @@ import Foundation
 import XCTest
 
 final class LoginUITests: XCTestCase {
-
+    
     func testInvalidLoginShowsErrorMessage() {
+        
         let app = XCUIApplication()
-
+        
         app.launchArguments.append("-uiTesting")
         app.launch()
-
-        let emailTextField = app.textFields["loginEmailTextField"]
-
+        
+        let loginPage = LoginPage(app: app)
+        
+        loginPage.escribirEmail("correo-invalido")
+        loginPage.escribirPassword("123")
+        loginPage.clickLogin()
+        
         XCTAssertTrue(
-            emailTextField.waitForExistence(timeout: 5)
+            loginPage.errorMessage.waitForExistence(timeout: 5)
         )
-
-        emailTextField.tap()
-        emailTextField.typeText("correo-invalido")
-
-        let passwordTextField = app.secureTextFields["loginPasswordTextField"]
-
+    }
+    
+    //correo es vacío, validar que el mensage de error exista.
+    func testEmptyEmailShowsErrorMessage() {
+        
+        let app = XCUIApplication()
+        
+        app.launchArguments.append("-uiTesting")
+        app.launch()
+        
+        let loginPage = LoginPage(app: app)
+        
+        // No escribimos ningún correo.
+        loginPage.escribirPassword("123")
+        loginPage.clickLogin()
+        
         XCTAssertTrue(
-            passwordTextField.waitForExistence(timeout: 5)
+            loginPage.errorMessage.waitForExistence(timeout: 5)
         )
-
-        passwordTextField.tap()
-        passwordTextField.typeText("123")
-
-        let loginButton = app.buttons["loginButton"]
-
+    }
+    
+    //password es vacío, validar que el mensaje de error exista.
+    func testEmptyPasswordShowsErrorMessage() {
+        
+        let app = XCUIApplication()
+        
+        app.launchArguments.append("-uiTesting")
+        app.launch()
+        
+        let loginPage = LoginPage(app: app)
+        
+        // Escribimos un correo, pero dejamos la contraseña vacía.
+        loginPage.escribirEmail("correo@ejemplo.com")
+        loginPage.clickLogin()
+        
         XCTAssertTrue(
-            loginButton.waitForExistence(timeout: 5)
-        )
-
-        loginButton.tap()
-
-        let errorMessage = app.staticTexts["loginErrorMessage"]
-
-        XCTAssertTrue(
-            errorMessage.waitForExistence(timeout: 5)
+            loginPage.errorMessage.waitForExistence(timeout: 5)
         )
     }
 }
