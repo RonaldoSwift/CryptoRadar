@@ -35,7 +35,7 @@ public struct RegisterView: View {
             Color(.systemBackground).ignoresSafeArea()
             
             ScrollView {
-                VStack(spacing:40) {
+                VStack(spacing:10) {
                     Text(RegisterStrings.Register.appName)
                         .font(.largeTitle)
                         .fontWeight(.bold)
@@ -72,12 +72,10 @@ public struct RegisterView: View {
                                     text: $viewModel.name
                                 )
                                 .textInputAutocapitalization(.words)
-                                .foregroundColor(.white)
+                                .foregroundColor(.primary)
                             }
                             .padding()
-                            .background(
-                                Color.black.opacity(0.6)
-                            )
+                            .background((Color(.systemGray6)))
                             .cornerRadius(12)
                         }
                         
@@ -103,12 +101,10 @@ public struct RegisterView: View {
                                 .keyboardType(.emailAddress)
                                 .textInputAutocapitalization(.never)
                                 .autocorrectionDisabled()
-                                .foregroundColor(.white)
+                                .foregroundColor(.primary)
                             }
                             .padding()
-                            .background(
-                                Color.black.opacity(0.6)
-                            )
+                            .background((Color(.systemGray6)))
                             .cornerRadius(12)
                         }
                         
@@ -138,7 +134,7 @@ public struct RegisterView: View {
                                         )
                                     }
                                 }
-                                .foregroundColor(.white)
+                                .foregroundColor(.gray)
                                 
                                 Button {
                                     showPassword.toggle()
@@ -152,9 +148,7 @@ public struct RegisterView: View {
                                 }
                             }
                             .padding()
-                            .background(
-                                Color.black.opacity(0.6)
-                            )
+                            .background((Color(.systemGray6)))
                             .cornerRadius(12)
                         }
                         
@@ -186,7 +180,7 @@ public struct RegisterView: View {
                                         )
                                     }
                                 }
-                                .foregroundColor(.white)
+                                .foregroundColor(.gray)
                                 
                                 Button {
                                     showConfirmPassword.toggle()
@@ -201,9 +195,7 @@ public struct RegisterView: View {
                                 }
                             }
                             .padding()
-                            .background(
-                                Color.black.opacity(0.6)
-                            )
+                            .background((Color(.systemGray6)))
                             .cornerRadius(12)
                         }
                         

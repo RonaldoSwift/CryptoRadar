@@ -69,13 +69,11 @@ public struct LoginView: View {
                                 .keyboardType(.emailAddress)
                                 .textInputAutocapitalization(.never)
                                 .autocorrectionDisabled()
-                                .foregroundColor(.white)
+                                .foregroundColor(.primary)
                                 .accessibilityIdentifier("login.email.textfield")
                             }
                             .padding()
-                            .background(
-                                Color.black.opacity(0.6)
-                            )
+                            .background((Color(.systemGray6)))
                             .cornerRadius(12)
                         }
                         
@@ -105,7 +103,7 @@ public struct LoginView: View {
                                         .accessibilityIdentifier("login.password.textfield")
                                     }
                                 }
-                                .foregroundColor(.white)
+                                .foregroundColor(.primary)
                                 
                                 Button {
                                     showPassword.toggle()
@@ -118,9 +116,7 @@ public struct LoginView: View {
                                 }
                             }
                             .padding()
-                            .background(
-                                Color.black.opacity(0.6)
-                            )
+                            .background(Color(.systemGray6))
                             .cornerRadius(12)
                         }
                         
