@@ -33,7 +33,6 @@ public struct CryptoListView: View {
             VStack(spacing: 24) {
                 header
                 searchBar
-                trending
                 content
             }
             .padding()
@@ -89,26 +88,6 @@ private extension CryptoListView {
         .foregroundStyle(.primary)
         .onChange(of: viewModel.searchText) { _ in
             viewModel.searchCryptos()
-        }
-    }
-    
-    var trending: some View {
-        
-        ScrollView(.horizontal,showsIndicators:false) {
-            
-            HStack {
-                ForEach(
-                    ["Bitcoin","Ethereum","Solana","Polkadot"],
-                    id: \.self
-                ) { item in
-                    Text(item)
-                        .padding(.horizontal)
-                        .padding(.vertical,10)
-                        .background(Color.primary.opacity(0.08))
-                        .cornerRadius(20)
-                        .foregroundStyle(.primary)
-                }
-            }
         }
     }
     
