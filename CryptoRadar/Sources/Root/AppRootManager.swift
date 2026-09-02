@@ -10,10 +10,11 @@ import Combine
 
 final class AppRootManager: ObservableObject {
     
-    @Published var currentRoot: AppRoots = .authentication
+    @Published var currentRoot: AppRoots = .splash
     @Published var pendingDeepLink: DeepLink?
 
     enum AppRoots {
+        case splash
         case authentication
         case principal
     }
