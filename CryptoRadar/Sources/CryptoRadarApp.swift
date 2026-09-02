@@ -20,14 +20,9 @@ struct CryptoRadarApp: App {
 
         //Solo entra directamente al Home si NO estoy haciendo UI Testing y además existe un token.
         // KeyChainManager
-        /*if !isUITesting && KeychainManager.shared.getToken() != nil {
+        if !isUITesting && KeychainManager.shared.getToken() != nil {
             manager.currentRoot = .principal
-        }*/
-        
-        if isUITesting {
-                manager.currentRoot = .authentication
-            }
-        
+        }
         return manager
     }()
     
@@ -52,10 +47,6 @@ struct CryptoRadarApp: App {
         WindowGroup {
             Group {
                 switch appRootManager.currentRoot {
-                    
-                case .splash:
-                    SplashRootView()
-                    
                 case .authentication:
                     AuthenticationRootView(
                         loginViewModel: container.resolve(LoginViewModel.self)!,
