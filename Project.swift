@@ -71,6 +71,23 @@ let project = Project(
                 dependencies: [
                 ]
             ),
+
+            .target(
+                name: "CryptoRadarAnimation",
+                destinations: .iOS,
+                product: .framework,
+                bundleId: "com.ronaldoVargas.CryptoRadarAnimation",
+                infoPlist: .default,
+                sources: [
+                    "Shared/CryptoRadarAnimation/**"
+                ],
+                resources: [
+                    "CryptoRadarRainbow/CryptoRadar.json"
+                ],
+                dependencies: [
+                    .external(name: "Lottie")
+                ]
+            ),
         .target(
             name: "PersistenceKit",
             destinations: .iOS,
@@ -122,6 +139,7 @@ let project = Project(
                 dependencies: [
                     .target(name: "StorageKit"),
                     .target(name: "NetworkKit"),
+                    .target(name: "CryptoRadarAnimation"),
                     .external(name: "Swinject")
                 ]
             ),
@@ -155,6 +173,7 @@ let project = Project(
                 dependencies: [
                     .target(name: "StorageKit"),
                     .target(name: "NetworkKit"),
+                    .target(name: "CryptoRadarAnimation"),
                     .external(name: "Swinject")
                 ]
             ),
