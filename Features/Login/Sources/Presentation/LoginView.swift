@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import CryptoRadarAnimation
 
 public struct LoginView: View {
     
@@ -32,10 +33,8 @@ public struct LoginView: View {
             
             ScrollView {
                 VStack(spacing: 40) {
-                    Text(LoginStrings.Login.appName)
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(.blue)
+                    CryptoRadarAnimationView()
+                        .frame(height: 55)
                         .padding(.top)
                     
                     VStack(spacing: 20) {
