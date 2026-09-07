@@ -62,7 +62,7 @@ private extension FavoriteListView {
         if viewModel.filteredFavorites.isEmpty {
             
             VStack(spacing: 16) {
-                Image(systemName:"star")
+                Image(systemName:"heart")
                     .font(.largeTitle)
                     .foregroundColor(.gray)
                 
@@ -76,14 +76,13 @@ private extension FavoriteListView {
                     ForEach(viewModel.filteredFavorites) { favorite in
                         favoriteCard(crypto:favorite)
                             .overlay(alignment:.trailing) {
-                                Button {
-                                    viewModel.removeFavorite(id:favorite.id)
-                                } label: {
-                                    Image(systemName:"star.fill")
-                                        .foregroundColor(.yellow)
-                                        .padding(.trailing,16)
+                                FavoriteHeartButton(
+                                    isFavorite: true,
+                                    size: 20
+                                ) {
+                                    viewModel.removeFavorite(id: favorite.id)
                                 }
-                                .buttonStyle(.plain)
+                                .padding(.trailing, 16)
                             }
                             .contentShape(Rectangle())
                             .onTapGesture {

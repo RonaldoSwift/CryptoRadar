@@ -77,13 +77,11 @@ private extension CryptoDetailView {
             
             Spacer()
             
-            Button {
+            FavoriteHeartButton(
+                isFavorite: crypto?.isFavorite ?? false,
+                size: 24
+            ) {
                 viewModel.toggleFavorite()
-            } label: {
-                Image(
-                    systemName: (crypto?.isFavorite ?? false) ? "star.fill": "star"
-                )
-                .foregroundColor(.yellow)
             }
         }
     }

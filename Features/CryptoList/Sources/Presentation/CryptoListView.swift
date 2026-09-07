@@ -38,7 +38,7 @@ public struct CryptoListView: View {
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
-        .task {
+        .onAppear {
             viewModel.loadIfNeeded()
             favoriteViewModel.load()
         }

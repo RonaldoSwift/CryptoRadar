@@ -29,8 +29,8 @@ public final class CryptoListViewModel: ObservableObject {
     public func loadCryptos() {
         isLoading = true
         errorMessage = nil
-        
-        Task {
+
+        Task { @MainActor in
             do {
                 cryptos = try await repository.getTopCryptos()
             } catch {
@@ -62,7 +62,7 @@ public final class CryptoListViewModel: ObservableObject {
             return
         }
         isLoading = true
-        searchTask = Task {
+        searchTask = Task { @MainActor in
             try? await Task.sleep(for: .milliseconds(500))
             guard !Task.isCancelled else { return }
             do {
