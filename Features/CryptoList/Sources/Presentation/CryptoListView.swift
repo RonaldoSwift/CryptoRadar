@@ -39,7 +39,11 @@ public struct CryptoListView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
         .onAppear {
-            viewModel.loadIfNeeded()
+            if viewModel.searchText.isEmpty {
+                viewModel.loadCryptos()
+            } else {
+                viewModel.searchCryptos()
+            }
             favoriteViewModel.load()
         }
         .alert("Error",isPresented: $viewModel.showErrorAlert) {

@@ -33,9 +33,9 @@ public struct FavoriteHeartButton: View {
                         .playing(loopMode: .playOnce)
                         .id(animationID)
                         .frame(width: size * 2.2, height: size * 2.2)
-                        .scaleEffect(trigger ? 1 : 0.85)
+                        .scaleEffect(trigger ? 1.15 : 0.55)
                         .opacity(trigger ? 1 : 0)
-                        .animation(SwiftUI.Animation.easeOut(duration: 0.2), value: trigger)
+                        .animation(.easeOut(duration: 0.2), value: trigger)
                 }
 
                 Image(systemName: isFavorite ? "heart.fill" : "heart")
@@ -44,9 +44,11 @@ public struct FavoriteHeartButton: View {
                     .frame(width: size, height: size)
                     .foregroundStyle(isFavorite ? Color.red : Color.gray)
                     .shadow(color: isFavorite ? Color.red.opacity(0.35) : .clear, radius: 8, x: 0, y: 4)
-                    .scaleEffect(trigger ? 1.08 : 1)
-                    .animation(SwiftUI.Animation.spring(response: 0.28, dampingFraction: 0.75), value: trigger)
+                    .scaleEffect(trigger ? 1.12 : 1)
+                    .animation(.spring(response: 0.28, dampingFraction: 0.75), value: trigger)
             }
+            .frame(width: size * 2.2, height: size * 2.2)
+            .fixedSize()
         }
         .buttonStyle(.plain)
     }
