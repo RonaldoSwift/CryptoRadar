@@ -82,7 +82,8 @@ let project = Project(
                     "Shared/CryptoRadarAnimation/**"
                 ],
                 resources: [
-                    "CryptoRadarRainbow/CryptoRadar.json"
+                    "CryptoRadarRainbow/CryptoRadar.json",
+                    "Shared/CryptoRadarAnimation/*.json"
                 ],
                 dependencies: [
                     .external(name: "Lottie")
@@ -248,6 +249,7 @@ let project = Project(
                 .target(name: "PersistenceKit"),
                 .target(name: "NetworkKit"),
                 .target(name: "ImageKit"),
+                .external(name: "Lottie"),
                 .external(name: "Swinject")
             ]
         ),

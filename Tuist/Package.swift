@@ -14,7 +14,6 @@ let packageSettings = PackageSettings(
 
 
 
-
 let package = Package(
     name: "CryptoRadarDependencies",
     dependencies: [
