@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-import CryptoRadarAnimation
 
 public struct RegisterView: View {
     
@@ -37,10 +36,6 @@ public struct RegisterView: View {
             
             ScrollView {
                 VStack(spacing:10) {
-                    CryptoRadarAnimationView()
-                        .frame(height: 55)
-                        .padding(.top)
-                    
                     VStack(spacing:20) {
                         VStack(spacing:8) {
                             Text(RegisterStrings.Register.title)
