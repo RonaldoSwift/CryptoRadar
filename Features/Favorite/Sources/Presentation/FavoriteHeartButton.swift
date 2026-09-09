@@ -2,6 +2,10 @@ import Lottie
 import SwiftUI
 
 public struct FavoriteHeartButton: View {
+    private enum Constants {
+        static let burstAnimationName = "favorite_burst"
+    }
+
     private let isFavorite: Bool
     private let size: CGFloat
     private let action: () -> Void
@@ -29,7 +33,7 @@ public struct FavoriteHeartButton: View {
         } label: {
             ZStack {
                 if trigger {
-                    LottieView(animation: .named("favorite_burst", bundle: .module))
+                    LottieView(animation: .named(Constants.burstAnimationName, bundle: .module))
                         .playing(loopMode: .playOnce)
                         .id(animationID)
                         .frame(width: size * 2.2, height: size * 2.2)
@@ -38,7 +42,7 @@ public struct FavoriteHeartButton: View {
                         .animation(.easeOut(duration: 0.2), value: trigger)
                 }
 
-                Image(systemName: isFavorite ? "heart.fill" : "heart")
+                Image(systemName: isFavorite ? FavoriteImages.heartFilled : FavoriteImages.heart)
                     .resizable()
                     .scaledToFit()
                     .frame(width: size, height: size)

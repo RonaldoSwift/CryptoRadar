@@ -21,26 +21,17 @@ public final class CryptoListService: CryptoListServiceProtocol {
     }
     
     public init() {}
-    
-    public func getTopCryptos() async throws -> [CryptoResponse] {
-        for attempt in 0..<3 {
-            do {
-                return try await apiClient.request(
-                    baseURL: baseURL,
-                    endpoint: "/coins/markets",
-                    queryItems: [
-                        URLQueryItem(name: "vs_currency", value: "usd"),
-                        URLQueryItem(name: "per_page", value: "20"),
-                        URLQueryItem(name: "page", value: "1")
-                    ]
-                )
-            } catch {
-                guard attempt < 2 else { throw error }
-                try? await Task.sleep(for: .seconds(1))
-            }
-        }
 
-        throw URLError(.cannotLoadFromNetwork)
+    public func getTopCryptos() async throws -> [CryptoResponse] {
+        try await apiClient.request(
+            baseURL: baseURL,
+            endpoint: "/coins/markets",
+            queryItems: [
+                URLQueryItem(name: "vs_currency", value: "usd"),
+                URLQueryItem(name: "per_page", value: "20"),
+                URLQueryItem(name: "page", value: "1")
+            ]
+        )
     }
     
     public func searchCryptos(

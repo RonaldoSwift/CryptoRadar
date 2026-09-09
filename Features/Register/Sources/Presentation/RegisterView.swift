@@ -36,6 +36,11 @@ public struct RegisterView: View {
             
             ScrollView {
                 VStack(spacing:10) {
+                    Text(RegisterStrings.Register.appName)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.blue)
+
                     VStack(spacing:20) {
                         VStack(spacing:8) {
                             Text(RegisterStrings.Register.title)

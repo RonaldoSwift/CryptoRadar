@@ -32,6 +32,11 @@ public struct LoginView: View {
             
             ScrollView {
                 VStack(spacing: 40) {
+                    Text(LoginStrings.Login.appName)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.blue)
+
                     VStack(spacing: 20) {
                         VStack(spacing: 8) {
                             Text(LoginStrings.Login.title)
