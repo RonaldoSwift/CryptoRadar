@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import StorageKit
+import NetworkKit
 
 @MainActor
 public final class LoginViewModel: ObservableObject {
@@ -25,6 +26,10 @@ public final class LoginViewModel: ObservableObject {
         self.repository = repository
     }
     
+    private func message(for error: Error, fallback: String) -> String {
+        NetworkError.message(for: error, fallback: fallback)
+    }
+
     public func login() async {
         errorMessage = nil
         guard !email.isEmpty else {
@@ -57,7 +62,10 @@ public final class LoginViewModel: ObservableObject {
             token = responseToken
             showSuccessAlert = true
         } catch {
-            errorMessage = error.localizedDescription
+            errorMessage = message(
+                for: error,
+                fallback: "No se pudo iniciar sesión."
+            )
         }
         isLoading = false
     }

@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import CryptoList
+import NetworkKit
 
 @MainActor
 public final class CryptoListViewModel: ObservableObject {
@@ -26,6 +27,10 @@ public final class CryptoListViewModel: ObservableObject {
         self.repository = repository
     }
     
+    private func message(for error: Error, fallback: String) -> String {
+        NetworkError.message(for: error, fallback: fallback)
+    }
+    
     public func loadCryptos() {
         isLoading = true
         errorMessage = nil
@@ -34,7 +39,10 @@ public final class CryptoListViewModel: ObservableObject {
             do {
                 cryptos = try await repository.getTopCryptos()
             } catch {
-                errorMessage = CryptoListStrings.CryptoList.Error.messageCrypto
+                errorMessage = message(
+                    for: error,
+                    fallback: CryptoListStrings.CryptoList.Error.messageCrypto
+                )
                 if cryptos.isEmpty {
                     // primera carga
                 } else {
@@ -50,7 +58,10 @@ public final class CryptoListViewModel: ObservableObject {
         do {
             cryptos = try await repository.getTopCryptos()
         } catch {
-            errorMessage = CryptoListStrings.CryptoList.Error.update
+            errorMessage = message(
+                for: error,
+                fallback: CryptoListStrings.CryptoList.Error.update
+            )
             showErrorAlert = true
         }
     }
@@ -68,7 +79,10 @@ public final class CryptoListViewModel: ObservableObject {
             do {
                 cryptos = try await repository.searchCryptos(query: searchText)
             } catch {
-                errorMessage = CryptoListStrings.CryptoList.Error.messageCrypto
+                errorMessage = message(
+                    for: error,
+                    fallback: CryptoListStrings.CryptoList.Error.messageCrypto
+                )
                 showErrorAlert = true
             }
             isLoading = false

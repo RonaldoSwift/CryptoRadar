@@ -12,6 +12,7 @@
 import Foundation
 import Combine
 import Favorite
+import NetworkKit
 
 @MainActor
 public final class CryptoDetailViewModel: ObservableObject {
@@ -28,6 +29,10 @@ public final class CryptoDetailViewModel: ObservableObject {
     public init(repository: CryptoDetailRepositoryProtocol,favoriteRepository: FavoriteRepositoryProtocol) {
         self.repository = repository
         self.favoriteRepository = favoriteRepository
+    }
+
+    private func message(for error: Error, fallback: String) -> String {
+        NetworkError.message(for: error, fallback: fallback)
     }
 
     public func load(id: String) {
@@ -55,7 +60,10 @@ public final class CryptoDetailViewModel: ObservableObject {
                 print("ERROR DETALLE:", error)
                 #endif
 
-                errorMessage = DetalleStrings.CryptoDetail.Error.detail
+                errorMessage = message(
+                    for: error,
+                    fallback: DetalleStrings.CryptoDetail.Error.detail
+                )
             }
             isLoading = false
         }
