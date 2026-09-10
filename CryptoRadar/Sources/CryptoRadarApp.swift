@@ -99,7 +99,7 @@ struct CryptoRadarApp: App {
                         }
                         .tabItem {
                             Label(AppStrings.favorite,
-                                  systemImage: AppImages.favorite)
+                                  systemImage: FavoriteImages.heartFilled)
                         }
                         .tag(1)
                         
