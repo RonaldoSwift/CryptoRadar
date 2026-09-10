@@ -38,8 +38,12 @@ public struct CryptoListView: View {
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
-        .task {
-            viewModel.loadIfNeeded()
+        .onAppear {
+            if viewModel.searchText.isEmpty {
+                viewModel.loadCryptos()
+            } else {
+                viewModel.searchCryptos()
+            }
             favoriteViewModel.load()
         }
         .alert("Error",isPresented: $viewModel.showErrorAlert) {

@@ -29,7 +29,7 @@ public final class CryptoListViewModel: ObservableObject {
     public func loadCryptos() {
         isLoading = true
         errorMessage = nil
-        
+
         Task {
             do {
                 cryptos = try await repository.getTopCryptos()

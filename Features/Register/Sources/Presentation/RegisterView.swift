@@ -40,8 +40,7 @@ public struct RegisterView: View {
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.blue)
-                        .padding(.top)
-                    
+
                     VStack(spacing:20) {
                         VStack(spacing:8) {
                             Text(RegisterStrings.Register.title)

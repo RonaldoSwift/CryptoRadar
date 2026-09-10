@@ -13,8 +13,8 @@ public struct CryptoResponse: Decodable, Identifiable {
     public let symbol: String
     public let name: String
     public let image: String
-    public let currentPrice: Double
-    public let priceChangePercentage24h: Double
+    public let currentPrice: Double?
+    public let priceChangePercentage24h: Double?
     
     enum CodingKeys: String, CodingKey {
         case id

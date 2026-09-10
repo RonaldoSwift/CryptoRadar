@@ -71,6 +71,7 @@ let project = Project(
                 dependencies: [
                 ]
             ),
+
         .target(
             name: "PersistenceKit",
             destinations: .iOS,
@@ -229,6 +230,7 @@ let project = Project(
                 .target(name: "PersistenceKit"),
                 .target(name: "NetworkKit"),
                 .target(name: "ImageKit"),
+                .external(name: "Lottie"),
                 .external(name: "Swinject")
             ]
         ),

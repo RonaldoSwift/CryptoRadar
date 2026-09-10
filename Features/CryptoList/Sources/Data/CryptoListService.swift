@@ -21,9 +21,8 @@ public final class CryptoListService: CryptoListServiceProtocol {
     }
     
     public init() {}
-    
-    public func getTopCryptos() async throws -> [CryptoResponse] {
 
+    public func getTopCryptos() async throws -> [CryptoResponse] {
         try await apiClient.request(
             baseURL: baseURL,
             endpoint: "/coins/markets",

@@ -62,7 +62,7 @@ private extension FavoriteListView {
         if viewModel.filteredFavorites.isEmpty {
             
             VStack(spacing: 16) {
-                Image(systemName:"star")
+                Image(systemName:"heart")
                     .font(.largeTitle)
                     .foregroundColor(.gray)
                 
@@ -74,20 +74,10 @@ private extension FavoriteListView {
             ScrollView {
                 LazyVStack(spacing: 14) {
                     ForEach(viewModel.filteredFavorites) { favorite in
-                        favoriteCard(crypto:favorite)
-                            .overlay(alignment:.trailing) {
-                                Button {
-                                    viewModel.removeFavorite(id:favorite.id)
-                                } label: {
-                                    Image(systemName:"star.fill")
-                                        .foregroundColor(.yellow)
-                                        .padding(.trailing,16)
-                                }
-                                .buttonStyle(.plain)
-                            }
+                        favoriteCard(crypto: favorite)
                             .contentShape(Rectangle())
                             .onTapGesture {
-                                onTapCrypto(favorite.id,favorite.name)
+                                onTapCrypto(favorite.id, favorite.name)
                             }
                     }
                 }
@@ -97,24 +87,31 @@ private extension FavoriteListView {
     
     func favoriteCard(crypto: FavoriteCrypto) -> some View {
         HStack(spacing: 14) {
-            AsyncImage(url:URL(string:crypto.image)) { image in
+            AsyncImage(url: URL(string: crypto.image)) { image in
                 image.resizable()
-                
             } placeholder: {
                 ProgressView()
             }
-            .frame(width: 46,height: 46)
+            .frame(width: 46, height: 46)
             .clipShape(Circle())
-            
-            VStack(alignment:.leading) {
+
+            VStack(alignment: .leading) {
                 Text(crypto.name)
-                    .foregroundStyle(.primary).bold()
-                
+                    .foregroundStyle(.primary)
+                    .bold()
+
                 Text(crypto.symbol.uppercased())
                     .foregroundStyle(.secondary)
             }
-            
+
             Spacer()
+
+            FavoriteHeartButton(
+                isFavorite: true,
+                size: 20
+            ) {
+                viewModel.removeFavorite(id: crypto.id)
+            }
         }
         .padding()
         .background(Color.primary.opacity(0.05))

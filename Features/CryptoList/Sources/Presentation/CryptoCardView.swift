@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ImageKit
+import Favorite
 
 struct CryptoCardView: View {
     
@@ -32,13 +33,9 @@ struct CryptoCardView: View {
             Spacer()
             
             VStack(alignment: .trailing,spacing: 8) {
-                Button {
+                FavoriteHeartButton(isFavorite: isFavorite, size: 20) {
                     onTapFavorite()
-                } label: {
-                    Image(systemName: isFavorite ? "star.fill" : "star")
-                    .foregroundColor(.yellow)
                 }
-                .buttonStyle(.plain)
             }
         }
         .padding()
