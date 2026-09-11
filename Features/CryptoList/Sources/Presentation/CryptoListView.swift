@@ -103,17 +103,20 @@ private extension CryptoListView {
                 .tint(.primary)
             Spacer()
         } else if let error = viewModel.errorMessage, viewModel.cryptos.isEmpty {
-            
-            VStack(spacing: 16) {
-                
+            VStack(alignment: .leading, spacing: 12) {
                 Text(error)
-                    .foregroundStyle(.primary)
-                
-                Button(CryptoListStrings.CryptoList.retry) {
+                    .font(.title3)
+                    .foregroundStyle(.red)
+
+                Button {
                     viewModel.loadCryptos()
+                } label: {
+                    Text(CryptoListStrings.CryptoList.retry)
+                        .font(.body)
+                        .foregroundStyle(.blue)
                 }
             }
-            
+            .frame(maxWidth: .infinity, alignment: .leading)
         } else {
             ScrollView {
                 LazyVStack(spacing: 14) {

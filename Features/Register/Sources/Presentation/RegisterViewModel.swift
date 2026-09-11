@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import StorageKit
+import NetworkKit
 
 @MainActor
 public final class RegisterViewModel: ObservableObject {
@@ -25,6 +26,10 @@ public final class RegisterViewModel: ObservableObject {
         self.repository = repository
     }
     
+    private func message(for error: Error, fallback: String) -> String {
+        NetworkError.message(for: error, fallback: fallback)
+    }
+
     func register() {
         
         guard !name.isEmpty else {
@@ -81,8 +86,10 @@ public final class RegisterViewModel: ObservableObject {
                 )
                 token = responseToken
             } catch {
-                errorMessage =
-                error.localizedDescription
+                errorMessage = message(
+                    for: error,
+                    fallback: RegisterStrings.Register.Error.registrationFailed
+                )
             }
             isLoading = false
         }

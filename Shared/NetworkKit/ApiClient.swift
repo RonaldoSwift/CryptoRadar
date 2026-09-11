@@ -31,7 +31,7 @@ public final class ApiClient {
     ) async throws -> Response {
         
         guard let url = URL(string: "\(baseURL)\(endpoint)") else {
-            throw URLError(.badURL)
+            throw NetworkError.invalidURL
         }
         
         var request = URLRequest(url: url)
@@ -52,33 +52,28 @@ public final class ApiClient {
             request.httpBody = try JSONEncoder().encode(body)
         }
         
-        let (data, response) =
-        try await URLSession.shared.data(for: request)
-        
-        guard let http =
-                response as? HTTPURLResponse
-        else {
-            throw URLError(.badServerResponse)
+        let (data, response): (Data, URLResponse)
+        do {
+            (data, response) = try await URLSession.shared.data(for: request)
+        } catch let urlError as URLError {
+            throw NetworkError.transport(urlError.code)
+        } catch {
+            throw NetworkError.unknown
         }
         
-        guard (200...299).contains(http.statusCode)
-        else {
-            
-            throw NSError(
-                domain: "",
-                code: http.statusCode,
-                userInfo: [
-                    NSLocalizedDescriptionKey:
-                        "Error del servidor \(http.statusCode)"
-                ]
-            )
+        guard let http = response as? HTTPURLResponse else {
+            throw NetworkError.invalidResponse
         }
         
-        return try JSONDecoder()
-            .decode(
-                Response.self,
-                from: data
-            )
+        guard (200...299).contains(http.statusCode) else {
+            throw NetworkError.server(statusCode: http.statusCode)
+        }
+        
+        do {
+            return try JSONDecoder().decode(Response.self, from: data)
+        } catch {
+            throw NetworkError.decoding
+        }
     }
     
     public func request<Response: Decodable>(
@@ -88,13 +83,13 @@ public final class ApiClient {
     ) async throws -> Response {
 
         guard var components = URLComponents(string: "\(baseURL)\(endpoint)") else {
-            throw URLError(.badURL)
+            throw NetworkError.invalidURL
         }
 
         components.queryItems = queryItems
 
         guard let url = components.url else {
-            throw URLError(.badURL)
+            throw NetworkError.invalidURL
         }
         
         print("URL -> \(url.absoluteString)")
@@ -107,26 +102,28 @@ public final class ApiClient {
             forHTTPHeaderField: "Content-Type"
         )
 
-        let (data, response) = try await URLSession.shared.data(for: request)
+        let (data, response): (Data, URLResponse)
+        do {
+            (data, response) = try await URLSession.shared.data(for: request)
+        } catch let urlError as URLError {
+            throw NetworkError.transport(urlError.code)
+        } catch {
+            throw NetworkError.unknown
+        }
+
         print(String(data: data, encoding: .utf8) ?? "Sin respuesta")
         guard let http = response as? HTTPURLResponse else {
-            throw URLError(.badServerResponse)
+            throw NetworkError.invalidResponse
         }
 
         guard (200...299).contains(http.statusCode) else {
-            throw NSError(
-                domain: "",
-                code: http.statusCode,
-                userInfo: [
-                    NSLocalizedDescriptionKey:
-                        "Error del servidor \(http.statusCode)"
-                ]
-            )
+            throw NetworkError.server(statusCode: http.statusCode)
         }
 
-        return try JSONDecoder().decode(
-            Response.self,
-            from: data
-        )
+        do {
+            return try JSONDecoder().decode(Response.self, from: data)
+        } catch {
+            throw NetworkError.decoding
+        }
     }
 }

@@ -22,3 +22,4 @@
 "Login.Error.PasswordMinLength" = "La contraseña debe tener mínimo 6 caracteres";
 "Login.Error.EmptyEmail" = "Ingrese su correo";
 "Login.Error.EmptyPassword" = "Ingrese su contraseña";
+"Login.Error.LoginFailed" = "No se pudo iniciar sesión.";
