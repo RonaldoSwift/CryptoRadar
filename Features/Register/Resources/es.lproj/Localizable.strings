@@ -32,3 +32,4 @@
 "Register.Error.PasswordMinLength" = "The password must be at least 6 characters long";
 "Register.Error.PasswordMismatch" = "Passwords do not match";
 "Register.NamePlaceholder" = "Enter your name";
+"Register.Error.RegistrationFailed" = "No se pudo registrar el usuario.";

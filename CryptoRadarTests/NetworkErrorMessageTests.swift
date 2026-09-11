@@ -1,23 +1,28 @@
-import XCTest
+import Foundation
+import Testing
 @testable import NetworkKit
 
-final class NetworkErrorMessageTests: XCTestCase {
+@Suite("NetworkErrorMessage")
+@MainActor
+struct NetworkErrorMessageTests {
 
-    func testMessageForTransportError() {
+    @Test("Transport error returns friendly message")
+    func messageForTransportError() {
         let message = NetworkError.message(
             for: NetworkError.transport(.notConnectedToInternet),
             fallback: "Error genérico"
         )
 
-        XCTAssertEqual(message, "No hay conexión a internet.")
+        #expect(message == "No hay conexión a internet.")
     }
 
-    func testMessageForRateLimitError() {
+    @Test("Rate limit error returns friendly message")
+    func messageForRateLimitError() {
         let message = NetworkError.message(
             for: NetworkError.server(statusCode: 429),
             fallback: "Error genérico"
         )
 
-        XCTAssertEqual(message, "Demasiadas solicitudes. Intenta más tarde.")
+        #expect(message == "Demasiadas solicitudes. Intenta más tarde.")
     }
 }

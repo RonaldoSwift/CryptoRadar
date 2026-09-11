@@ -64,7 +64,7 @@ public final class LoginViewModel: ObservableObject {
         } catch {
             errorMessage = message(
                 for: error,
-                fallback: "No se pudo iniciar sesión."
+                fallback: LoginStrings.Login.Error.loginFailed
             )
         }
         isLoading = false

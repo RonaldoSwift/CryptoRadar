@@ -88,7 +88,7 @@ public final class RegisterViewModel: ObservableObject {
             } catch {
                 errorMessage = message(
                     for: error,
-                    fallback: "No se pudo registrar el usuario."
+                    fallback: RegisterStrings.Register.Error.registrationFailed
                 )
             }
             isLoading = false
