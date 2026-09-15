@@ -21,33 +21,45 @@ La aplicación permite explorar criptomonedas, consultar información detallada,
 
 ### Login
 
-<img src="Screenshots/login.png" width="250">
-<img src="Screenshots/login-light.png" width="250" alt="Login Light">
+<div style="display: flex; gap: 10px;">
+    <img src="Screenshots/login.png" alt="Login dark" width="45%">
+    <img src="Screenshots/login-light.png" alt="Login light" width="45%">
+</div>
 
 ### Register
 
-<img src="Screenshots/register.png" width="250">
-<img src="Screenshots/register-light.png" width="250">
+<div style="display: flex; gap: 10px;">
+    <img src="Screenshots/register.png" alt="Register dark" width="45%">
+    <img src="Screenshots/register-light.png" alt="Register light" width="45%">
+</div>
 
 ### Market
 
-<img src="Screenshots/market.png" width="250">
-<img src="Screenshots/list-light.png" width="250">
+<div style="display: flex; gap: 10px;">
+    <img src="Screenshots/market.png" alt="Market dark" width="45%">
+    <img src="Screenshots/list-light.png" alt="Market light" width="45%">
+</div>
 
 ### Crypto Detail
 
-<img src="Screenshots/detail.png" width="250">
-<img src="Screenshots/detalle-light.png" width="250">
+<div style="display: flex; gap: 10px;">
+    <img src="Screenshots/detail.png" alt="Crypto detail dark" width="45%">
+    <img src="Screenshots/detalle-light.png" alt="Crypto detail light" width="45%">
+</div>
 
 ### Favorites
 
-<img src="Screenshots/favorites.png" width="250">
-<img src="Screenshots/favorite-light.png" width="250">
+<div style="display: flex; gap: 10px;">
+    <img src="Screenshots/favorites.png" alt="Favorites dark" width="45%">
+    <img src="Screenshots/favorite-light.png" alt="Favorites light" width="45%">
+</div>
 
 ### Settings
 
-<img src="Screenshots/settings.png" width="250">
-<img src="Screenshots/config-dark.png" width="250">
+<div style="display: flex; gap: 10px;">
+    <img src="Screenshots/settings.png" alt="Settings dark" width="45%">
+    <img src="Screenshots/config-dark.png" alt="Settings light" width="45%">
+</div>
 
 ---
 
