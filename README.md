@@ -93,14 +93,36 @@ CryptoRadar
 
 # 🔗 Deep Links
 
-Actualmente la aplicación soporta:
-Abrir detalle
+Actualmente la aplicación soporta dos accesos directos:
 
-cryptoradar://crypto/bitcoin
-Abrir favoritos
+- Abrir detalle de Bitcoin: `cryptoradar://crypto/bitcoin`
+- Abrir favoritos: `cryptoradar://favorites`
 
-cryptoradar://favorites
 Si el usuario no ha iniciado sesión, el Deep Link queda pendiente y se ejecuta automáticamente después del Login.
+
+### Generador de QR
+
+Puedes generar los QR con herramientas como [short.io QR Code Generator](https://short.io/es/tools/qr-code-generator) o cualquier generador de código QR que prefieras.
+
+### QR de ejemplo
+
+El código QR del enlace `cryptoradar://crypto/bitcoin` es:
+
+![QR CryptoRadar Bitcoin](https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=cryptoradar%3A%2F%2Fcrypto%2Fbitcoin)
+
+### QR de favoritos
+
+![QR CryptoRadar Favoritos](https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=cryptoradar%3A%2F%2Ffavorites)
+
+> Escanea cualquiera de estos QR con la cámara del iPhone para probar que el deep link se abre correctamente dentro de la app.
+
+### Prueba manual en iPhone
+
+1. Genera el QR para cada deep link.
+2. Escanéalo con la cámara del iPhone.
+3. Verifica que la app se abre en la pantalla correcta.
+4. Repite la prueba con `cryptoradar://crypto/bitcoin` y `cryptoradar://favorites`.
+
 ---
 
 # 🛠 Stack Tecnológico
@@ -127,12 +149,12 @@ git clone:   https://github.com/RonaldoSwift/CryptoRadar.git
 
 # � Acceso de prueba
 
-Para probar la app rápidamente, puedes usar las siguientes credenciales de ejemplo:
+Para probar el login rápidamente, utiliza la cuenta demo de ReqRes:
 
-- Correo: `user@example.com`
-- Contraseña: `password123`
+- Correo: `eve.holt@reqres.in`
+- Contraseña: `cityslicka`
 
-> Estas credenciales sirven como cuenta de prueba para ingresar en la pantalla de login y revisar el flujo principal de la aplicación.
+Estas credenciales fueron verificadas contra el endpoint de login configurado en la aplicación.
 
 ---
 
