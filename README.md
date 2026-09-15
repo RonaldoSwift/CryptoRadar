@@ -22,6 +22,7 @@ La aplicación permite explorar criptomonedas, consultar información detallada,
 ### Login
 
 <img src="Screenshots/login.png" width="250">
+<img src="Screenshots/login-light.png" width="250">
 
 ### Register
 
@@ -119,7 +120,18 @@ git clone:   https://github.com/RonaldoSwift/CryptoRadar.git
 3. Ejecutar la aplicación
 ---
 
-# 👨‍💻 Autor
+# � Acceso de prueba
+
+Para probar la app rápidamente, puedes usar las siguientes credenciales de ejemplo:
+
+- Correo: `user@example.com`
+- Contraseña: `password123`
+
+> Estas credenciales sirven como cuenta de prueba para ingresar en la pantalla de login y revisar el flujo principal de la aplicación.
+
+---
+
+# �👨‍💻 Autor
 
 Ronaldo Vargas
 Ingeniería de Sistemas
