@@ -112,10 +112,6 @@ Actualmente la aplicación soporta dos accesos directos:
 
 Si el usuario no ha iniciado sesión, el Deep Link queda pendiente y se ejecuta automáticamente después del Login.
 
-### Generador de QR
-
-Puedes generar los QR con herramientas como [short.io QR Code Generator](https://short.io/es/tools/qr-code-generator) o cualquier generador de código QR que prefieras.
-
 ### QR de ejemplo
 
 El código QR del enlace `cryptoradar://crypto/bitcoin` es:
