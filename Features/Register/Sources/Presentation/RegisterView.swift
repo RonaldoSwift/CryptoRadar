@@ -46,7 +46,7 @@ public struct RegisterView: View {
                             Text(RegisterStrings.Register.title)
                                 .font(.title)
                                 .fontWeight(.bold)
-                                .foregroundColor(.white)
+                                .foregroundStyle(.primary)
                             
                             Text(RegisterStrings.Register.subtitle)
                                 .foregroundColor(.gray)
