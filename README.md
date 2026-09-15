@@ -21,27 +21,45 @@ La aplicación permite explorar criptomonedas, consultar información detallada,
 
 ### Login
 
-<img src="Screenshots/login.png" width="250">
+<div style="display: flex; gap: 10px;">
+    <img src="Screenshots/login.png" alt="Login dark" width="45%">
+    <img src="Screenshots/login-light.png" alt="Login light" width="45%">
+</div>
 
 ### Register
 
-<img src="Screenshots/register.png" width="250">
+<div style="display: flex; gap: 10px;">
+    <img src="Screenshots/register.png" alt="Register dark" width="45%">
+    <img src="Screenshots/register-light.png" alt="Register light" width="45%">
+</div>
 
 ### Market
 
-<img src="Screenshots/market.png" width="250">
+<div style="display: flex; gap: 10px;">
+    <img src="Screenshots/market.png" alt="Market dark" width="45%">
+    <img src="Screenshots/list-light.png" alt="Market light" width="45%">
+</div>
 
 ### Crypto Detail
 
-<img src="Screenshots/detail.png" width="250">
+<div style="display: flex; gap: 10px;">
+    <img src="Screenshots/detail.png" alt="Crypto detail dark" width="45%">
+    <img src="Screenshots/detalle-light.png" alt="Crypto detail light" width="45%">
+</div>
 
 ### Favorites
 
-<img src="Screenshots/favorites.png" width="250">
+<div style="display: flex; gap: 10px;">
+    <img src="Screenshots/favorites.png" alt="Favorites dark" width="45%">
+    <img src="Screenshots/favorite-light.png" alt="Favorites light" width="45%">
+</div>
 
 ### Settings
 
-<img src="Screenshots/settings.png" width="250">
+<div style="display: flex; gap: 10px;">
+    <img src="Screenshots/settings.png" alt="Settings dark" width="45%">
+    <img src="Screenshots/config-dark.png" alt="Settings light" width="45%">
+</div>
 
 ---
 
@@ -87,14 +105,32 @@ CryptoRadar
 
 # 🔗 Deep Links
 
-Actualmente la aplicación soporta:
-Abrir detalle
+Actualmente la aplicación soporta dos accesos directos:
 
-cryptoradar://crypto/bitcoin
-Abrir favoritos
+- Abrir detalle de Bitcoin: `cryptoradar://crypto/bitcoin`
+- Abrir favoritos: `cryptoradar://favorites`
 
-cryptoradar://favorites
 Si el usuario no ha iniciado sesión, el Deep Link queda pendiente y se ejecuta automáticamente después del Login.
+
+### QR de ejemplo
+
+El código QR del enlace `cryptoradar://crypto/bitcoin` es:
+
+![QR CryptoRadar Bitcoin](https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=cryptoradar%3A%2F%2Fcrypto%2Fbitcoin)
+
+### QR de favoritos
+
+![QR CryptoRadar Favoritos](https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=cryptoradar%3A%2F%2Ffavorites)
+
+> Escanea cualquiera de estos QR con la cámara del iPhone para probar que el deep link se abre correctamente dentro de la app.
+
+### Prueba manual en iPhone
+
+1. Genera el QR para cada deep link.
+2. Escanéalo con la cámara del iPhone.
+3. Verifica que la app se abre en la pantalla correcta.
+4. Repite la prueba con `cryptoradar://crypto/bitcoin` y `cryptoradar://favorites`.
+
 ---
 
 # 🛠 Stack Tecnológico
@@ -119,7 +155,18 @@ git clone:   https://github.com/RonaldoSwift/CryptoRadar.git
 3. Ejecutar la aplicación
 ---
 
-# 👨‍💻 Autor
+# � Acceso de prueba
+
+Para probar el login rápidamente, utiliza la cuenta demo de ReqRes:
+
+- Correo: `eve.holt@reqres.in`
+- Contraseña: `cityslicka`
+
+Estas credenciales fueron verificadas contra el endpoint de login configurado en la aplicación.
+
+---
+
+# �👨‍💻 Autor
 
 Ronaldo Vargas
 Ingeniería de Sistemas

@@ -42,7 +42,7 @@ public struct LoginView: View {
                             Text(LoginStrings.Login.title)
                                 .font(.title)
                                 .fontWeight(.bold)
-                                .foregroundColor(.white)
+                                .foregroundStyle(.primary)
                             
                             Text(LoginStrings.Login.subtitle)
                                 .foregroundColor(.gray)
