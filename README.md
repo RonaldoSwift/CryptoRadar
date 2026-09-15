@@ -22,27 +22,32 @@ La aplicación permite explorar criptomonedas, consultar información detallada,
 ### Login
 
 <img src="Screenshots/login.png" width="250">
-<img src="Screenshots/login-light.png" width="250">
+<img src="Screenshots/login-light.png" width="250" alt="Login Light">
 
 ### Register
 
 <img src="Screenshots/register.png" width="250">
+<img src="Screenshots/register-light.png" width="250">
 
 ### Market
 
 <img src="Screenshots/market.png" width="250">
+<img src="Screenshots/list-light.png" width="250">
 
 ### Crypto Detail
 
 <img src="Screenshots/detail.png" width="250">
+<img src="Screenshots/detalle-light.png" width="250">
 
 ### Favorites
 
 <img src="Screenshots/favorites.png" width="250">
+<img src="Screenshots/favorite-light.png" width="250">
 
 ### Settings
 
 <img src="Screenshots/settings.png" width="250">
+<img src="Screenshots/config-dark.png" width="250">
 
 ---
 

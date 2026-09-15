@@ -68,12 +68,11 @@ private extension CryptoDetailView {
     
     @ViewBuilder
     func header(crypto: CryptoDetail?) -> some View {
-        
         HStack {
             Text(crypto?.name ?? cryptoName)
                 .font(.title2)
                 .bold()
-                .foregroundColor(.white)
+                .foregroundStyle(.primary)
             
             Spacer()
             
@@ -90,23 +89,23 @@ private extension CryptoDetailView {
     func priceSection(crypto: CryptoDetail) -> some View {
         VStack(spacing: 8) {
             Text(DetalleStrings.CryptoDetail.currentPrice)
-                .foregroundColor(.gray)
+                .foregroundStyle(.secondary)
             
             Text("$\(crypto.currentPrice,specifier: "%.2f")")
                 .font(.largeTitle)
                 .bold()
-                .foregroundColor(.white)
+                .foregroundStyle(.primary)
         }
     }
     
     var chartView: some View {
         
         RoundedRectangle(cornerRadius: 20)
-            .fill(Color.white.opacity(0.05))
+            .fill(Color(UIColor.secondarySystemBackground))
             .frame(height: 220)
             .overlay {
                 Text(DetalleStrings.CryptoDetail.graph)
-                    .foregroundColor(.gray)
+                    .foregroundStyle(.secondary)
             }
     }
     
@@ -116,7 +115,7 @@ private extension CryptoDetailView {
         VStack(alignment: .leading,spacing: 16) {
             
             Text(DetalleStrings.CryptoDetail.statistics)
-                .foregroundColor(.white)
+                .foregroundStyle(.primary)
                 .bold()
             
             LazyVGrid(
@@ -141,15 +140,15 @@ private extension CryptoDetailView {
     func statCard(title: String,value: String) -> some View {
         VStack(alignment: .leading,spacing: 8) {
             Text(title)
-                .foregroundColor(.gray)
+                .foregroundStyle(.secondary)
             
             Text(value)
-                .foregroundColor(.white)
+                .foregroundStyle(.primary)
                 .bold()
         }
         .frame(maxWidth: .infinity,minHeight: 120)
         .padding()
-        .background(Color.white.opacity(0.05))
+        .background(Color(UIColor.secondarySystemBackground))
         .cornerRadius(20)
     }
     
@@ -159,13 +158,13 @@ private extension CryptoDetailView {
         VStack(alignment: .leading,spacing: 12
         ) {
             Text("About \(crypto.name)")
-                .foregroundColor(.white)    
+                .foregroundStyle(.primary)
                 .bold()
             
             Text(
                 viewModel.showFullDescription ? crypto.description : String(crypto.description.prefix(250))
             )
-            .foregroundColor(.gray)
+            .foregroundStyle(.secondary)
             
             Button(viewModel.showFullDescription ? DetalleStrings.CryptoDetail.readLess : DetalleStrings.CryptoDetail.readMore) {
                 viewModel.toggleDescription()
@@ -174,7 +173,7 @@ private extension CryptoDetailView {
         }
         
         .padding()
-        .background(Color.white.opacity(0.05))
+        .background(Color(UIColor.secondarySystemBackground))
         .cornerRadius(20)
     }
 }
