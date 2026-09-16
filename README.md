@@ -135,10 +135,9 @@ El código QR del enlace `cryptoradar://crypto/bitcoin` es:
 
 ### Video de prueba
 
-<video controls width="360">
-    <source src="Screenshots/pruebaApp.mp4" type="video/mp4">
-    Tu navegador no admite la reproducción de videos.
-</video>
+[Ver video de prueba de la aplicación](Screenshots/pruebaApp.mp4)
+
+> Haz clic en el enlace para abrir o descargar el video `pruebaApp.mp4`.
 
 ---
 
