@@ -116,20 +116,22 @@ Si el usuario no ha iniciado sesión, el Deep Link queda pendiente y se ejecuta 
 
 El código QR del enlace `cryptoradar://crypto/bitcoin` es:
 
-![QR CryptoRadar Bitcoin](https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=cryptoradar%3A%2F%2Fcrypto%2Fbitcoin)
+<img src="Screenshots/qr-bitcoin.png" alt="QR CryptoRadar Bitcoin" width="220">
 
 ### QR de favoritos
 
-![QR CryptoRadar Favoritos](https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=cryptoradar%3A%2F%2Ffavorites)
+<img src="Screenshots/qr-favorites.png" alt="QR CryptoRadar Favoritos" width="220">
 
-> Escanea cualquiera de estos QR con la cámara del iPhone para probar que el deep link se abre correctamente dentro de la app.
+> La aplicación debe estar instalada en el iPhone antes de escanear el QR.
+> Escanea cualquiera de estos códigos con la cámara para abrir el deep link.
 
 ### Prueba manual en iPhone
 
-1. Genera el QR para cada deep link.
-2. Escanéalo con la cámara del iPhone.
-3. Verifica que la app se abre en la pantalla correcta.
-4. Repite la prueba con `cryptoradar://crypto/bitcoin` y `cryptoradar://favorites`.
+1. Instala y abre la aplicación al menos una vez desde Xcode en el iPhone.
+2. Escanea uno de los QR con la cámara del iPhone.
+3. Pulsa la notificación para abrir CryptoRadar.
+4. Verifica que la app se abre en la pantalla correcta.
+5. Repite la prueba con `cryptoradar://crypto/bitcoin` y `cryptoradar://favorites`.
 
 ---
 

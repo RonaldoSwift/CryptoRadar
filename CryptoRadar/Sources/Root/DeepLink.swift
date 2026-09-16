@@ -12,16 +12,16 @@ enum DeepLink: Equatable {
     case favorites
     
     init?(url: URL) {
-        guard url.scheme == "cryptoradar" else {
+        guard url.scheme?.lowercased() == "cryptoradar" else {
             return nil
         }
-        switch url.host {
+        switch url.host?.lowercased() {
         case "crypto":
-            let components = url.pathComponents
-            guard components.count > 1 else {
+            let components = url.pathComponents.filter { $0 != "/" }
+            guard let id = components.first, !id.isEmpty else {
                 return nil
             }
-            self = .crypto(id: components[1])
+            self = .crypto(id: id)
         case "favorites":
             self = .favorites
         default:
