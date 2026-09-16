@@ -133,6 +133,13 @@ El código QR del enlace `cryptoradar://crypto/bitcoin` es:
 4. Verifica que la app se abre en la pantalla correcta.
 5. Repite la prueba con `cryptoradar://crypto/bitcoin` y `cryptoradar://favorites`.
 
+### Video de prueba
+
+<video controls width="360">
+    <source src="Screenshots/pruebaApp.mp4" type="video/mp4">
+    Tu navegador no admite la reproducción de videos.
+</video>
+
 ---
 
 # 🛠 Stack Tecnológico
