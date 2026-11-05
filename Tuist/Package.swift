@@ -8,7 +8,8 @@ import ProjectDescription
 let packageSettings = PackageSettings(
     productTypes: [
         "Swinject": .framework,
-        "ImageKit": .framework
+        "ImageKit": .framework,
+        "Lottie": .framework
     ],
     baseSettings: .settings(
         base: [
