@@ -93,7 +93,6 @@ CryptoRadar
 ├── Shared
 │   ├── StorageKit
 │   ├── NetworkKit
-│   └── ImageKit
 │
 └── CryptoRadar
     ├── Sources
@@ -179,4 +178,3 @@ Estas credenciales fueron verificadas contra el endpoint de login configurado en
 Ronaldo Vargas
 Ingeniería de Sistemas
 iOS Developer
-

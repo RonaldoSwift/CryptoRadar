@@ -27,7 +27,6 @@ let project = Project(
                 .target(name: "Configuracion"),
                 .target(name: "StorageKit"),
                 .target(name: "NetworkKit"),
-                .target(name: "ImageKit"),
                 .target(name: "PersistenceKit"),
                 .external(name:"Swinject")
             ],
@@ -93,18 +92,6 @@ let project = Project(
                     "Shared/NetworkKit/**"
                 ]
             ),
-        
-            .target(
-                name: "ImageKit",
-                destinations: .iOS,
-                product: .framework,
-                bundleId: "com.ronaldoVargas.ImageKit",
-                infoPlist: .default,
-                sources: [
-                    "Shared/ImageKit/**"
-                ]
-            ),
-        
         
         // FEATURES
         
@@ -188,7 +175,7 @@ let project = Project(
             dependencies: [
                 .target(name: "StorageKit"),
                 .target(name: "NetworkKit"),
-                .target(name: "ImageKit"),
+                .external(name: "ImageKit"),
                 .target(name:"Favorite"),
                 .external(name: "Swinject")
             ]
@@ -208,7 +195,7 @@ let project = Project(
             dependencies: [
                 .target(name: "StorageKit"),
                 .target(name: "NetworkKit"),
-                .target(name: "ImageKit"),
+                .external(name: "ImageKit"),
                 .target(name: "Favorite"),
                 .external(name: "Swinject")
             ]
@@ -229,7 +216,7 @@ let project = Project(
                 .target(name: "StorageKit"),
                 .target(name: "PersistenceKit"),
                 .target(name: "NetworkKit"),
-                .target(name: "ImageKit"),
+                .external(name: "ImageKit"),
                 .external(name: "Lottie"),
                 .external(name: "Swinject")
             ]

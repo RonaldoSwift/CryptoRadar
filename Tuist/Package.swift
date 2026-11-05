@@ -7,8 +7,14 @@ import ProjectDescription
 
 let packageSettings = PackageSettings(
     productTypes: [
-        "Swinject": .framework
-    ]
+        "Swinject": .framework,
+        "ImageKit": .framework
+    ],
+    baseSettings: .settings(
+        base: [
+            "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
+        ]
+    )
 )
 #endif
 
@@ -17,6 +23,10 @@ let packageSettings = PackageSettings(
 let package = Package(
     name: "CryptoRadarDependencies",
     dependencies: [
+        .package(
+            url: "https://github.com/RonaldoSwift/image-kit-ios.git",
+            from: "1.0.0"
+        ),
         .package(
             url: "https://github.com/airbnb/lottie-spm.git",
             from: "4.5.0"
