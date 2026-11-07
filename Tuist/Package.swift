@@ -13,30 +13,30 @@ let packageSettings = PackageSettings(
     ],
     baseSettings: .settings(
         base: [
-            "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
+            "IPHONEOS_DEPLOYMENT_TARGET": "17.0"
         ]
         ),
         targetSettings: [
             "_LottieStub": .settings(
                 base: [
-                    "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
+                    "IPHONEOS_DEPLOYMENT_TARGET": "17.0"
                 ],
                 debug: [
-                    "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
+                    "IPHONEOS_DEPLOYMENT_TARGET": "17.0"
                 ],
                 release: [
-                    "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
+                    "IPHONEOS_DEPLOYMENT_TARGET": "17.0"
                 ]
             ),
             "Swinject": .settings(
                 base: [
-                    "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
+                    "IPHONEOS_DEPLOYMENT_TARGET": "17.0"
                 ],
                 debug: [
-                    "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
+                    "IPHONEOS_DEPLOYMENT_TARGET": "17.0"
                 ],
                 release: [
-                    "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
+                    "IPHONEOS_DEPLOYMENT_TARGET": "17.0"
                 ]
             )
         ]
