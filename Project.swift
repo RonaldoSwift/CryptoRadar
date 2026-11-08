@@ -9,6 +9,7 @@ let project = Project(
             destinations: .iOS,
             product: .app,
             bundleId: "com.ronaldoVargas.CryptoRadar",
+            deploymentTargets: .iOS("17.0"),
             infoPlist: .file(
                 path: "CryptoRadar/Info.plist"
             ),
@@ -49,6 +50,7 @@ let project = Project(
             destinations: .iOS,
             product: .uiTests,
             bundleId: "com.ronaldoVargas.CryptoRadarUITests",
+            deploymentTargets: .iOS("17.0"),
             infoPlist: .default,
             sources: [
                 "CryptoRadarUITests/**"
@@ -63,6 +65,7 @@ let project = Project(
                 destinations: .iOS,
                 product: .framework,
                 bundleId: "com.ronaldoVargas.StorageKit",
+                deploymentTargets: .iOS("17.0"),
                 infoPlist: .default,
                 sources: [
                     "Shared/StorageKit/**"
@@ -76,6 +79,7 @@ let project = Project(
             destinations: .iOS,
             product: .framework,
             bundleId: "com.ronaldoVargas.PersistenceKit",
+            deploymentTargets: .iOS("17.0"),
             infoPlist: .default,
             sources: [
                 "Shared/PersistenceKit/**"
@@ -87,6 +91,7 @@ let project = Project(
                 destinations: .iOS,
                 product: .framework,
                 bundleId: "com.ronaldoVargas.NetworkKit",
+                deploymentTargets: .iOS("17.0"),
                 infoPlist: .default,
                 sources: [
                     "Shared/NetworkKit/**"
@@ -100,6 +105,7 @@ let project = Project(
                 destinations: .iOS,
                 product: .framework,
                 bundleId: "com.ronaldoVargas.Login",
+                deploymentTargets: .iOS("17.0"),
                 infoPlist: .default,
                 sources: [
                     "Features/Login/Sources/**"
@@ -119,6 +125,7 @@ let project = Project(
                 destinations: .iOS,
                 product: .unitTests,
                 bundleId: "com.ronaldoVargas.LoginTests",
+                deploymentTargets: .iOS("17.0"),
                 infoPlist: .default,
                 sources: [
                     "Features/LoginTests/**"
@@ -133,6 +140,7 @@ let project = Project(
                 destinations: .iOS,
                 product: .framework,
                 bundleId: "com.ronaldoVargas.Register",
+                deploymentTargets: .iOS("17.0"),
                 infoPlist: .default,
                 sources: [
                     "Features/Register/Sources/**"
@@ -152,6 +160,7 @@ let project = Project(
                 destinations: .iOS,
                 product: .unitTests,
                 bundleId: "com.ronaldoVargas.RegisterTests",
+                deploymentTargets: .iOS("17.0"),
                 infoPlist: .default,
                 sources: [
                     "Features/RegisterTests/**"
@@ -165,6 +174,7 @@ let project = Project(
             destinations: .iOS,
             product: .framework,
             bundleId: "com.ronaldoVargas.CryptoList",
+            deploymentTargets: .iOS("17.0"),
             infoPlist: .default,
             sources: [
                 "Features/CryptoList/Sources/**"
@@ -185,6 +195,7 @@ let project = Project(
             destinations: .iOS,
             product: .framework,
             bundleId: "com.ronaldoVargas.Detalle",
+            deploymentTargets: .iOS("17.0"),
             infoPlist: .default,
             sources: [
                 "Features/Detalle/Sources/**"
@@ -205,6 +216,7 @@ let project = Project(
             destinations: .iOS,
             product: .framework,
             bundleId: "com.ronaldoVargas.Favorite",
+            deploymentTargets: .iOS("17.0"),
             infoPlist: .default,
             sources: [
                 "Features/Favorite/Sources/**"
@@ -226,6 +238,7 @@ let project = Project(
             destinations: .iOS,
             product: .framework,
             bundleId: "com.ronaldoVargas.Configuracion",
+            deploymentTargets: .iOS("17.0"),
             infoPlist: .default,
             sources:[
                 "Features/Configuracion/Sources/**"

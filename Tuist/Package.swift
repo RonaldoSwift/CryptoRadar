@@ -10,36 +10,7 @@ let packageSettings = PackageSettings(
         "Swinject": .framework,
         "ImageKit": .framework,
         "Lottie": .framework
-    ],
-    baseSettings: .settings(
-        base: [
-            "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
-        ]
-        ),
-        targetSettings: [
-            "_LottieStub": .settings(
-                base: [
-                    "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
-                ],
-                debug: [
-                    "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
-                ],
-                release: [
-                    "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
-                ]
-            ),
-            "Swinject": .settings(
-                base: [
-                    "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
-                ],
-                debug: [
-                    "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
-                ],
-                release: [
-                    "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
-                ]
-            )
-        ]
+    ]
     )
 #endif
 
