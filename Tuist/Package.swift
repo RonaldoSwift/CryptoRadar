@@ -11,12 +11,7 @@ let packageSettings = PackageSettings(
         "ImageKit": .framework,
         "Lottie": .framework
     ],
-    baseSettings: .settings(
-        base: [
-            "IPHONEOS_DEPLOYMENT_TARGET": "17.0"
-        ]
-        ),
-        targetSettings: [
+    targetSettings: [
             "_LottieStub": .settings(
                 base: [
                     "IPHONEOS_DEPLOYMENT_TARGET": "17.0"
